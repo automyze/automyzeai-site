@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLP Recruitment | Live Target Accounts & Signal Playbook | Automyze</title>
+<meta name="description" content="A curated dispatch of 10 UK and European fintech scaleups with verified active hiring bottlenecks across regulatory compliance, risk infrastructure, and specialized fintech sales.">
+
+<!-- Favicon: Forest Green Logo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3D2B'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='22' font-weight='600' fill='%23F4F2ED'%3Ea%3C/text%3E%3Ccircle cx='23.5' cy='21.5' r='2.5' fill='%238A6D3B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F4F2ED;
+  --ink:#16181A;
+  --ink2:#5A5F63;
+  --ink3:#8B8F93;
+  --rule:#DDD9D1;
+  --rule2:#C9C4B8;
+  --forest:#1F3D2B;
+  --forest-hover:#173022;
+  --brass:#8A6D3B;
+  --card:#FBFAF7;
+  --tint:#F0EEE8;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter Tight',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+
+h1,h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+h1{font-size:56px;line-height:1.06;letter-spacing:-.015em;margin-bottom:20px}
+h1 em,h2 em{font-style:italic;color:var(--forest)}
+h2{font-size:38px;line-height:1.12;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:500;line-height:1.35}
+p{line-height:1.65}
+
+.lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule2)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--forest);display:inline-block;margin-right:7px;vertical-align:1px}
+
+section{border-bottom:1px solid var(--rule);padding:72px 0}
+.two{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
+
+.btn{
+  background:var(--forest);
+  color:var(--paper);
+  padding:13px 26px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.btn:hover{background:var(--forest-hover);transform:translateY(-1px);color:var(--paper)}
+.btn2{
+  font-size:14px;
+  color:var(--ink2);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule2);
+  padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
+}
+.btn2:hover{color:var(--ink);border-color:var(--ink)}
+.fine{font-size:12.5px;color:var(--ink3)}
+
+/* Navigation */
+nav{
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  transition:border-color .2s ease;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Instrument Serif',Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
+.logo em{color:var(--forest);font-style:italic}
+.nav-r{display:flex;align-items:center;gap:26px}
+.nav-r a{font-size:13.5px;color:var(--ink2);text-decoration:none;transition:color .15s ease}
+.nav-r a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--forest)!important;
+  color:var(--paper)!important;
+  padding:8px 18px!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  border-radius:0;
+}
+.nav-cta:hover{background:var(--forest-hover)!important}
+
+/* Hero */
+.hero{padding:80px 0 0;border-bottom:none}
+.hero .sub{font-size:19px;color:var(--ink2);max-width:760px;margin-bottom:30px;line-height:1.55}
+.hero .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+
+/* Metric Band */
+.band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--tint);margin-top:60px}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+.cell{padding:26px 36px;border-right:1px solid var(--rule)}
+.cell:last-child{border-right:none}
+.cell .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1;color:var(--forest)}
+
+/* The Strategic Wedge */
+.wedge-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--rule2)}
+.wedge-grid>div{padding:34px 30px}
+.wedge-grid>div:first-child{border-right:1px solid var(--rule2);background:var(--paper)}
+.wedge-grid h4{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.wedge-grid p{font-size:13.5px;color:var(--ink2);line-height:1.6}
+
+/* Accounts Table */
+.table-wrap{
+  overflow-x:auto;
+  margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--rule2);
+}
+table.act{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+}
+table.act th{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  font-weight:500;
+  padding:14px 18px;
+  background:var(--tint);
+  border-bottom:1px solid var(--rule2);
+  white-space:nowrap;
+}
+table.act td{
+  font-size:13.5px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+  line-height:1.55;
+  color:var(--ink);
+}
+table.act tr:last-child td{border-bottom:none}
+table.act tr:hover td{background:rgba(244,242,237,.5)}
+.ac-link{font-weight:600;color:var(--forest);text-decoration:none}
+.ac-link:hover{text-decoration:underline}
+.ac-domain{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink3);display:block;margin-top:2px}
+.ac-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  background:var(--paper);
+  border:1px solid var(--rule2);
+  padding:2px 7px;
+  color:var(--ink2);
+  display:inline-block;
+}
+.ac-cluster-link{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--forest);
+  text-decoration:none;
+  background:var(--tint);
+  border:1px solid rgba(31,61,43,0.18);
+  padding:4px 8px;
+  display:inline-block;
+  line-height:1.4;
+  transition:all .15s ease;
+}
+.ac-cluster-link:hover{
+  background:var(--paper);
+  border-color:var(--forest);
+  text-decoration:underline;
+}
+.ac-mirror{
+  font-size:12.5px;
+  color:var(--ink2);
+  background:var(--tint);
+  padding:8px 10px;
+  border-left:2px solid var(--brass);
+  font-style:normal;
+  margin-top:4px;
+}
+
+/* Signal Clusters Blocks */
+.clusters-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.c-box{background:var(--card);border:1px solid var(--rule2);padding:28px}
+.c-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);display:block;margin-bottom:8px}
+.c-box h3{font-size:20px;font-weight:500;margin-bottom:14px;color:var(--ink)}
+.c-box p{font-size:14px;color:var(--ink2);margin-bottom:14px;line-height:1.6}
+.c-signals{list-style:none;margin:16px 0;padding-top:12px;border-top:1px solid var(--rule)}
+.c-signals li{font-size:13px;color:var(--ink2);padding:5px 0;position:relative;padding-left:16px}
+.c-signals li::before{content:"+";position:absolute;left:0;color:var(--forest);font-family:'IBM Plex Mono',monospace}
+.c-wedge{
+  background:var(--tint);
+  border-left:3px solid var(--forest);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--forest);
+  margin-top:16px;
+}
+
+/* Callout Section (Proprietary Clusters vs Rented Data) */
+.callout-box{
+  background:var(--card);
+  border:1px solid var(--rule2);
+  padding:32px;
+  margin-top:28px;
+}
+.callout-box h3{font-family:'Instrument Serif',Georgia,serif;font-size:26px;margin-bottom:12px;color:var(--forest)}
+.callout-box p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:920px}
+
+/* Final Call Section */
+.final{background:var(--forest);color:var(--paper);border-bottom:none}
+.final h2{color:var(--paper);max-width:680px}
+.final h2 em{color:#C9BFA4}
+.final p{color:#BFC7C0;max-width:580px;margin-top:18px;font-size:16px}
+.final .btn{background:var(--paper);color:var(--forest);margin-top:30px}
+.final .btn:hover{background:#EDE9DF;color:var(--forest-hover)}
+.final-links{display:flex;gap:20px;align-items:center;margin-top:20px}
+.final-links a{color:#D2DDD5;font-size:13.5px;text-decoration:none;border-bottom:1px dotted #8FA095}
+.final-links a:hover{color:var(--paper);border-bottom-style:solid}
+
+/* Footer */
+footer{padding:34px 0;font-size:13px;color:var(--ink3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{font-size:20px}
+
+/* Scroll Reveals (Subtle & Non-Jarring) */
+.rv{opacity:0;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-u{transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* Print Styles */
+@media print {
+  nav, .no-print, button, .btn { display:none!important }
+  body { background:white!important; color:black!important }
+  .table-wrap, table.act { border:1px solid #ccc!important; width:100%!important }
+  table.act td, table.act th { border-bottom:1px solid #ddd!important }
+  section { padding:24px 0!important; page-break-inside:avoid }
+  .wrap { max-width:100%!important; padding:0!important }
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .wrap{padding:0 24px}
+  .two,.wedge-grid,.clusters-grid{grid-template-columns:1fr;gap:24px}
+  .wedge-grid>div:first-child{border-right:none;border-bottom:1px solid var(--rule2)}
+  h1{font-size:38px}
+  h2{font-size:29px}
+  .band .wrap{grid-template-columns:1fr 1fr}
+  .cell:nth-child(2){border-right:none}
+  .cell:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .cell:nth-child(4){border-top:1px solid var(--rule)}
+  .nav-r a:not(.nav-cta){display:none}
+  section{padding:54px 0}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div class="nav-r">
+      <a href="#accounts">Accounts</a>
+      <a href="#wedge">The Wedge</a>
+      <a href="#clusters">Signal Clusters</a>
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Target Dispatch</p>
+      <h1>Ten live target accounts for <em>FLP Recruitment</em>.</h1>
+      <p class="sub">A curated dispatch of 10 UK and European fintech scaleups with verified active hiring bottlenecks across regulatory compliance, risk infrastructure, and specialized fintech sales.</p>
+      <div class="cta-row">
+        <button id="downloadCsvBtn" class="btn">Download Accounts (.CSV)</button>
+        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn2">Book a strategy call</a>
+      </div>
+      <p class="fine">Verified against live Ashby and Greenhouse requisitions, FCA/EEA regulatory mandates, and fintech scaleup dockets.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <div class="cell"><div class="k">Accounts verified</div><div class="v">10</div></div>
+      <div class="cell"><div class="k">Primary source checks</div><div class="v">100%</div></div>
+      <div class="cell"><div class="k">Core bottleneck</div><div class="v" style="font-size:20px">Fintech & compliance talent</div></div>
+      <div class="cell"><div class="k">Unverified accounts</div><div class="v">0</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STRATEGIC WEDGE -->
+<section id="wedge">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The Strategic Wedge</p>
+      <h2>Why generic tech recruitment fails, and where FLP <em>wins</em>.</h2>
+      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">When fast-growing fintechs hire generalist tech recruiters, they get flooded with candidates who do not understand regulatory compliance frameworks (FCA, BaFin, ZAG-MaRisk), payment rails, or fintech unit economics. FLP wins through deep sector specialization and hands-on talent consultancy.</p>
+    </div>
+    <div>
+      <div class="wedge-grid">
+        <div>
+          <span class="lbl" style="color:#A04040">The Commodity Trap</span>
+          <h4 style="margin-top:6px">Generic Tech Agency Recruiting</h4>
+          <p>Generalist agencies treat fintech like standard SaaS. They lack understanding of electronic money regulations, AML transaction monitoring, and banking rails, sending software recruiters to fill risk and compliance roles with zero regulatory context.</p>
+        </div>
+        <div>
+          <span class="lbl" style="color:var(--forest)">The High-Converting Wedge</span>
+          <h4 style="margin-top:6px">Specialized Fintech & Regulatory Partner</h4>
+          <p>Founded by Fabien Le Pichon with 6+ years in fintech agency and in-house hyper-growth leadership, FLP delivers pre-vetted compliance leaders, MLROs, and fintech sellers who understand banking partners, scheme rules, and complex regulatory licensing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTS TABLE -->
+<section id="accounts">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div>
+        <p class="eyebrow">Live Target Accounts</p>
+        <h2>Ten fintech scaleups with active compliance and commercial hiring requisitions.</h2>
+      </div>
+      <button id="downloadCsvBtnTable" class="btn" style="padding:10px 20px;font-size:13px">Download CSV</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="act">
+        <thead>
+          <tr>
+            <th style="width:22%">Account & Industry</th>
+            <th style="width:17%">Target Persona</th>
+            <th style="width:18%">Signal Cluster</th>
+            <th style="width:21%">Deterministic Evidence</th>
+            <th style="width:22%">Opening Angle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://airwallex.com" target="_blank" class="ac-link">Airwallex</a>
+              <span class="ac-domain">airwallex.com</span>
+              <span class="ac-tag" style="margin-top:6px">Cross-Border Payments</span>
+            </td>
+            <td>Global Head of Compliance, VP EMEA</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Compliance & Risk</a></td>
+            <td>Live Ashby requisition for Senior Director EU & ME, MLRO to lead regional compliance architecture, oversee AML/CTF programs, and serve as primary regulatory liaison across Europe.</td>
+            <td>
+              <div class="ac-mirror">"Your live Ashby search for a Senior Director and MLRO to lead regional compliance architecture highlights the rigorous regulatory oversight required across European cross-border payment rails."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://lendable.co.uk" target="_blank" class="ac-link">Lendable</a>
+              <span class="ac-domain">lendable.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">AI Consumer Lending</span>
+            </td>
+            <td>Chief Risk Officer, Head of Compliance</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Compliance & Risk</a></td>
+            <td>Live Ashby posting for Head of Compliance Monitoring owning risk-based monitoring framework and reporting directly to executive compliance committee.</td>
+            <td>
+              <div class="ac-mirror">"Lendable's active Ashby posting for Head of Compliance Monitoring underscores the challenge of scaling AI-driven credit while maintaining strict FCA risk-based monitoring."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://getground.co.uk" target="_blank" class="ac-link">GetGround</a>
+              <span class="ac-domain">getground.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Property Fintech</span>
+            </td>
+            <td>Chief Executive Officer, Head of Legal & Compliance</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Compliance & Risk</a></td>
+            <td>Live Ashby search for Compliance and Risk Lead managing regulatory obligations, risk registers, and AML/financial crime investigations.</td>
+            <td>
+              <div class="ac-mirror">"Your active search on Ashby for a Compliance and Risk Lead highlights GetGround's operational focus on tightening AML and financial crime protocols as transaction volume scales."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://getmoss.com" target="_blank" class="ac-link">Moss</a>
+              <span class="ac-domain">getmoss.com</span>
+              <span class="ac-tag" style="margin-top:6px">Spend Management</span>
+            </td>
+            <td>Group Chief Compliance Officer, VP Legal</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Compliance & Risk</a></td>
+            <td>Live Ashby requisition for Deputy MLRO overseeing Anti-Financial Crime (AFC/AML), corporate card fraud, and BaFin/ZAG-MaRisk regulatory compliance.</td>
+            <td>
+              <div class="ac-mirror">"Moss's active Ashby recruitment for a Deputy MLRO to oversee AFC/AML and card fraud reflects the escalating regulatory oversight across European corporate spend infrastructure."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://ebury.com" target="_blank" class="ac-link">Ebury</a>
+              <span class="ac-domain">ebury.com</span>
+              <span class="ac-tag" style="margin-top:6px">FX & Transaction Banking</span>
+            </td>
+            <td>Head of Compliance & FinCrime, Chief Compliance Officer</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Compliance & Risk</a></td>
+            <td>Live Greenhouse posting for Product Manager - Financial Crime scaling high-throughput payment screening and automated AML transaction monitoring.</td>
+            <td>
+              <div class="ac-mirror">"Ebury's Greenhouse search for a Product Manager in Financial Crime to scale payment and name screening reflects the technical overhead of preventing fraud across high-volume FX corridors."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://flagright.com" target="_blank" class="ac-link">Flagright</a>
+              <span class="ac-domain">flagright.com</span>
+              <span class="ac-tag" style="margin-top:6px">AML Infrastructure</span>
+            </td>
+            <td>Co-Founder & CEO, Head of Sales</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Payment Rails & GTM</a></td>
+            <td>Live Ashby posting for Senior Enterprise AE selling real-time transaction monitoring and AML compliance infrastructure directly to fintechs, PSPs, and neobanks.</td>
+            <td>
+              <div class="ac-mirror">"Your active Ashby requisition for a Senior Enterprise AE highlights Flagright's push to secure senior sales talent who understand banking regulatory pain and can close complex compliance deals."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://evervault.com" target="_blank" class="ac-link">Evervault</a>
+              <span class="ac-domain">evervault.com</span>
+              <span class="ac-tag" style="margin-top:6px">Payment Security</span>
+            </td>
+            <td>Head of Sales, VP Go-To-Market</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Payment Rails & GTM</a></td>
+            <td>Live Ashby requisition for Account Executive with specialized fintech and payments experience selling developer encryption for PCI DSS compliance.</td>
+            <td>
+              <div class="ac-mirror">"Evervault's active search for an Account Executive focused on fintech and payments reflects the high domain knowledge required to sell encryption infrastructure to compliance-conscious engineering leaders."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://velocity.trade" target="_blank" class="ac-link">Velocity</a>
+              <span class="ac-domain">velocity.trade</span>
+              <span class="ac-tag" style="margin-top:6px">Digital Payment Rails</span>
+            </td>
+            <td>Chief Commercial Officer, Head of Sales</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Payment Rails & GTM</a></td>
+            <td>Live Ashby job posting for Enterprise AE EMEA selling regulated stablecoin payment rails and liquidity infrastructure to fintechs and payment service providers.</td>
+            <td>
+              <div class="ac-mirror">"Your active Ashby posting for an Enterprise AE in EMEA points directly to the challenge of finding high-performing enterprise sellers with native fluency in payment rails and regulated liquidity."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://payhawk.com" target="_blank" class="ac-link">Payhawk</a>
+              <span class="ac-domain">payhawk.com</span>
+              <span class="ac-tag" style="margin-top:6px">Commercial Cards</span>
+            </td>
+            <td>Regional VP Sales, Head of Commercial</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Payment Rails & GTM</a></td>
+            <td>Live European requisition for Enterprise Account Executive expanding corporate visa card and ERP accounting automation across mid-market and enterprise CFOs.</td>
+            <td>
+              <div class="ac-mirror">"Scaling Payhawk's commercial card infrastructure across Europe requires sales executives who can consult directly with CFOs on multi-entity ERP integration and expense governance."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://condukt.com" target="_blank" class="ac-link">Condukt</a>
+              <span class="ac-domain">condukt.com</span>
+              <span class="ac-tag" style="margin-top:6px">Banking Orchestration</span>
+            </td>
+            <td>Co-Founder & CEO, Head of Commercial</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Payment Rails & GTM</a></td>
+            <td>Live Ashby search for Founding Account Executive selling embedded banking orchestration and ledger software to scaling financial institutions.</td>
+            <td>
+              <div class="ac-mirror">"Condukt's active Ashby search for a Founding AE highlights the critical hurdle of finding early-stage commercial talent who understand core banking ledgers and can close initial lighthouse accounts."</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL CLUSTERS -->
+<section id="clusters">
+  <div class="wrap">
+    <p class="eyebrow">Signal Clusters</p>
+    <h2>The operational triggers we monitor.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Accounts enter the dispatch when multi-layered fintech hiring triggers align. We monitor live requisitions for compliance and commercial operators navigating European banking frameworks before drafting a single word.</p>
+
+    <div class="clusters-grid">
+      <div class="c-box" id="cluster-01">
+        <span class="c-badge">CLUSTER 01</span>
+        <h3>European & UK Fintechs Expanding Compliance & Risk</h3>
+        <p>Fintech scaleups, payment institutions, and neobanks scaling past Series A facing direct regulatory scrutiny from the FCA, BaFin, or Central Bank of Ireland, actively seeking MLROs and Financial Crime Leads.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Active Ashby or Greenhouse posting for MLRO, Head of Compliance, or Risk Lead in the UK or Europe</li>
+          <li>Operating under FCA, EMI (Electronic Money Institution), or BaFin regulatory regimes</li>
+          <li>Headcount over 50 with rapid payment transaction volume growth</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>FLP wedge:</strong> Founder-led talent partnership by Fabien Le Pichon delivering pre-vetted compliance leaders with verified regulatory tenure and deep audit track records.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-02">
+        <span class="c-badge">CLUSTER 02</span>
+        <h3>Fintech Infrastructure Scaleups Hiring Enterprise GTM</h3>
+        <p>B2B fintech platforms and payment rail providers experiencing rapid enterprise demand where finding Account Executives who understand payment economics, interchange, and PCI DSS compliance is the primary bottleneck.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Active search for Enterprise Account Executive or Commercial Lead on Ashby or Greenhouse</li>
+          <li>Specialized product focus in payments, cards, ledger orchestration, or crypto rails</li>
+          <li>Targeting enterprise financial institutions and CFO buyer personas</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>FLP wedge:</strong> Sourcing high-performing fintech sales operators who navigate long institutional sales cycles, banking procurement, and technical API integrations.
+        </div>
+      </div>
+    </div>
+
+    <!-- How Automyze Operates (Below Signal Clusters) -->
+    <div class="callout-box">
+      <span class="lbl" style="color:var(--brass)">Operating Philosophy</span>
+      <h3 style="margin-top:8px">How Automyze operates: proprietary Signal Clusters vs. rented data</h3>
+      <p>Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around Signal Clusters: multi-layered, observable public facts that prove an Active Pain Trigger inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live technical bottlenecks and architectural strain directly from job boards, engineer commits, and app store release notes. Read more on our philosophy and methodology <a href="https://automyzeai.com/#method" style="color:var(--forest);font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CALL / BOOK -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#C9BFA4">Scale Outbound</p>
+    <h2>Turn this into a repeatable <em>outbound engine</em>.</h2>
+    <p>This 10-account dispatch is a single slice of what is possible. If you want to scale this into an automated outbound motion covering your entire market, test message-market fit, and run pain-signal outreach, you can work with Automyze or hire Rivesh as a full-time dedicated or fractional Go-To-Market Engineer.</p>
+    <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn">Book a strategy call</a>
+    <div class="final-links">
+      <a href="mailto:riveshk@automyzeai.com">riveshk@automyzeai.com</a>
+      <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn" style="padding:10px 20px;font-size:13px">Book a call</a>
+      <span>© 2026 Automyze</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Instant CSV Download Script & Scroll Observer -->
+<script>
+(function(){
+  // Sticky nav scroll threshold
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive: true});
+
+  // IntersectionObserver for graceful, non-jarring scroll reveals
+  var targets = document.querySelectorAll('section > .wrap > *');
+  for(var i = 0; i < targets.length; i++){
+    if(!targets[i].closest('.hero')) {
+      targets[i].classList.add('rv', 'rv-u');
+    }
+  }
+  var all = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -5% 0px'});
+    for(var k = 0; k < all.length; k++) io.observe(all[k]);
+  } else {
+    for(var k = 0; k < all.length; k++) all[k].classList.add('in');
+  }
+
+  // Instant CSV Download
+  var csvData = "client_name,client_domain,signal_cluster,target_account_name,target_account_domain,target_persona,observable_evidence,opening_angle\n" +
+    'FLP Recruitment,flprecruitment.com,European & UK Fintechs Expanding Compliance & Risk,Airwallex,airwallex.com,"Global Head of Compliance, VP EMEA","Live Ashby requisition for Senior Director EU & ME, MLRO to lead regional compliance architecture, oversee AML/CTF programs, and serve as primary regulatory liaison across Europe.","Your live Ashby search for a Senior Director and MLRO to lead regional compliance architecture highlights the rigorous regulatory oversight required across European cross-border payment rails."\n' +
+    'FLP Recruitment,flprecruitment.com,European & UK Fintechs Expanding Compliance & Risk,Lendable,lendable.co.uk,"Chief Risk Officer, Head of Compliance","Live Ashby posting for Head of Compliance Monitoring owning risk-based monitoring framework and reporting directly to executive compliance committee.","Lendable active Ashby posting for Head of Compliance Monitoring underscores the challenge of scaling AI-driven credit while maintaining strict FCA risk-based monitoring."\n' +
+    'FLP Recruitment,flprecruitment.com,European & UK Fintechs Expanding Compliance & Risk,GetGround,getground.co.uk,"Chief Executive Officer, Head of Legal & Compliance","Live Ashby search for Compliance and Risk Lead managing regulatory obligations, risk registers, and AML/financial crime investigations.","Your active search on Ashby for a Compliance and Risk Lead highlights GetGround operational focus on tightening AML and financial crime protocols as transaction volume scales."\n' +
+    'FLP Recruitment,flprecruitment.com,European & UK Fintechs Expanding Compliance & Risk,Moss,getmoss.com,"Group Chief Compliance Officer, VP Legal","Live Ashby requisition for Deputy MLRO overseeing Anti-Financial Crime (AFC/AML), corporate card fraud, and BaFin/ZAG-MaRisk regulatory compliance.","Moss active Ashby recruitment for a Deputy MLRO to oversee AFC/AML and card fraud reflects the escalating regulatory oversight across European corporate spend infrastructure."\n' +
+    'FLP Recruitment,flprecruitment.com,European & UK Fintechs Expanding Compliance & Risk,Ebury,ebury.com,"Head of Compliance & FinCrime, Chief Compliance Officer","Live Greenhouse posting for Product Manager - Financial Crime scaling high-throughput payment screening and automated AML transaction monitoring.","Ebury Greenhouse search for a Product Manager in Financial Crime to scale payment and name screening reflects the technical overhead of preventing fraud across high-volume FX corridors."\n' +
+    'FLP Recruitment,flprecruitment.com,Fintech Infrastructure Scaleups Hiring Enterprise GTM,Flagright,flagright.com,"Co-Founder & CEO, Head of Sales","Live Ashby posting for Senior Enterprise AE selling real-time transaction monitoring and AML compliance infrastructure directly to fintechs, PSPs, and neobanks.","Your active Ashby requisition for a Senior Enterprise AE highlights Flagright push to secure senior sales talent who understand banking regulatory pain and can close complex compliance deals."\n' +
+    'FLP Recruitment,flprecruitment.com,Fintech Infrastructure Scaleups Hiring Enterprise GTM,Evervault,evervault.com,"Head of Sales, VP Go-To-Market","Live Ashby requisition for Account Executive with specialized fintech and payments experience selling developer encryption for PCI DSS compliance.","Evervault active search for an Account Executive focused on fintech and payments reflects the high domain knowledge required to sell encryption infrastructure to compliance-conscious engineering leaders."\n' +
+    'FLP Recruitment,flprecruitment.com,Fintech Infrastructure Scaleups Hiring Enterprise GTM,Velocity,velocity.trade,"Chief Commercial Officer, Head of Sales","Live Ashby job posting for Enterprise AE EMEA selling regulated stablecoin payment rails and liquidity infrastructure to fintechs and payment service providers.","Your active Ashby posting for an Enterprise AE in EMEA points directly to the challenge of finding high-performing enterprise sellers with native fluency in payment rails and regulated liquidity."\n' +
+    'FLP Recruitment,flprecruitment.com,Fintech Infrastructure Scaleups Hiring Enterprise GTM,Payhawk,payhawk.com,"Regional VP Sales, Head of Commercial","Live European requisition for Enterprise Account Executive expanding corporate visa card and ERP accounting automation across mid-market and enterprise CFOs.","Scaling Payhawk commercial card infrastructure across Europe requires sales executives who can consult directly with CFOs on multi-entity ERP integration and expense governance."\n' +
+    'FLP Recruitment,flprecruitment.com,Fintech Infrastructure Scaleups Hiring Enterprise GTM,Condukt,condukt.com,"Co-Founder & CEO, Head of Commercial","Live Ashby search for Founding Account Executive selling embedded banking orchestration and ledger software to scaling financial institutions.","Condukt active Ashby search for a Founding AE highlights the critical hurdle of finding early-stage commercial talent who understand core banking ledgers and can close initial lighthouse accounts."\n';
+
+  function triggerDownload() {
+    var blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'automyze_flp_10_accounts.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  var b1 = document.getElementById('downloadCsvBtn');
+  var b2 = document.getElementById('downloadCsvBtnTable');
+  if(b1) b1.addEventListener('click', triggerDownload);
+  if(b2) b2.addEventListener('click', triggerDownload);
+})();
+</script>
+
+</body>
+</html>
