@@ -1,430 +1,645 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Accounts & Signal-Led GTM Playbook | Lexi</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-            },
-            dark: {
-              bg: '#0A0E17',
-              card: '#111827',
-              border: '#1F2937',
-              hover: '#1a2234',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    @media print {
-      body { background: white !important; color: black !important; }
-      .no-print { display: none !important; }
-      .print-border { border: 1px solid #e2e8f0 !important; }
-      .text-slate-100, .text-slate-200, .text-white { color: #0f172a !important; }
-      .text-slate-400, .text-slate-300 { color: #475569 !important; }
-      .bg-dark-card, .bg-dark-bg { background: white !important; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexi | Live Target Accounts & Signal Playbook | Automyze</title>
+<meta name="description" content="A curated dispatch of 10 litigation practices and enterprise scaleups with verified active operational bottlenecks across deposition summaries, medical chronologies, and contract redlines.">
+
+<!-- Favicon: Forest Green Logo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3D2B'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='22' font-weight='600' fill='%23F4F2ED'%3Ea%3C/text%3E%3Ccircle cx='23.5' cy='21.5' r='2.5' fill='%238A6D3B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F4F2ED;
+  --ink:#16181A;
+  --ink2:#5A5F63;
+  --ink3:#8B8F93;
+  --rule:#DDD9D1;
+  --rule2:#C9C4B8;
+  --forest:#1F3D2B;
+  --forest-hover:#173022;
+  --brass:#8A6D3B;
+  --card:#FBFAF7;
+  --tint:#F0EEE8;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter Tight',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+
+h1,h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+h1{font-size:56px;line-height:1.06;letter-spacing:-.015em;margin-bottom:20px}
+h1 em,h2 em{font-style:italic;color:var(--forest)}
+h2{font-size:38px;line-height:1.12;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:500;line-height:1.35}
+p{line-height:1.65}
+
+.lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule2)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--forest);display:inline-block;margin-right:7px;vertical-align:1px}
+
+section{border-bottom:1px solid var(--rule);padding:72px 0}
+.two{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
+
+.btn{
+  background:var(--forest);
+  color:var(--paper);
+  padding:13px 26px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.btn:hover{background:var(--forest-hover);transform:translateY(-1px);color:var(--paper)}
+.btn2{
+  font-size:14px;
+  color:var(--ink2);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule2);
+  padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
+}
+.btn2:hover{color:var(--ink);border-color:var(--ink)}
+.fine{font-size:12.5px;color:var(--ink3)}
+
+/* Navigation */
+nav{
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  transition:border-color .2s ease;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Instrument Serif',Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
+.logo em{color:var(--forest);font-style:italic}
+.nav-r{display:flex;align-items:center;gap:26px}
+.nav-r a{font-size:13.5px;color:var(--ink2);text-decoration:none;transition:color .15s ease}
+.nav-r a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--forest)!important;
+  color:var(--paper)!important;
+  padding:8px 18px!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  border-radius:0;
+}
+.nav-cta:hover{background:var(--forest-hover)!important}
+
+/* Hero */
+.hero{padding:80px 0 0;border-bottom:none}
+.hero .sub{font-size:19px;color:var(--ink2);max-width:760px;margin-bottom:30px;line-height:1.55}
+.hero .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+
+/* Metric Band */
+.band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--tint);margin-top:60px}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+.cell{padding:26px 36px;border-right:1px solid var(--rule)}
+.cell:last-child{border-right:none}
+.cell .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1;color:var(--forest)}
+
+/* The Strategic Wedge */
+.wedge-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--rule2)}
+.wedge-grid>div{padding:34px 30px}
+.wedge-grid>div:first-child{border-right:1px solid var(--rule2);background:var(--paper)}
+.wedge-grid h4{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.wedge-grid p{font-size:13.5px;color:var(--ink2);line-height:1.6}
+
+/* Accounts Table */
+.table-wrap{
+  overflow-x:auto;
+  margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--rule2);
+}
+table.act{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+}
+table.act th{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  font-weight:500;
+  padding:14px 18px;
+  background:var(--tint);
+  border-bottom:1px solid var(--rule2);
+  white-space:nowrap;
+}
+table.act td{
+  font-size:13.5px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+  line-height:1.55;
+  color:var(--ink);
+}
+table.act tr:last-child td{border-bottom:none}
+table.act tr:hover td{background:rgba(244,242,237,.5)}
+.ac-link{font-weight:600;color:var(--forest);text-decoration:none}
+.ac-link:hover{text-decoration:underline}
+.ac-domain{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink3);display:block;margin-top:2px}
+.ac-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  background:var(--paper);
+  border:1px solid var(--rule2);
+  padding:2px 7px;
+  color:var(--ink2);
+  display:inline-block;
+}
+.ac-cluster-link{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--forest);
+  text-decoration:none;
+  background:var(--tint);
+  border:1px solid rgba(31,61,43,0.18);
+  padding:4px 8px;
+  display:inline-block;
+  line-height:1.4;
+  transition:all .15s ease;
+}
+.ac-cluster-link:hover{
+  background:var(--paper);
+  border-color:var(--forest);
+  text-decoration:underline;
+}
+.ac-mirror{
+  font-size:12.5px;
+  color:var(--ink2);
+  background:var(--tint);
+  padding:8px 10px;
+  border-left:2px solid var(--brass);
+  font-style:normal;
+  margin-top:4px;
+}
+
+/* Signal Clusters Blocks */
+.clusters-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.c-box{background:var(--card);border:1px solid var(--rule2);padding:28px}
+.c-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);display:block;margin-bottom:8px}
+.c-box h3{font-size:20px;font-weight:500;margin-bottom:14px;color:var(--ink)}
+.c-box p{font-size:14px;color:var(--ink2);margin-bottom:14px;line-height:1.6}
+.c-signals{list-style:none;margin:16px 0;padding-top:12px;border-top:1px solid var(--rule)}
+.c-signals li{font-size:13px;color:var(--ink2);padding:5px 0;position:relative;padding-left:16px}
+.c-signals li::before{content:"+";position:absolute;left:0;color:var(--forest);font-family:'IBM Plex Mono',monospace}
+.c-wedge{
+  background:var(--tint);
+  border-left:3px solid var(--forest);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--forest);
+  margin-top:16px;
+}
+
+/* Callout Section (Proprietary Clusters vs Rented Data) */
+.callout-box{
+  background:var(--card);
+  border:1px solid var(--rule2);
+  padding:32px;
+  margin-top:28px;
+}
+.callout-box h3{font-family:'Instrument Serif',Georgia,serif;font-size:26px;margin-bottom:12px;color:var(--forest)}
+.callout-box p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:920px}
+
+/* Final Call Section */
+.final{background:var(--forest);color:var(--paper);border-bottom:none}
+.final h2{color:var(--paper);max-width:680px}
+.final h2 em{color:#C9BFA4}
+.final p{color:#BFC7C0;max-width:580px;margin-top:18px;font-size:16px}
+.final .btn{background:var(--paper);color:var(--forest);margin-top:30px}
+.final .btn:hover{background:#EDE9DF;color:var(--forest-hover)}
+.final-links{display:flex;gap:20px;align-items:center;margin-top:20px}
+.final-links a{color:#D2DDD5;font-size:13.5px;text-decoration:none;border-bottom:1px dotted #8FA095}
+.final-links a:hover{color:var(--paper);border-bottom-style:solid}
+
+/* Footer */
+footer{padding:34px 0;font-size:13px;color:var(--ink3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{font-size:20px}
+
+/* Scroll Reveals (Subtle & Non-Jarring) */
+.rv{opacity:0;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-u{transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* Print Styles */
+@media print {
+  nav, .no-print, button, .btn { display:none!important }
+  body { background:white!important; color:black!important }
+  .table-wrap, table.act { border:1px solid #ccc!important; width:100%!important }
+  table.act td, table.act th { border-bottom:1px solid #ddd!important }
+  section { padding:24px 0!important; page-break-inside:avoid }
+  .wrap { max-width:100%!important; padding:0!important }
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .wrap{padding:0 24px}
+  .two,.wedge-grid,.clusters-grid{grid-template-columns:1fr;gap:24px}
+  .wedge-grid>div:first-child{border-right:none;border-bottom:1px solid var(--rule2)}
+  h1{font-size:38px}
+  h2{font-size:29px}
+  .band .wrap{grid-template-columns:1fr 1fr}
+  .cell:nth-child(2){border-right:none}
+  .cell:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .cell:nth-child(4){border-top:1px solid var(--rule)}
+  .nav-r a:not(.nav-cta){display:none}
+  section{padding:54px 0}
+}
+</style>
 </head>
-<body class="bg-[#0A0E17] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+<body>
 
-  <!-- Top Navigation / Brand Bar -->
-  <header class="border-b border-slate-800/80 bg-[#0A0E17]/80 backdrop-blur sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
-          A
+<nav id="nav">
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div class="nav-r">
+      <a href="#accounts">Accounts</a>
+      <a href="#wedge">The Wedge</a>
+      <a href="#clusters">Signal Clusters</a>
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Target Dispatch</p>
+      <h1>Ten live target accounts for <em>Lexi</em>.</h1>
+      <p class="sub">A curated dispatch of 10 litigation practices and enterprise scaleups with verified active operational bottlenecks across deposition summaries, medical chronologies, and contract redlines.</p>
+      <div class="cta-row">
+        <button id="downloadCsvBtn" class="btn">Download Accounts (.CSV)</button>
+        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn2">Book a strategy call</a>
+      </div>
+      <p class="fine">Verified against active litigation paralegal requisitions, docket filings, and enterprise contract volumes.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <div class="cell"><div class="k">Accounts verified</div><div class="v">10</div></div>
+      <div class="cell"><div class="k">Primary source checks</div><div class="v">100%</div></div>
+      <div class="cell"><div class="k">Core bottleneck</div><div class="v" style="font-size:20px">Deposition & MSA backlog</div></div>
+      <div class="cell"><div class="k">Unverified accounts</div><div class="v">0</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STRATEGIC WEDGE -->
+<section id="wedge">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The Strategic Wedge</p>
+      <h2>Why selling generic legal AI fails, and where Lexi <em>wins</em>.</h2>
+      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">When legal platforms pitch AI document analysis or web copilots, litigation partners and general counsels dismiss them because they hallucinate citations, breach confidentiality, or force lawyers to leave Microsoft Word. Lexi wins by embedding natively where lawyers draft.</p>
+    </div>
+    <div>
+      <div class="wedge-grid">
+        <div>
+          <span class="lbl" style="color:#A04040">The Commodity Trap</span>
+          <h4 style="margin-top:6px">Pitching "AI Legal Copilot"</h4>
+          <p>Browser-based chat tools force attorneys and paralegals to copy-paste confidential client records into third-party tabs. They lack verifiable page-and-line citations, break on 500-page deposition transcripts, and disrupt the core Word drafting workflow.</p>
         </div>
         <div>
-          <span class="font-bold tracking-tight text-white">Automyze AI</span>
-          <span class="text-xs text-slate-400 hidden sm:inline ml-2">| Signal-Led GTM Engine</span>
+          <span class="lbl" style="color:var(--forest)">The High-Converting Wedge</span>
+          <h4 style="margin-top:6px">Native Microsoft Word Legal Assistant</h4>
+          <p>Lexi operates directly inside Microsoft Word. It compiles deposition summaries, medical chronologies, and contract redlines with click-to-verify document anchors, maintaining 100% human-in-the-loop accuracy with zero context switching.</p>
         </div>
-      </div>
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          100% Deterministic Verified
-        </span>
-        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="no-print hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-sm transition">
-          Book GTM Strategy Call
-        </a>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-
-    <!-- Hero Title & Context -->
-    <section class="space-y-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-indigo-950/60 text-indigo-300 border border-indigo-800/50">
-        PROSPECT DOSSIER & ACCOUNT DISPATCH
+<!-- ACCOUNTS TABLE -->
+<section id="accounts">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div>
+        <p class="eyebrow">Live Target Accounts</p>
+        <h2>Ten accounts with active discovery and contract bottlenecks.</h2>
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-        Signal-Led GTM Playbook & 10 Live Accounts for <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Lexi</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed">
-        Engineered for <strong>Harshit Garg</strong> (CEO) & <strong>Kiran Mohan</strong> (CTO). A curated dispatch of 10 verified target accounts with acute operational strain across litigation discovery backlogs and high-velocity enterprise contract redlines.
-      </p>
-    </section>
-
-    <!-- The Automyze Differentiation Callout (Subtle Marketing) -->
-    <section class="p-6 rounded-xl border border-indigo-900/60 bg-gradient-to-br from-indigo-950/30 via-slate-900/40 to-slate-900/20 shadow-xl">
-      <div class="flex items-start gap-4">
-        <div class="p-2.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 mt-0.5">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <div class="space-y-2">
-          <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-300 font-mono">
-            How Automyze Operates: Proprietary Signal Clusters vs. Rented Data
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around <strong>Signal Clusters</strong>—multi-layered, observable public facts that prove an <strong>Active Pain Trigger</strong> inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live administrative friction directly from active litigation paralegal recruitment, trial docket surges, and enterprise procurement velocity.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Strategic Wedge Teardown -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
-        <span>The Strategic Wedge:</span>
-        <span class="text-indigo-400 font-normal text-xl">Why Pitching "AI Legal Chatbots" Fails & Where Lexi Wins</span>
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-5 rounded-xl border border-rose-900/50 bg-rose-950/10 space-y-3">
-          <div class="text-xs font-mono font-semibold uppercase text-rose-400 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-rose-500"></span> The Commodity Trap
-          </div>
-          <h4 class="font-bold text-slate-100">Pitching "AI Legal Assistant / Generative AI Chat"</h4>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            When legaltech platforms pitch <em>"Generative AI for Lawyers,"</em> law partners and General Counsels tune out. They fear client data leaks, hate writing prompts, and refuse to upload 300-page confidential deposition binders into an external web chat.
-          </p>
-        </div>
-        <div class="p-5 rounded-xl border border-emerald-900/50 bg-emerald-950/10 space-y-3">
-          <div class="text-xs font-mono font-semibold uppercase text-emerald-400 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> The High-Converting Wedge
-          </div>
-          <h4 class="font-bold text-slate-100">Positioning as the "Word-Native AI Associate"</h4>
-          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-            Lexi wins by operating directly inside existing attorney workflows: <em>"Zero prompt engineering, zero browser copy-pasting. Lexi runs natively inside Microsoft Word & Outlook to generate citation-anchored medical chronologies and clause-compliant MSA redlines in minutes."</em>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Table of 10 Live Verified Accounts -->
-    <section class="space-y-4">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 class="text-2xl font-bold tracking-tight text-white">10 Verified Live Target Accounts</h2>
-          <p class="text-xs sm:text-sm text-slate-400">Filtered through our Second-Pass Deterministic Verification Gate. Zero deadpools, zero generic enterprise fluff.</p>
-        </div>
-        <button id="downloadCsvBtn" class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition self-start sm:self-auto">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          Download Accounts (.CSV)
-        </button>
-      </div>
-
-      <!-- Account Table -->
-      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#111827] shadow-xl">
-        <table class="w-full text-left text-xs text-slate-300 divide-y divide-slate-800">
-          <thead class="bg-slate-900/80 text-slate-400 font-mono text-[11px] uppercase tracking-wider">
-            <tr>
-              <th scope="col" class="px-4 py-3.5">Account & Domain</th>
-              <th scope="col" class="px-4 py-3.5">Target Persona</th>
-              <th scope="col" class="px-4 py-3.5">Signal Cluster</th>
-              <th scope="col" class="px-4 py-3.5">Deterministic Evidence (Why Right Now?)</th>
-              <th scope="col" class="px-4 py-3.5">Contextual Hook Angle</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-800/60 font-sans">
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://millermartin.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Miller & Martin PLLC</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">millermartin.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Managing Partner / Litigation Practice Chair</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Cluster 1: Litigation Law</span></td>
-              <td class="px-4 py-3 text-slate-300">Active recruitment for Litigation Paralegals in Atlanta & Chattanooga handling complex discovery, medical chronology compilation, and deposition prep.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Noticed Miller & Martin’s active recruitment for Litigation Paralegals across Atlanta and Chattanooga to support expanding commercial and tort discovery caseloads..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://kmllp.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Kirby McInerney LLP</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">kmllp.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Head of Securities Litigation / Managing Partner</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Cluster 1: Securities Class Action</span></td>
-              <td class="px-4 py-3 text-slate-300">Active hiring for Class Action Litigation Paralegals managing multi-plaintiff document indexing, SEC disclosure cross-checks, and chronology exhibits.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Your active search for a Class Action Litigation Paralegal to manage multi-plaintiff document reviews and disclosure indexing reflects the intensive administrative lift of securities litigation..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://kiernantrebach.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Kiernan Trebach LLP</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">kiernantrebach.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Managing Partner / Litigation Operations Director</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Cluster 1: Insurance Defense</span></td>
-              <td class="px-4 py-3 text-slate-300">Regional insurance defense firm actively hiring Paralegals across DC/MD/VA for high-volume medical record summaries, IME reviews, and discovery responses.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Kiernan Trebach’s active hiring for Litigation Paralegals across the Mid-Atlantic to support trial defense and medical liability claims highlights the continuous volume of discovery reviews..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://gallowaylawfirm.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Galloway Law Firm</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">gallowaylawfirm.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Managing Director / Litigation Support Manager</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Cluster 1: Regional Trial Defense</span></td>
-              <td class="px-4 py-3 text-slate-300">Gulf Coast litigation powerhouse actively seeking Casualty & Insurance Defense Paralegals to summarize voluminous depositions and medical records.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Your active recruitment for Casualty Litigation Paralegals across your Gulf Coast offices points directly to the ongoing operational strain of processing voluminous depositions..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://smbtrials.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Swanson, Martin & Bell</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">smbtrials.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Managing Partner / Toxic Tort Practice Group</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Cluster 1: Toxic Tort & Product Liability</span></td>
-              <td class="px-4 py-3 text-slate-300">Trial defense firm managing extensive product liability and toxic tort caseloads actively recruiting Litigation Project Assistants for complex document organization.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Swanson Martin & Bell’s recruitment for Litigation Project Assistants to support complex toxic tort and product liability dockets highlights the sheer volume of multi-year record organization..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://incident.io" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">incident.io</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">incident.io</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Head of Legal / General Counsel</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Cluster 2: B2B SaaS Scaleup</span></td>
-              <td class="px-4 py-3 text-slate-300">Fast-growing Series A/B incident management platform scaling enterprise sales, with lean legal counsel handling high volumes of enterprise MSAs, SLAs, and security addenda.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"As incident.io scales enterprise sales across global infrastructure teams, accelerating customer MSA turnarounds while maintaining strict security addenda terms creates an immediate bottleneck..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://finout.io" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Finout</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">finout.io</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Head of Legal / VP Operations & Compliance</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Cluster 2: FinOps Scaleup</span></td>
-              <td class="px-4 py-3 text-slate-300">FinOps enterprise platform expanding globally with rapid customer acquisition, requiring constant vendor contract and enterprise security addenda reviews.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Your team’s rapid enterprise expansion across FinOps platforms highlights the escalating volume of bespoke customer security questionnaires and contract markups hitting your legal desk..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://baseten.co" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Baseten</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">baseten.co</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Head of Legal / Legal Counsel</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Cluster 2: AI Infrastructure</span></td>
-              <td class="px-4 py-3 text-slate-300">AI model deployment infrastructure company closing Fortune 500 contracts, experiencing massive enterprise procurement MSA review backlogs with lean legal staffing.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"Baseten’s rapid enterprise adoption by Fortune 500 AI engineering teams creates a steady influx of complex customer MSAs, data privacy exhibits, and GPU uptime SLAs..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://hightouch.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Hightouch</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">hightouch.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">General Counsel / Head of Legal & Trust</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Cluster 2: Composable Data Cloud</span></td>
-              <td class="px-4 py-3 text-slate-300">Leading composable CDP platform selling to enterprise compliance and data teams, managing a high volume of custom Data Processing Agreements (DPAs) and vendor contracts.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"With Hightouch processing enterprise customer data across major brands, your legal desk inevitably manages continuous rounds of custom DPAs and enterprise risk assessments..."</td>
-            </tr>
-            <tr class="hover:bg-slate-800/30 transition">
-              <td class="px-4 py-3 font-semibold text-white">
-                <a href="https://breachrx.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">BreachRx</a>
-                <span class="block text-[11px] text-slate-400 font-mono font-normal">breachrx.com</span>
-              </td>
-              <td class="px-4 py-3 text-slate-300">Head of Legal & Regulatory Affairs</td>
-              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Cluster 2: Regulated Cyber Scaleup</span></td>
-              <td class="px-4 py-3 text-slate-300">Incident management and compliance platform selling to regulated industries, handling continuous compliance, SLA, and enterprise MSA reviews with lean in-house counsel.</td>
-              <td class="px-4 py-3 text-slate-400 italic">"BreachRx’s expansion across heavily regulated enterprise and healthcare accounts requires meticulous review of enterprise compliance guarantees and liability frameworks on every deal..."</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Signal Clusters & Trigger Tracks Breakdown -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-bold tracking-tight text-white">Signal Clusters: The Operational Triggers</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Cluster 1 -->
-        <div class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="px-2.5 py-1 rounded text-xs font-mono bg-indigo-950 text-indigo-400 border border-indigo-800/50">SIGNAL CLUSTER 1</span>
-            <span class="text-xs text-slate-400">Mid-Sized Litigation Practices (50–250 Attorneys)</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Paralegal Capacity Crises & Deposition Backlogs</h3>
-          <div class="space-y-2 text-xs sm:text-sm text-slate-300">
-            <p><strong>The Active Pain Trigger:</strong> Mid-sized litigation firms are handling massive surges in multi-party litigation, toxic torts, and insurance claims. Paralegals spend up to 40% of their billable hours manually indexing deposition transcripts and building medical chronologies, creating a severe bottleneck right before trial deadlines.</p>
-            <p><strong>The 3 Verifiable Signals:</strong></p>
-            <ul class="list-disc list-inside text-slate-400 space-y-1 pl-1 text-xs font-mono">
-              <li>50–250 litigation attorneys handling active trial dockets</li>
-              <li>Live job posting for Litigation Paralegal / Case Assistant</li>
-              <li>Explicit requirement for medical chronology or deposition digest preparation</li>
-            </ul>
-          </div>
-          <div class="p-3.5 rounded-lg bg-indigo-950/40 border border-indigo-900/40 text-xs text-indigo-300">
-            <strong>Lexi's Wedge:</strong> Runs inside Microsoft Word to draft citation-backed deposition digests and medical chronologies in under 30 minutes, saving 15+ hours per associate each week.
-          </div>
-        </div>
-
-        <!-- Cluster 2 -->
-        <div class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-4">
-          <div class="flex items-center justify-between">
-            <span class="px-2.5 py-1 rounded text-xs font-mono bg-purple-950 text-purple-400 border border-purple-800/50">SIGNAL CLUSTER 2</span>
-            <span class="text-xs text-slate-400">High-Growth B2B Scaleups (Post-Series A/B)</span>
-          </div>
-          <h3 class="text-lg font-bold text-white">Solo In-House Counsel Drowning in Enterprise MSAs</h3>
-          <div class="space-y-2 text-xs sm:text-sm text-slate-300">
-            <p><strong>The Active Pain Trigger:</strong> Fast-growing B2B software companies with 50–250 employees and a solo General Counsel are closing enterprise deals. The solo GC is inundated with customer-paper MSAs, bespoke DPAs, and security exhibits, creating a friction point that slows quarter-end deal closes.</p>
-            <p><strong>The 3 Verifiable Signals:</strong></p>
-            <ul class="list-disc list-inside text-slate-400 space-y-1 pl-1 text-xs font-mono">
-              <li>Series A/B enterprise SaaS company with 50–200 headcount</li>
-              <li>Lean legal team (1 General Counsel / Head of Legal)</li>
-              <li>Active expansion into enterprise tiers with custom security/DPA needs</li>
-            </ul>
-          </div>
-          <div class="p-3.5 rounded-lg bg-purple-950/40 border border-purple-900/40 text-xs text-purple-300">
-            <strong>Lexi's Wedge:</strong> Natively parses customer paper in Word against company fallback negotiation playbooks, returning redlined MSAs to enterprise sales reps in under 15 minutes.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GTM Play Explainer (Campaign Strategy & Fallback Mechanics) -->
-    <section class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-6">
-      <div class="space-y-2">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/50">
-          GTM PLAY EXPLAINER
-        </div>
-        <h2 class="text-2xl font-bold tracking-tight text-white">The Execution Strategy: Pain Signal Led Outreach</h2>
-        <p class="text-xs sm:text-sm text-slate-400">How to execute this motion systematically, what angles to lead with, and what fallback to trigger if primary signals shift.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 1: SIGNAL DETECTION</div>
-          <h4 class="font-bold text-sm text-white">Scrape Active Hiring & Court Filings</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Monitor law firm career pages and Ashby/Greenhouse for keywords <code>medical chronology</code>, <code>deposition summary</code>, and <code>litigation paralegal</code>. Never contact a firm unless active staffing bottlenecks are publicly confirmed.
-          </p>
-        </div>
-        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 2: PAIN SIGNAL LED OUTREACH</div>
-          <h4 class="font-bold text-sm text-white">3-Sentence Crawford Mirror</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            Mirror their observable workload (e.g. <em>"Noticed your active search for Litigation Paralegals in Atlanta to handle discovery..."</em>). Highlight the 40% associate time tax, and ask for curiosity regarding Word-native automation benchmarks.
-          </p>
-        </div>
-        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
-          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 3: VALUE-BASED FALLBACK</div>
-          <h4 class="font-bold text-sm text-white">Permissionless Deposition Digest</h4>
-          <p class="text-xs text-slate-400 leading-relaxed">
-            If partners don't respond, deliver a <strong>Permissionless Deposition Audit</strong>: run a publicly available mock trial deposition through Lexi to showcase a 1-page citation-backed digest completed in under 60 seconds with zero halluncinations.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Agency Call to Action / Fractional GTME Footer -->
-    <section class="p-8 rounded-2xl border border-indigo-900/80 bg-gradient-to-br from-indigo-950/50 via-slate-900 to-[#0A0E17] space-y-6 text-center sm:text-left">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div class="space-y-3 max-w-2xl">
-          <span class="px-3 py-1 rounded-full text-xs font-mono bg-indigo-900/60 text-indigo-300 border border-indigo-700/60">
-            SCALE THIS REPEATABLY
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            Want to Turn This Into a Repeatable Outbound Sales Engine?
-          </h3>
-          <p class="text-sm text-slate-300 leading-relaxed">
-            This 10-account dispatch is just 1% of what is possible. If you want to scale this into an automated outbound motion—complete with <strong>Entire TAM Mapping</strong>, <strong>Message-Market Fit</strong>, <strong>Pain Signal Led Outreach</strong>, and <strong>Value-Based Intro Offers</strong>—you can hire a full-time or fractional Go-To-Market Engineer (GTME).
-          </p>
-          <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-2 justify-center sm:justify-start">
-            <span class="flex items-center gap-1.5 text-slate-300">
-              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              TAM Signal Mapping
-            </span>
-            <span class="flex items-center gap-1.5 text-slate-300">
-              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Waterfall Enrichment
-            </span>
-            <span class="flex items-center gap-1.5 text-slate-300">
-              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Fractional GTME Placement
-            </span>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-3 w-full sm:w-auto no-print">
-          <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 shadow-xl shadow-indigo-600/30 transition text-center">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            Book Strategy Call
-          </a>
-          <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-medium text-xs text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 transition text-center">
-            Connect with Rivesh on LinkedIn
-          </a>
-          <a href="mailto:riveshk@automyzeai.com" class="text-xs text-center text-slate-400 hover:text-white font-mono transition">
-            riveshk@automyzeai.com
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-6xl mx-auto px-4">
-      © 2026 Automyze AI. All rights reserved. • Engineered for high-conversion B2B GTM.
+      <button id="downloadCsvBtnTable" class="btn" style="padding:10px 20px;font-size:13px">Download CSV</button>
     </div>
-  </footer>
 
-  <!-- Instant CSV Download Script -->
-  <script>
-    document.getElementById('downloadCsvBtn').addEventListener('click', function () {
-      const csvContent = "client_name,client_domain,signal_cluster_id,signal_cluster_name,account_number,target_account_name,target_account_domain,target_persona,active_pain_trigger_evidence,hook_subject_line,sentence_1_mirror,sentence_2_learning,sentence_3_curiosity_ask\\n" +
-        'Lexi,getlexi.io,Signal Cluster 1,"Mid-Sized Litigation Firms with Paralegal Bottlenecks & Deposition Backlog",1,Miller & Martin PLLC,millermartin.com,Managing Partner / Litigation Practice Chair,"Active recruitment for Litigation Paralegals in Atlanta/Chattanooga to handle complex discovery, medical chronology compilation, and witness deposition prep.",Litigation discovery workflows,"Noticed Miller & Martin’s active recruitment for Litigation Paralegals across Atlanta and Chattanooga to support expanding commercial and tort discovery caseloads.",Mid-sized litigation partners often tell us that senior paralegals spend up to 40% of billable hours manually indexing medical records and cross-referencing deposition transcripts rather than on strategic case prep.,Curious how litigation practices are using purpose-built AI legal assistants native to Microsoft Word to cut deposition summary and chronology turnaround from 8 hours to under 30 minutes?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 1,"Mid-Sized Litigation Firms with Paralegal Bottlenecks & Deposition Backlog",2,Kirby McInerney LLP,kmllp.com,Head of Securities & Class Action Litigation / Managing Partner,"Active hiring for Class Action Litigation Paralegals managing multi-plaintiff document indexing, SEC disclosure cross-checks, and chronology exhibits.",Class action document indexing,Your active search for a Class Action Litigation Paralegal to manage multi-plaintiff document reviews and disclosure indexing reflects the intensive administrative lift of securities litigation.,Firms litigating complex financial claims frequently find that associates spend dozens of non-recoverable hours cross-referencing financial disclosures against witness testimony in Excel and Word.,Would it be helpful to see benchmarks on how securities litigators are automating multi-document timeline extraction directly inside Word with zero manual copy-pasting?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 1,"Mid-Sized Litigation Firms with Paralegal Bottlenecks & Deposition Backlog",3,Kiernan Trebach LLP,kiernantrebach.com,Managing Partner / Litigation Operations Director,"Regional insurance defense firm actively hiring Paralegals across DC/MD/VA for high-volume medical record summaries, IME reviews, and discovery responses.",Medical record summary turnaround,Kiernan Trebach’s active hiring for Litigation Paralegals across the Mid-Atlantic to support trial defense and medical liability claims highlights the continuous volume of discovery reviews.,Insurance defense practices often find that sudden surges in claimant medical records create paralegal backlogs that delay initial case evaluations and increase fixed overhead.,Open to exploring how defense teams are generating formatted, citation-backed medical chronologies in minutes without adding administrative headcount?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 1,"Mid-Sized Litigation Firms with Paralegal Bottlenecks & Deposition Backlog",4,Galloway Johnson Tompkins Burr & Smith,gallowaylawfirm.com,Managing Director / Litigation Support Manager,"Gulf Coast regional litigation powerhouse actively seeking Casualty & Insurance Defense Paralegals to summarize voluminous depositions and medical records.",Deposition summary capacity,Your active recruitment for Casualty Litigation Paralegals across your Gulf Coast offices points directly to the ongoing operational strain of processing voluminous depositions and claimant disclosures.,Litigation support managers frequently report that drafting initial deposition digests pulls experienced staff away from imminent trial exhibit preparation.,Curious how regional trial firms are using native Word-integrated AI agents to draft preliminary deposition digests with pinpoint record citations automatically?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 1,"Mid-Sized Litigation Firms with Paralegal Bottlenecks & Deposition Backlog",5,Swanson Martin & Bell LLP,smbtrials.com,Managing Partner / Toxic Tort Practice Group Leader,"Trial defense firm managing extensive product liability and toxic tort caseloads actively recruiting Litigation Project Assistants for complex document organization.",Toxic tort document discovery,Swanson Martin & Bell’s recruitment for Litigation Project Assistants to support complex toxic tort and product liability dockets highlights the sheer volume of multi-year record organization required for trial.,Trial defense teams frequently discover that manually cataloging hundreds of historical technical records and expert witness reports creates massive administrative drag before motions can even be drafted.,Would you be open to reviewing how trial teams are extracting multi-decade fact patterns into verified chronologies with verifiable document anchors in a single afternoon?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 2,"High-Growth B2B Scaleups with Solo In-House Counsel Drowning in MSAs",6,incident.io,incident.io,Head of Legal / General Counsel,"Fast-growing Series A/B incident management platform scaling enterprise sales, with lean legal counsel handling high volumes of enterprise MSAs, SLAs, and security addenda.",Enterprise MSA review velocity,"As incident.io scales enterprise sales across global infrastructure teams, accelerating customer MSA turnarounds while maintaining strict security addenda terms creates an immediate in-house legal bottleneck.",Solo GCs and heads of legal at high-growth software scaleups frequently find that standard enterprise contract redlines consume 60% of their weekly capacity, delaying enterprise deal velocity.,Interested in seeing how B2B legal teams are automating standard playbook contract reviews directly inside Microsoft Word to return redlined MSAs to sales in under 15 minutes?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 2,"High-Growth B2B Scaleups with Solo In-House Counsel Drowning in MSAs",7,Finout,finout.io,Head of Legal / VP Operations & Compliance,"FinOps enterprise platform expanding globally with rapid customer acquisition, requiring constant vendor contract and enterprise security addenda reviews.",Enterprise deal turnaround,Your team’s rapid enterprise expansion across FinOps platforms highlights the escalating volume of bespoke customer security questionnaires and contract markups hitting your legal desk.,In-house legal leaders scaling enterprise motions often struggle to prevent custom customer DPAs and liability clauses from becoming deal friction during end-of-quarter closes.,Curious how in-house counsel are using trained AI legal operating systems to enforce fallback clause positions automatically inside Word?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 2,"High-Growth B2B Scaleups with Solo In-House Counsel Drowning in MSAs",8,Baseten,baseten.co,Head of Legal / Legal Counsel,"AI model deployment infrastructure company closing Fortune 500 contracts, experiencing massive enterprise procurement MSA review backlogs with lean legal staffing.",AI infrastructure contract velocity,Baseten’s rapid enterprise adoption by Fortune 500 AI engineering teams creates a steady influx of complex customer MSAs, data privacy exhibits, and GPU uptime SLAs.,Legal leaders supporting high-velocity AI platforms frequently find themselves drowning in routine procurement paper when sales needs fast turnaround to close quota.,Open to seeing how infrastructure scaleups are auto-generating redlines based on company negotiation playbooks without outsourcing to expensive outside counsel?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 2,"High-Growth B2B Scaleups with Solo In-House Counsel Drowning in MSAs",9,Hightouch,hightouch.com,General Counsel / Head of Legal & Trust,"Leading composable CDP platform selling to enterprise compliance and data teams, managing a high volume of custom Data Processing Agreements (DPAs) and vendor contracts.",Enterprise DPA negotiation,With Hightouch processing enterprise customer data across major brands, your legal desk inevitably manages continuous rounds of custom DPAs and enterprise risk assessments.,General counsels scaling data platforms frequently note that negotiating third-party DPA terms against standard corporate positions consumes hours of high-value strategic legal time each week.,Would it help to review how legal teams are automating line-by-line DPA clause comparison and fallback generation directly in their standard Word workflow?\\n' +
-        'Lexi,getlexi.io,Signal Cluster 2,"High-Growth B2B Scaleups with Solo In-House Counsel Drowning in MSAs",10,BreachRx,breachrx.com,Head of Legal & Regulatory Affairs,"Incident management and compliance platform selling to regulated industries, handling continuous compliance, SLA, and enterprise MSA reviews with lean in-house counsel.",Regulated enterprise MSA cycles,BreachRx’s expansion across heavily regulated enterprise and healthcare accounts requires meticulous review of enterprise compliance guarantees and liability frameworks on every deal.,Regulatory and in-house legal teams often find that reconciling client-paper contracts with strict corporate compliance standards creates an unavoidable bottleneck right at contract sign-off.,Curious how tech-forward legal teams are automating compliance clause verification and initial redlining in minutes while maintaining 100% human-in-the-loop oversight?\\n';
+    <div class="table-wrap">
+      <table class="act">
+        <thead>
+          <tr>
+            <th style="width:22%">Account & Industry</th>
+            <th style="width:17%">Target Persona</th>
+            <th style="width:18%">Signal Cluster</th>
+            <th style="width:21%">Deterministic Evidence</th>
+            <th style="width:22%">Opening Angle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://millermartin.com" target="_blank" class="ac-link">Miller & Martin PLLC</a>
+              <span class="ac-domain">millermartin.com</span>
+              <span class="ac-tag" style="margin-top:6px">Litigation Law Firm</span>
+            </td>
+            <td>Managing Partner, Litigation Practice Chair</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Litigation Discovery</a></td>
+            <td>Active recruitment for Litigation Paralegals in Atlanta and Chattanooga to handle complex discovery, medical chronology compilation, and witness deposition prep.</td>
+            <td>
+              <div class="ac-mirror">"Noticed Miller & Martin's active recruitment for Litigation Paralegals across Atlanta and Chattanooga to support expanding commercial and tort discovery caseloads."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://kmllp.com" target="_blank" class="ac-link">Kirby McInerney LLP</a>
+              <span class="ac-domain">kmllp.com</span>
+              <span class="ac-tag" style="margin-top:6px">Securities Litigation</span>
+            </td>
+            <td>Head of Securities & Class Action Litigation</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Litigation Discovery</a></td>
+            <td>Active hiring for Class Action Litigation Paralegals managing multi-plaintiff document indexing, SEC disclosure cross-checks, and chronology exhibits.</td>
+            <td>
+              <div class="ac-mirror">"Your active search for a Class Action Litigation Paralegal to manage multi-plaintiff document reviews and disclosure indexing reflects the intensive administrative lift of securities litigation."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://kiernantrebach.com" target="_blank" class="ac-link">Kiernan Trebach LLP</a>
+              <span class="ac-domain">kiernantrebach.com</span>
+              <span class="ac-tag" style="margin-top:6px">Insurance Defense</span>
+            </td>
+            <td>Managing Partner, Litigation Operations Director</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Litigation Discovery</a></td>
+            <td>Regional insurance defense firm actively hiring Paralegals across DC, MD, and VA for high-volume medical record summaries, IME reviews, and discovery responses.</td>
+            <td>
+              <div class="ac-mirror">"Kiernan Trebach's active hiring for Litigation Paralegals across the Mid-Atlantic to support trial defense and medical liability claims highlights the continuous volume of discovery reviews."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://gallowaylawfirm.com" target="_blank" class="ac-link">Galloway Johnson Tompkins Burr & Smith</a>
+              <span class="ac-domain">gallowaylawfirm.com</span>
+              <span class="ac-tag" style="margin-top:6px">Casualty Litigation</span>
+            </td>
+            <td>Managing Director, Litigation Support Manager</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Litigation Discovery</a></td>
+            <td>Gulf Coast regional litigation powerhouse actively seeking Casualty & Insurance Defense Paralegals to summarize voluminous depositions and medical records.</td>
+            <td>
+              <div class="ac-mirror">"Your active recruitment for Casualty Litigation Paralegals across your Gulf Coast offices points directly to the ongoing operational strain of processing voluminous depositions and claimant disclosures."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://smbtrials.com" target="_blank" class="ac-link">Swanson Martin & Bell LLP</a>
+              <span class="ac-domain">smbtrials.com</span>
+              <span class="ac-tag" style="margin-top:6px">Trial Defense</span>
+            </td>
+            <td>Managing Partner, Toxic Tort Practice Group Leader</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Litigation Discovery</a></td>
+            <td>Trial defense firm managing extensive product liability and toxic tort caseloads actively recruiting Litigation Project Assistants for complex document organization.</td>
+            <td>
+              <div class="ac-mirror">"Swanson Martin & Bell's recruitment for Litigation Project Assistants to support complex toxic tort and product liability dockets highlights the sheer volume of multi-year record organization required for trial."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://incident.io" target="_blank" class="ac-link">incident.io</a>
+              <span class="ac-domain">incident.io</span>
+              <span class="ac-tag" style="margin-top:6px">Cloud Infrastructure</span>
+            </td>
+            <td>Head of Legal, General Counsel</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Enterprise MSAs</a></td>
+            <td>Fast-growing Series A/B incident management platform scaling enterprise sales, with lean legal counsel handling high volumes of enterprise MSAs, SLAs, and security addenda.</td>
+            <td>
+              <div class="ac-mirror">"As incident.io scales enterprise sales across global infrastructure teams, accelerating customer MSA turnarounds while maintaining strict security addenda terms creates an immediate in-house legal bottleneck."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://finout.io" target="_blank" class="ac-link">Finout</a>
+              <span class="ac-domain">finout.io</span>
+              <span class="ac-tag" style="margin-top:6px">FinOps Platform</span>
+            </td>
+            <td>Head of Legal, VP Operations & Compliance</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Enterprise MSAs</a></td>
+            <td>FinOps enterprise platform expanding globally with rapid customer acquisition, requiring constant vendor contract and enterprise security addenda reviews.</td>
+            <td>
+              <div class="ac-mirror">"Your team's rapid enterprise expansion across FinOps platforms highlights the escalating volume of bespoke customer security questionnaires and contract markups hitting your legal desk."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://baseten.co" target="_blank" class="ac-link">Baseten</a>
+              <span class="ac-domain">baseten.co</span>
+              <span class="ac-tag" style="margin-top:6px">AI Infrastructure</span>
+            </td>
+            <td>Head of Legal, Legal Counsel</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Enterprise MSAs</a></td>
+            <td>AI model deployment infrastructure company closing Fortune 500 contracts, experiencing massive enterprise procurement MSA review backlogs with lean legal staffing.</td>
+            <td>
+              <div class="ac-mirror">"Baseten's rapid enterprise adoption by Fortune 500 AI engineering teams creates a steady influx of complex customer MSAs, data privacy exhibits, and GPU uptime SLAs."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://hightouch.com" target="_blank" class="ac-link">Hightouch</a>
+              <span class="ac-domain">hightouch.com</span>
+              <span class="ac-tag" style="margin-top:6px">Composable CDP</span>
+            </td>
+            <td>General Counsel, Head of Legal & Trust</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Enterprise MSAs</a></td>
+            <td>Leading composable CDP platform selling to enterprise compliance and data teams, managing a high volume of custom Data Processing Agreements (DPAs) and vendor contracts.</td>
+            <td>
+              <div class="ac-mirror">"With Hightouch processing enterprise customer data across major brands, your legal desk inevitably manages continuous rounds of custom DPAs and enterprise risk assessments."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://breachrx.com" target="_blank" class="ac-link">BreachRx</a>
+              <span class="ac-domain">breachrx.com</span>
+              <span class="ac-tag" style="margin-top:6px">Regulated Security</span>
+            </td>
+            <td>Head of Legal & Regulatory Affairs</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Enterprise MSAs</a></td>
+            <td>Incident management and compliance platform selling to regulated industries, handling continuous compliance, SLA, and enterprise MSA reviews with lean in-house counsel.</td>
+            <td>
+              <div class="ac-mirror">"BreachRx's expansion across heavily regulated enterprise and healthcare accounts requires meticulous review of enterprise compliance guarantees and liability frameworks on every deal."</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.setAttribute('href', url);
-      link.setAttribute('download', 'automyze_lexi_10_accounts.csv');
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-  </script>
+<!-- SIGNAL CLUSTERS -->
+<section id="clusters">
+  <div class="wrap">
+    <p class="eyebrow">Signal Clusters</p>
+    <h2>The operational triggers we monitor.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Accounts enter the dispatch when multiple observable facts align simultaneously. We monitor live litigation caseload surges and enterprise procurement hiring before drafting a single word.</p>
+
+    <div class="clusters-grid">
+      <div class="c-box" id="cluster-01">
+        <span class="c-badge">CLUSTER 01</span>
+        <h3>Mid-Sized Litigation Practices with Discovery Backlogs</h3>
+        <p>Litigation defense firms experiencing severe paralegal bottlenecks when summarizing hundreds of pages of claimant depositions, medical records, and expert witness testimonies.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>25 to 150 litigation attorneys managing active trial dockets</li>
+          <li>Active job postings for Litigation Paralegals or Project Assistants</li>
+          <li>Specialized practice areas in tort defense, insurance liability, or securities litigation</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Lexi wedge:</strong> Native Microsoft Word integration cutting deposition digests and chronology turnaround from 8 hours to under 30 minutes with verifiable page-and-line citations.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-02">
+        <span class="c-badge">CLUSTER 02</span>
+        <h3>Enterprise Tech Scaleups with Solo In-House Counsel</h3>
+        <p>Fast-scaling B2B software scaleups where solo General Counsels and lean legal desks become the deal-closing bottleneck reviewing bespoke enterprise customer MSAs, SLAs, and security addenda.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>High-growth B2B SaaS platform (Series A to Growth stage, 50 to 500 headcount)</li>
+          <li>Solo General Counsel or 1-2 person legal team handling high deal velocity</li>
+          <li>Selling to Fortune 500 procurement teams requiring custom MSA and DPA negotiations</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Lexi wedge:</strong> Automated contract playbook redlining native to Word that returns marked-up MSAs to sales reps in under 15 minutes without expensive outside counsel fees.
+        </div>
+      </div>
+    </div>
+
+    <!-- How Automyze Operates (Below Signal Clusters) -->
+    <div class="callout-box">
+      <span class="lbl" style="color:var(--brass)">Operating Philosophy</span>
+      <h3 style="margin-top:8px">How Automyze operates: proprietary Signal Clusters vs. rented data</h3>
+      <p>Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around Signal Clusters: multi-layered, observable public facts that prove an Active Pain Trigger inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live technical bottlenecks and architectural strain directly from job boards, engineer commits, and app store release notes. Read more on our philosophy and methodology <a href="https://automyzeai.com/#method" style="color:var(--forest);font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CALL / BOOK -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#C9BFA4">Scale Outbound</p>
+    <h2>Turn this into a repeatable <em>outbound engine</em>.</h2>
+    <p>This 10-account dispatch is a single slice of what is possible. If you want to scale this into an automated outbound motion covering your entire market, test message-market fit, and run pain-signal outreach, you can work with Automyze or hire Rivesh as a full-time dedicated or fractional Go-To-Market Engineer.</p>
+    <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn">Book a strategy call</a>
+    <div class="final-links">
+      <a href="mailto:riveshk@automyzeai.com">riveshk@automyzeai.com</a>
+      <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn" style="padding:10px 20px;font-size:13px">Book a call</a>
+      <span>© 2026 Automyze</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Instant CSV Download Script & Scroll Observer -->
+<script>
+(function(){
+  // Sticky nav scroll threshold
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive: true});
+
+  // IntersectionObserver for graceful, non-jarring scroll reveals
+  var targets = document.querySelectorAll('section > .wrap > *');
+  for(var i = 0; i < targets.length; i++){
+    if(!targets[i].closest('.hero')) {
+      targets[i].classList.add('rv', 'rv-u');
+    }
+  }
+  var all = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -5% 0px'});
+    for(var k = 0; k < all.length; k++) io.observe(all[k]);
+  } else {
+    for(var k = 0; k < all.length; k++) all[k].classList.add('in');
+  }
+
+  // Instant CSV Download
+  var csvData = "client_name,client_domain,signal_cluster,target_account_name,target_account_domain,target_persona,observable_evidence,opening_angle\n" +
+    'Lexi,getlexi.io,Litigation Discovery & Deposition Backlog,Miller & Martin PLLC,millermartin.com,"Managing Partner, Litigation Practice Chair","Active recruitment for Litigation Paralegals in Atlanta and Chattanooga to handle complex discovery, medical chronology compilation, and witness deposition prep.","Noticed Miller & Martin active recruitment for Litigation Paralegals across Atlanta and Chattanooga to support expanding commercial and tort discovery caseloads."\n' +
+    'Lexi,getlexi.io,Litigation Discovery & Deposition Backlog,Kirby McInerney LLP,kmllp.com,Head of Securities & Class Action Litigation,"Active hiring for Class Action Litigation Paralegals managing multi-plaintiff document indexing, SEC disclosure cross-checks, and chronology exhibits.","Your active search for a Class Action Litigation Paralegal to manage multi-plaintiff document reviews and disclosure indexing reflects the intensive administrative lift of securities litigation."\n' +
+    'Lexi,getlexi.io,Litigation Discovery & Deposition Backlog,Kiernan Trebach LLP,kiernantrebach.com,"Managing Partner, Litigation Operations Director","Regional insurance defense firm actively hiring Paralegals across DC, MD, and VA for high-volume medical record summaries, IME reviews, and discovery responses.","Kiernan Trebach active hiring for Litigation Paralegals across the Mid-Atlantic to support trial defense and medical liability claims highlights the continuous volume of discovery reviews."\n' +
+    'Lexi,getlexi.io,Litigation Discovery & Deposition Backlog,Galloway Johnson Tompkins Burr & Smith,gallowaylawfirm.com,"Managing Director, Litigation Support Manager","Gulf Coast regional litigation powerhouse actively seeking Casualty & Insurance Defense Paralegals to summarize voluminous depositions and medical records.","Your active recruitment for Casualty Litigation Paralegals across your Gulf Coast offices points directly to the ongoing operational strain of processing voluminous depositions and claimant disclosures."\n' +
+    'Lexi,getlexi.io,Litigation Discovery & Deposition Backlog,Swanson Martin & Bell LLP,smbtrials.com,"Managing Partner, Toxic Tort Practice Group Leader","Trial defense firm managing extensive product liability and toxic tort caseloads actively recruiting Litigation Project Assistants for complex document organization.","Swanson Martin & Bell recruitment for Litigation Project Assistants to support complex toxic tort and product liability dockets highlights the sheer volume of multi-year record organization required for trial."\n' +
+    'Lexi,getlexi.io,Solo In-House Counsel Drowning in MSAs,incident.io,incident.io,"Head of Legal, General Counsel","Fast-growing Series A/B incident management platform scaling enterprise sales, with lean legal counsel handling high volumes of enterprise MSAs, SLAs, and security addenda.","As incident.io scales enterprise sales across global infrastructure teams, accelerating customer MSA turnarounds while maintaining strict security addenda terms creates an immediate in-house legal bottleneck."\n' +
+    'Lexi,getlexi.io,Solo In-House Counsel Drowning in MSAs,Finout,finout.io,"Head of Legal, VP Operations & Compliance","FinOps enterprise platform expanding globally with rapid customer acquisition, requiring constant vendor contract and enterprise security addenda reviews.","Your team rapid enterprise expansion across FinOps platforms highlights the escalating volume of bespoke customer security questionnaires and contract markups hitting your legal desk."\n' +
+    'Lexi,getlexi.io,Solo In-House Counsel Drowning in MSAs,Baseten,baseten.co,"Head of Legal, Legal Counsel","AI model deployment infrastructure company closing Fortune 500 contracts, experiencing massive enterprise procurement MSA review backlogs with lean legal staffing.","Baseten rapid enterprise adoption by Fortune 500 AI engineering teams creates a steady influx of complex customer MSAs, data privacy exhibits, and GPU uptime SLAs."\n' +
+    'Lexi,getlexi.io,Solo In-House Counsel Drowning in MSAs,Hightouch,hightouch.com,"General Counsel, Head of Legal & Trust","Leading composable CDP platform selling to enterprise compliance and data teams, managing a high volume of custom Data Processing Agreements (DPAs) and vendor contracts.","With Hightouch processing enterprise customer data across major brands, your legal desk inevitably manages continuous rounds of custom DPAs and enterprise risk assessments."\n' +
+    'Lexi,getlexi.io,Solo In-House Counsel Drowning in MSAs,BreachRx,breachrx.com,Head of Legal & Regulatory Affairs,"Incident management and compliance platform selling to regulated industries, handling continuous compliance, SLA, and enterprise MSA reviews with lean in-house counsel.","BreachRx expansion across heavily regulated enterprise and healthcare accounts requires meticulous review of enterprise compliance guarantees and liability frameworks on every deal."\n';
+
+  function triggerDownload() {
+    var blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'automyze_lexi_10_accounts.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  var b1 = document.getElementById('downloadCsvBtn');
+  var b2 = document.getElementById('downloadCsvBtnTable');
+  if(b1) b1.addEventListener('click', triggerDownload);
+  if(b2) b2.addEventListener('click', triggerDownload);
+})();
+</script>
+
 </body>
 </html>
