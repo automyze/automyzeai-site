@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthax | Live Target Accounts & Signal Playbook | Automyze</title>
+<meta name="description" content="A curated dispatch of 10 private clinics and surgical centers with verified active clinical documentation bottlenecks, EHR administrative drag, and patient consultation backlogs.">
+
+<!-- Favicon: Forest Green Logo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3D2B'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='22' font-weight='600' fill='%23F4F2ED'%3Ea%3C/text%3E%3Ccircle cx='23.5' cy='21.5' r='2.5' fill='%238A6D3B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F4F2ED;
+  --ink:#16181A;
+  --ink2:#5A5F63;
+  --ink3:#8B8F93;
+  --rule:#DDD9D1;
+  --rule2:#C9C4B8;
+  --forest:#1F3D2B;
+  --forest-hover:#173022;
+  --brass:#8A6D3B;
+  --card:#FBFAF7;
+  --tint:#F0EEE8;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter Tight',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+
+h1,h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+h1{font-size:56px;line-height:1.06;letter-spacing:-.015em;margin-bottom:20px}
+h1 em,h2 em{font-style:italic;color:var(--forest)}
+h2{font-size:38px;line-height:1.12;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:500;line-height:1.35}
+p{line-height:1.65}
+
+.lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule2)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--forest);display:inline-block;margin-right:7px;vertical-align:1px}
+
+section{border-bottom:1px solid var(--rule);padding:72px 0}
+.two{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
+
+.btn{
+  background:var(--forest);
+  color:var(--paper);
+  padding:13px 26px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.btn:hover{background:var(--forest-hover);transform:translateY(-1px);color:var(--paper)}
+.btn2{
+  font-size:14px;
+  color:var(--ink2);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule2);
+  padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
+}
+.btn2:hover{color:var(--ink);border-color:var(--ink)}
+.fine{font-size:12.5px;color:var(--ink3)}
+
+/* Navigation */
+nav{
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  transition:border-color .2s ease;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Instrument Serif',Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
+.logo em{color:var(--forest);font-style:italic}
+.nav-r{display:flex;align-items:center;gap:26px}
+.nav-r a{font-size:13.5px;color:var(--ink2);text-decoration:none;transition:color .15s ease}
+.nav-r a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--forest)!important;
+  color:var(--paper)!important;
+  padding:8px 18px!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  border-radius:0;
+}
+.nav-cta:hover{background:var(--forest-hover)!important}
+
+/* Hero */
+.hero{padding:80px 0 0;border-bottom:none}
+.hero .sub{font-size:19px;color:var(--ink2);max-width:760px;margin-bottom:30px;line-height:1.55}
+.hero .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+
+/* Metric Band */
+.band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--tint);margin-top:60px}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+.cell{padding:26px 36px;border-right:1px solid var(--rule)}
+.cell:last-child{border-right:none}
+.cell .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1;color:var(--forest)}
+
+/* The Strategic Wedge */
+.wedge-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--rule2)}
+.wedge-grid>div{padding:34px 30px}
+.wedge-grid>div:first-child{border-right:1px solid var(--rule2);background:var(--paper)}
+.wedge-grid h4{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.wedge-grid p{font-size:13.5px;color:var(--ink2);line-height:1.6}
+
+/* Accounts Table */
+.table-wrap{
+  overflow-x:auto;
+  margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--rule2);
+}
+table.act{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+}
+table.act th{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  font-weight:500;
+  padding:14px 18px;
+  background:var(--tint);
+  border-bottom:1px solid var(--rule2);
+  white-space:nowrap;
+}
+table.act td{
+  font-size:13.5px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+  line-height:1.55;
+  color:var(--ink);
+}
+table.act tr:last-child td{border-bottom:none}
+table.act tr:hover td{background:rgba(244,242,237,.5)}
+.ac-link{font-weight:600;color:var(--forest);text-decoration:none}
+.ac-link:hover{text-decoration:underline}
+.ac-domain{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink3);display:block;margin-top:2px}
+.ac-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  background:var(--paper);
+  border:1px solid var(--rule2);
+  padding:2px 7px;
+  color:var(--ink2);
+  display:inline-block;
+}
+.ac-cluster-link{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--forest);
+  text-decoration:none;
+  background:var(--tint);
+  border:1px solid rgba(31,61,43,0.18);
+  padding:4px 8px;
+  display:inline-block;
+  line-height:1.4;
+  transition:all .15s ease;
+}
+.ac-cluster-link:hover{
+  background:var(--paper);
+  border-color:var(--forest);
+  text-decoration:underline;
+}
+.ac-mirror{
+  font-size:12.5px;
+  color:var(--ink2);
+  background:var(--tint);
+  padding:8px 10px;
+  border-left:2px solid var(--brass);
+  font-style:normal;
+  margin-top:4px;
+}
+
+/* Signal Clusters Blocks */
+.clusters-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.c-box{background:var(--card);border:1px solid var(--rule2);padding:28px}
+.c-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);display:block;margin-bottom:8px}
+.c-box h3{font-size:20px;font-weight:500;margin-bottom:14px;color:var(--ink)}
+.c-box p{font-size:14px;color:var(--ink2);margin-bottom:14px;line-height:1.6}
+.c-signals{list-style:none;margin:16px 0;padding-top:12px;border-top:1px solid var(--rule)}
+.c-signals li{font-size:13px;color:var(--ink2);padding:5px 0;position:relative;padding-left:16px}
+.c-signals li::before{content:"+";position:absolute;left:0;color:var(--forest);font-family:'IBM Plex Mono',monospace}
+.c-wedge{
+  background:var(--tint);
+  border-left:3px solid var(--forest);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--forest);
+  margin-top:16px;
+}
+
+/* Callout Section (Proprietary Clusters vs Rented Data) */
+.callout-box{
+  background:var(--card);
+  border:1px solid var(--rule2);
+  padding:32px;
+  margin-top:28px;
+}
+.callout-box h3{font-family:'Instrument Serif',Georgia,serif;font-size:26px;margin-bottom:12px;color:var(--forest)}
+.callout-box p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:920px}
+
+/* Final Call Section */
+.final{background:var(--forest);color:var(--paper);border-bottom:none}
+.final h2{color:var(--paper);max-width:680px}
+.final h2 em{color:#C9BFA4}
+.final p{color:#BFC7C0;max-width:580px;margin-top:18px;font-size:16px}
+.final .btn{background:var(--paper);color:var(--forest);margin-top:30px}
+.final .btn:hover{background:#EDE9DF;color:var(--forest-hover)}
+.final-links{display:flex;gap:20px;align-items:center;margin-top:20px}
+.final-links a{color:#D2DDD5;font-size:13.5px;text-decoration:none;border-bottom:1px dotted #8FA095}
+.final-links a:hover{color:var(--paper);border-bottom-style:solid}
+
+/* Footer */
+footer{padding:34px 0;font-size:13px;color:var(--ink3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{font-size:20px}
+
+/* Scroll Reveals (Subtle & Non-Jarring) */
+.rv{opacity:0;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-u{transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* Print Styles */
+@media print {
+  nav, .no-print, button, .btn { display:none!important }
+  body { background:white!important; color:black!important }
+  .table-wrap, table.act { border:1px solid #ccc!important; width:100%!important }
+  table.act td, table.act th { border-bottom:1px solid #ddd!important }
+  section { padding:24px 0!important; page-break-inside:avoid }
+  .wrap { max-width:100%!important; padding:0!important }
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .wrap{padding:0 24px}
+  .two,.wedge-grid,.clusters-grid{grid-template-columns:1fr;gap:24px}
+  .wedge-grid>div:first-child{border-right:none;border-bottom:1px solid var(--rule2)}
+  h1{font-size:38px}
+  h2{font-size:29px}
+  .band .wrap{grid-template-columns:1fr 1fr}
+  .cell:nth-child(2){border-right:none}
+  .cell:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .cell:nth-child(4){border-top:1px solid var(--rule)}
+  .nav-r a:not(.nav-cta){display:none}
+  section{padding:54px 0}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div class="nav-r">
+      <a href="#accounts">Accounts</a>
+      <a href="#wedge">The Wedge</a>
+      <a href="#clusters">Signal Clusters</a>
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Target Dispatch</p>
+      <h1>Ten live target accounts for <em>Synthax</em>.</h1>
+      <p class="sub">A curated dispatch of 10 private clinics and surgical centers with verified active clinical documentation bottlenecks, EHR administrative drag, and patient consultation backlogs.</p>
+      <div class="cta-row">
+        <button id="downloadCsvBtn" class="btn">Download Accounts (.CSV)</button>
+        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn2">Book a strategy call</a>
+      </div>
+      <p class="fine">Verified against live CQC inspection records, outpatient clinic schedules, and private specialist consultation dockets.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <div class="cell"><div class="k">Accounts verified</div><div class="v">10</div></div>
+      <div class="cell"><div class="k">Primary source checks</div><div class="v">100%</div></div>
+      <div class="cell"><div class="k">Core bottleneck</div><div class="v" style="font-size:20px">Clinical documentation drag</div></div>
+      <div class="cell"><div class="k">Unverified accounts</div><div class="v">0</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STRATEGIC WEDGE -->
+<section id="wedge">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The Strategic Wedge</p>
+      <h2>Why generic AI medical dictation fails, and where Synthax <em>wins</em>.</h2>
+      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">When private clinics test generic ambient scribes or transcription apps, clinicians end up with rambling paragraphs that do not fit clinical specialty templates, require manual formatting, and fail to generate private insurer billing codes. Synthax solves this by serving as an end-to-end clinical documentation operating system tailored specifically to private practice.</p>
+    </div>
+    <div>
+      <div class="wedge-grid">
+        <div>
+          <span class="lbl" style="color:#A04040">The Commodity Trap</span>
+          <h4 style="margin-top:6px">Generic Ambient Scribes & Dictation</h4>
+          <p>Generic transcription tools capture spoken words but produce unstructured narrative prose. Clinicians still spend hours editing notes, retyping summaries into clinic management systems, and cross-referencing insurer codes manually.</p>
+        </div>
+        <div>
+          <span class="lbl" style="color:var(--forest)">The High-Converting Wedge</span>
+          <h4 style="margin-top:6px">Private Clinic AI Operating System</h4>
+          <p>Engineered by an NHS-trained clinician and software specialists, Synthax converts live consultation dialogue directly into structured clinical letters, prescriptions, and procedure billing codes formatted for UK private hospital governance and insurer reimbursement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTS TABLE -->
+<section id="accounts">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div>
+        <p class="eyebrow">Live Target Accounts</p>
+        <h2>Ten private clinics and surgical groups with active documentation bottlenecks.</h2>
+      </div>
+      <button id="downloadCsvBtnTable" class="btn" style="padding:10px 20px;font-size:13px">Download CSV</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="act">
+        <thead>
+          <tr>
+            <th style="width:22%">Account & Industry</th>
+            <th style="width:17%">Target Persona</th>
+            <th style="width:18%">Signal Cluster</th>
+            <th style="width:21%">Deterministic Evidence</th>
+            <th style="width:22%">Opening Angle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://thelondonclinic.co.uk" target="_blank" class="ac-link">The London Clinic</a>
+              <span class="ac-domain">thelondonclinic.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Independent Hospital</span>
+            </td>
+            <td>Medical Director, Chief Information Officer, Outpatient Services Manager</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Independent charitable hospital on Harley Street operating 7 outpatient facilities and 200+ beds. Multi-specialty outpatient consultants generate thousands of complex diagnostic letters and oncology summaries weekly, creating severe clinical documentation drag and secretarial backlogs.</td>
+            <td>
+              <div class="ac-mirror">"Managing outpatient documentation across seven facilities on Harley Street inevitably forces senior consultants to spend hours drafting clinic letters after full patient lists instead of seeing referrals."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://cadoganclinic.com" target="_blank" class="ac-link">Cadogan Clinic</a>
+              <span class="ac-domain">cadoganclinic.com</span>
+              <span class="ac-tag" style="margin-top:6px">Specialist Surgical Hospital</span>
+            </td>
+            <td>Medical Director, Practice Manager, Head of Nursing & Clinical Governance</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Surgical Centers</a></td>
+            <td>Chelsea day-case surgical hospital conducting over 20,000 procedures annually across cosmetic surgery, dermatology, and aesthetic medicine. Surgeons and dermatologists face high documentation overhead documenting pre-op consent, operative notes, and post-care instructions between theater lists.</td>
+            <td>
+              <div class="ac-mirror">"With more than 20,000 annual procedures across surgical theater and dermatology rooms, Cadogan surgeons lose critical operating capacity to post-op summaries and manual clinic notes."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://schoen-clinic.co.uk" target="_blank" class="ac-link">Schoen Clinic London</a>
+              <span class="ac-domain">schoen-clinic.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Orthopedic & Spinal Hospital</span>
+            </td>
+            <td>Clinical Director, Hospital Director, Lead Orthopedic Consultant</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Dedicated spinal and orthopedic private hospital in Marylebone. Highly technical musculoskeletal assessments require extensive biomechanical notes, surgical indications, and insurer pre-authorization documentation that creates hours of evening administrative work for surgeons.</td>
+            <td>
+              <div class="ac-mirror">"The detail required for complex spinal and orthopedic assessments at Schoen Clinic means consultants often finish clinical sessions only to face hours of insurer reporting and letter generation."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://hcahealthcare.co.uk" target="_blank" class="ac-link">Harley Street Clinic (HCA UK)</a>
+              <span class="ac-domain">hcahealthcare.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Private Healthcare Network</span>
+            </td>
+            <td>Outpatient Operations Director, VP Medical Operations, Clinical Lead</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Flagship HCA UK oncology and cardiology center managing intensive diagnostic consultations. Oncologists and cardiologists coordinate complex multidisciplinary team (MDT) summaries and GP update letters across high patient caseloads under tight clinical timelines.</td>
+            <td>
+              <div class="ac-mirror">"Coordinating multi-specialty oncology and cardiology letters across Harley Street Clinic requires rapid turnaround to referring GPs, putting continuous pressure on clinical secretarial teams."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://kimshospital.co.uk" target="_blank" class="ac-link">KIMS Hospital</a>
+              <span class="ac-domain">kimshospital.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Independent Hospital</span>
+            </td>
+            <td>Medical Director, Chief Executive, Operations Director</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Largest independent private hospital in Kent, operating 300+ consultants across private practice and NHS e-Referral services. Consultants balance dual-stream documentation across independent clinic software and NHS trust requirements, causing major administrative friction.</td>
+            <td>
+              <div class="ac-mirror">"Balancing independent private consultations with NHS e-Referral volume across 300 consultants at KIMS creates substantial clinical documentation overhead and delayed GP letters."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://skin55.co.uk" target="_blank" class="ac-link">Skin55</a>
+              <span class="ac-domain">skin55.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Dermatology Clinic</span>
+            </td>
+            <td>Clinic Director, Senior Dermatologist, Practice Manager</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Premier medical and laser dermatology clinic on Harley Street founded by leading NHS consultant dermatologists. Clinicians handle dozens of rapid outpatient skin assessments daily, where manual entry of lesion mapping, biopsy requests, and treatment dockets bottlenecks patient throughput.</td>
+            <td>
+              <div class="ac-mirror">"Rapid skin consultations at Skin55 demand instant clinical accuracy for lesion mapping and biopsy notes, where typing between patients directly reduces daily appointment availability."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://hcahealthcare.co.uk" target="_blank" class="ac-link">The Portland Hospital (HCA UK)</a>
+              <span class="ac-domain">hcahealthcare.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Pediatric & Maternity Hospital</span>
+            </td>
+            <td>Clinical Director of Pediatrics, Head of Outpatient Services</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>The UK's only private hospital dedicated exclusively to women and children, handling over 10,000 outpatient pediatric consultations annually. Pediatric developmental notes, growth milestone tracking, and parental consultation letters require immense clinical time.</td>
+            <td>
+              <div class="ac-mirror">"Drafting detailed developmental assessments and parental summaries across Portland high-volume pediatric clinics consumes hours of consultant time that could be returned to clinical care."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://fortiusclinic.com" target="_blank" class="ac-link">Fortius Clinic</a>
+              <span class="ac-domain">fortiusclinic.com</span>
+              <span class="ac-tag" style="margin-top:6px">Orthopedic & Sports Medicine</span>
+            </td>
+            <td>Chief Operating Officer, Clinical Director, Practice Lead</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Surgical Centers</a></td>
+            <td>Leading private musculoskeletal network with 4 London outpatient and diagnostic clinics plus a dedicated day-case surgical center. Treating elite athletes and private patients requires rapid diagnostic reporting and immediate coordination with physiotherapists and imaging centers.</td>
+            <td>
+              <div class="ac-mirror">"Coordinating multidisciplinary care across Fortius surgical and sports medicine centers requires rapid clinical summaries to referring specialists, creating friction when consultants dictate manually."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://kingedwardvii.co.uk" target="_blank" class="ac-link">King Edward VII's Hospital</a>
+              <span class="ac-domain">kingedwardvii.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Independent Hospital</span>
+            </td>
+            <td>Medical Director, Director of Clinical Services, Practice Manager</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Multi-Specialist Clinics</a></td>
+            <td>Renowned independent hospital in Marylebone with an established specialist consulting room wing. Senior private consultants across urology, gynecology, and general surgery navigate legacy dictation workflows that delay patient dockets and private insurer billing.</td>
+            <td>
+              <div class="ac-mirror">"Maintaining bespoke consultant-led patient care at King Edward VII requires exhaustive clinical letters, where traditional dictation pools create 48-hour delays in reaching patients and insurers."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://lbps.co.uk" target="_blank" class="ac-link">London Bridge Plastic Surgery</a>
+              <span class="ac-domain">lbps.co.uk</span>
+              <span class="ac-tag" style="margin-top:6px">Surgical & Aesthetic Clinic</span>
+            </td>
+            <td>Medical Director, Lead Plastic Surgeon, Clinic Manager</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Surgical Centers</a></td>
+            <td>Flagship day-case plastic surgery and cosmetic medicine clinic near London Bridge. Surgeons require rigorous pre-operative consent documentation, operative logs, and multi-stage post-operative checkups to meet CQC cosmetic surgery compliance standards.</td>
+            <td>
+              <div class="ac-mirror">"Rigorous CQC cosmetic surgical governance at London Bridge Plastic Surgery requires extensive consent recording and operative notes, tying up surgical consultants in post-procedure administration."</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL CLUSTERS -->
+<section id="clusters">
+  <div class="wrap">
+    <p class="eyebrow">Signal Clusters</p>
+    <h2>The clinical bottlenecks we monitor.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Accounts enter the dispatch when multi-layered clinical documentation bottlenecks align. We monitor private outpatient volume, complex multi-specialty consulting workflows, and insurer billing friction before drafting a single word.</p>
+
+    <div class="clusters-grid">
+      <div class="c-box" id="cluster-01">
+        <span class="c-badge">CLUSTER 01</span>
+        <h3>Multi-Specialist Private Clinics & Harley Street Practices</h3>
+        <p>Independent clinics and consulting rooms managing high outpatient volume where senior consultants lose 2+ hours per clinic session manually dictating letters or paying high transcription bureau fees with 48-hour delays.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Multi-specialty outpatient consulting across cardiology, oncology, orthopedics, or dermatology</li>
+          <li>Reliance on outsourced medical secretarial pools or legacy digital dictation workflows</li>
+          <li>Documented clinical letter turnaround backlogs impacting referring GPs and private insurers</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Synthax wedge:</strong> Converts live consultation dialogue directly into structured clinical letters and electronic prescription dockets in real time, eliminating secretarial delays.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-02">
+        <span class="c-badge">CLUSTER 02</span>
+        <h3>Outpatient Surgical Centers & Multi-Site Aesthetic Clinics</h3>
+        <p>High-throughput day-case surgical and aesthetic clinics where pre-op medical histories, consent forms, and post-op operative summaries create severe administrative bottlenecks between operating theaters.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Active day-case theater lists and multi-site outpatient consulting branches</li>
+          <li>Heavy procedural documentation requirements across cosmetic, orthopedic, and ophthalmic surgery</li>
+          <li>Independent hospital governance and CQC audit requirements for clinical documentation</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Synthax wedge:</strong> Generates structured operative notes, procedure logs, and private insurance billing codes instantly between theater sessions.
+        </div>
+      </div>
+    </div>
+
+    <!-- How Automyze Operates (Below Signal Clusters) -->
+    <div class="callout-box">
+      <span class="lbl" style="color:var(--brass)">Operating Philosophy</span>
+      <h3 style="margin-top:8px">How Automyze operates: proprietary Signal Clusters vs. rented data</h3>
+      <p>Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around Signal Clusters: multi-layered, observable public facts that prove an Active Pain Trigger inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live technical bottlenecks and architectural strain directly from job boards, engineer commits, and app store release notes. Read more on our philosophy and methodology <a href="https://automyzeai.com/#method" style="color:var(--forest);font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CALL / BOOK -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#C9BFA4">Scale Outbound</p>
+    <h2>Turn this into a repeatable <em>outbound engine</em>.</h2>
+    <p>This 10-account dispatch is a single slice of what is possible. If you want to scale this into an automated outbound motion covering your entire market, test message-market fit, and run pain-signal outreach, you can work with Automyze or hire Rivesh as a full-time dedicated or fractional Go-To-Market Engineer.</p>
+    <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn">Book a strategy call</a>
+    <div class="final-links">
+      <a href="mailto:riveshk@automyzeai.com">riveshk@automyzeai.com</a>
+      <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn" style="padding:10px 20px;font-size:13px">Book a call</a>
+      <span>© 2026 Automyze</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Instant CSV Download Script & Scroll Observer -->
+<script>
+(function(){
+  // Sticky nav scroll threshold
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive: true});
+
+  // IntersectionObserver for graceful, non-jarring scroll reveals
+  var targets = document.querySelectorAll('section > .wrap > *');
+  for(var i = 0; i < targets.length; i++){
+    if(!targets[i].closest('.hero')) {
+      targets[i].classList.add('rv', 'rv-u');
+    }
+  }
+  var all = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -5% 0px'});
+    for(var k = 0; k < all.length; k++) io.observe(all[k]);
+  } else {
+    for(var k = 0; k < all.length; k++) all[k].classList.add('in');
+  }
+
+  // Instant CSV Download
+  var csvData = "client_name,client_domain,signal_cluster,target_account_name,target_account_domain,target_persona,observable_evidence,opening_angle\n" +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,The London Clinic,thelondonclinic.co.uk,"Medical Director, Chief Information Officer, Outpatient Services Manager","Independent charitable hospital on Harley Street operating 7 outpatient facilities and 200+ beds. Multi-specialty outpatient consultants generate thousands of complex diagnostic letters and oncology summaries weekly, creating severe clinical documentation drag and secretarial backlogs.","Managing outpatient documentation across seven facilities on Harley Street inevitably forces senior consultants to spend hours drafting clinic letters after full patient lists instead of seeing referrals."\n' +
+    'Synthax,synthax.ai,Outpatient Surgical Centers & Multi-Site Aesthetic Clinics,Cadogan Clinic,cadoganclinic.com,"Medical Director, Practice Manager, Head of Nursing & Clinical Governance","Chelsea day-case surgical hospital conducting over 20,000 procedures annually across cosmetic surgery, dermatology, and aesthetic medicine. Surgeons and dermatologists face high documentation overhead documenting pre-op consent, operative notes, and post-care instructions between theater lists.","With more than 20,000 annual procedures across surgical theater and dermatology rooms, Cadogan surgeons lose critical operating capacity to post-op summaries and manual clinic notes."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,Schoen Clinic London,schoen-clinic.co.uk,"Clinical Director, Hospital Director, Lead Orthopedic Consultant","Dedicated spinal and orthopedic private hospital in Marylebone. Highly technical musculoskeletal assessments require extensive biomechanical notes, surgical indications, and insurer pre-authorization documentation that creates hours of evening administrative work for surgeons.","The detail required for complex spinal and orthopedic assessments at Schoen Clinic means consultants often finish clinical sessions only to face hours of insurer reporting and letter generation."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,Harley Street Clinic (HCA UK),hcahealthcare.co.uk,"Outpatient Operations Director, VP Medical Operations, Clinical Lead","Flagship HCA UK oncology and cardiology center managing intensive diagnostic consultations. Oncologists and cardiologists coordinate complex multidisciplinary team (MDT) summaries and GP update letters across high patient caseloads under tight clinical timelines.","Coordinating multi-specialty oncology and cardiology letters across Harley Street Clinic requires rapid turnaround to referring GPs, putting continuous pressure on clinical secretarial teams."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,KIMS Hospital,kimshospital.co.uk,"Medical Director, Chief Executive, Operations Director","Largest independent private hospital in Kent, operating 300+ consultants across private practice and NHS e-Referral services. Consultants balance dual-stream documentation across independent clinic software and NHS trust requirements, causing major administrative friction.","Balancing independent private consultations with NHS e-Referral volume across 300 consultants at KIMS creates substantial clinical documentation overhead and delayed GP letters."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,Skin55,skin55.co.uk,"Clinic Director, Senior Dermatologist, Practice Manager","Premier medical and laser dermatology clinic on Harley Street founded by leading NHS consultant dermatologists. Clinicians handle dozens of rapid outpatient skin assessments daily, where manual entry of lesion mapping, biopsy requests, and treatment dockets bottlenecks patient throughput.","Rapid skin consultations at Skin55 demand instant clinical accuracy for lesion mapping and biopsy notes, where typing between patients directly reduces daily appointment availability."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,The Portland Hospital (HCA UK),hcahealthcare.co.uk,"Clinical Director of Pediatrics, Head of Outpatient Services","The UK\'s only private hospital dedicated exclusively to women and children, handling over 10,000 outpatient pediatric consultations annually. Pediatric developmental notes, growth milestone tracking, and parental consultation letters require immense clinical time.","Drafting detailed developmental assessments and parental summaries across Portland high-volume pediatric clinics consumes hours of consultant time that could be returned to clinical care."\n' +
+    'Synthax,synthax.ai,Outpatient Surgical Centers & Multi-Site Aesthetic Clinics,Fortius Clinic,fortiusclinic.com,"Chief Operating Officer, Clinical Director, Practice Lead","Leading private musculoskeletal network with 4 London outpatient and diagnostic clinics plus a dedicated day-case surgical center. Treating elite athletes and private patients requires rapid diagnostic reporting and immediate coordination with physiotherapists and imaging centers.","Coordinating multidisciplinary care across Fortius surgical and sports medicine centers requires rapid clinical summaries to referring specialists, creating friction when consultants dictate manually."\n' +
+    'Synthax,synthax.ai,Multi-Specialist Private Clinics & Harley Street Practices,King Edward VII\'s Hospital,kingedwardvii.co.uk,"Medical Director, Director of Clinical Services, Practice Manager","Renowned independent hospital in Marylebone with an established specialist consulting room wing. Senior private consultants across urology, gynecology, and general surgery navigate legacy dictation workflows that delay patient dockets and private insurer billing.","Maintaining bespoke consultant-led patient care at King Edward VII requires exhaustive clinical letters, where traditional dictation pools create 48-hour delays in reaching patients and insurers."\n' +
+    'Synthax,synthax.ai,Outpatient Surgical Centers & Multi-Site Aesthetic Clinics,London Bridge Plastic Surgery,lbps.co.uk,"Medical Director, Lead Plastic Surgeon, Clinic Manager","Flagship day-case plastic surgery and cosmetic medicine clinic near London Bridge. Surgeons require rigorous pre-operative consent documentation, operative logs, and multi-stage post-operative checkups to meet CQC cosmetic surgery compliance standards.","Rigorous CQC cosmetic surgical governance at London Bridge Plastic Surgery requires extensive consent recording and operative notes, tying up surgical consultants in post-procedure administration."\n';
+
+  function triggerDownload() {
+    var blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'automyze_synthax_10_accounts.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  var b1 = document.getElementById('downloadCsvBtn');
+  var b2 = document.getElementById('downloadCsvBtnTable');
+  if(b1) b1.addEventListener('click', triggerDownload);
+  if(b2) b2.addEventListener('click', triggerDownload);
+})();
+</script>
+
+</body>
+</html>
