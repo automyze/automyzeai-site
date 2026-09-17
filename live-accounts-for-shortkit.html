@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Accounts & Signal-Led GTM Playbook | ShortKit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            dark: {
+              bg: '#0A0E17',
+              card: '#111827',
+              border: '#1F2937',
+              hover: '#1a2234',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-border { border: 1px solid #e2e8f0 !important; }
+      .text-slate-100, .text-slate-200, .text-white { color: #0f172a !important; }
+      .text-slate-400, .text-slate-300 { color: #475569 !important; }
+      .bg-dark-card, .bg-dark-bg { background: white !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#0A0E17] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+
+  <!-- Top Navigation / Brand Bar -->
+  <header class="border-b border-slate-800/80 bg-[#0A0E17]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
+          A
+        </div>
+        <div>
+          <span class="font-bold tracking-tight text-white">Automyze AI</span>
+          <span class="text-xs text-slate-400 hidden sm:inline ml-2">| Signal-Led GTM Engine</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          100% Deterministic Verified
+        </span>
+        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="no-print hidden sm:inline-flex items-center justify-center px-3.5 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg shadow-sm transition">
+          Book GTM Strategy Call
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+    <!-- Hero Title & Context -->
+    <section class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-indigo-950/60 text-indigo-300 border border-indigo-800/50">
+        PROSPECT DOSSIER & ACCOUNT DISPATCH
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+        Signal-Led GTM Playbook & 10 Live Accounts for <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">ShortKit</span>
+      </h1>
+      <p class="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed">
+        Engineered for <strong>Neil Bhammar</strong> (CEO) & <strong>Michael Seleman</strong> (CTO). A curated dispatch of 10 consumer and media apps with verified active engineering bottlenecks in client-side video playback, pre-buffering, and swipe latency.
+      </p>
+    </section>
+
+    <!-- The Automyze Differentiation Callout (Subtle Marketing) -->
+    <section class="p-6 rounded-xl border border-indigo-900/60 bg-gradient-to-br from-indigo-950/30 via-slate-900/40 to-slate-900/20 shadow-xl">
+      <div class="flex items-start gap-4">
+        <div class="p-2.5 rounded-lg bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-indigo-300 font-mono">
+            How Automyze Operates: Proprietary Signal Clusters vs. Rented Data
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around <strong>Signal Clusters</strong>—multi-layered, observable public facts that prove an <strong>Active Pain Trigger</strong> inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live technical bottlenecks and architectural strain directly from job boards, engineer commits, and app store release notes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strategic Wedge Teardown -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span>The Strategic Wedge:</span>
+        <span class="text-indigo-400 font-normal text-xl">Why Selling Against Mux Fails & Where ShortKit Wins</span>
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-xl border border-rose-900/50 bg-rose-950/10 space-y-3">
+          <div class="text-xs font-mono font-semibold uppercase text-rose-400 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-rose-500"></span> The Commodity Trap
+          </div>
+          <h4 class="font-bold text-slate-100">Pitching "Video Streaming / Video API"</h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            When ShortKit reaches out with generic messaging like <em>"Add video to your app,"</em> engineering leaders reflexively reply: <em>"We already use Mux / Cloudinary / AWS IVS, our video is covered."</em> Mux and Cloudinary provide backend transcoding and CDN streaming. They do <strong>zero client-side player work</strong>.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl border border-emerald-900/50 bg-emerald-950/10 space-y-3">
+          <div class="text-xs font-mono font-semibold uppercase text-emerald-400 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> The High-Converting Wedge
+          </div>
+          <h4 class="font-bold text-slate-100">Positioning as the "Client-Side Swipe Engine"</h4>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            ShortKit sells <strong>above Mux</strong>: <em>"Keep your existing video storage/CDN—ShortKit is the client-side vertical feed SDK that provides predictive 3-video pre-buffering and memory recycling in RecyclerView/FlatList, saving 9 months of AVPlayer triage."</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Table of 10 Live Verified Accounts -->
+    <section class="space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight text-white">10 Verified Live Target Accounts</h2>
+          <p class="text-xs sm:text-sm text-slate-400">Filtered through our Second-Pass Deterministic Verification Gate. Zero deadpools, zero generic tech giants.</p>
+        </div>
+        <button id="downloadCsvBtn" class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/20 transition self-start sm:self-auto">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Download Accounts (.CSV)
+        </button>
+      </div>
+
+      <!-- Account Table -->
+      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-[#111827] shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300 divide-y divide-slate-800">
+          <thead class="bg-slate-900/80 text-slate-400 font-mono text-[11px] uppercase tracking-wider">
+            <tr>
+              <th scope="col" class="px-4 py-3.5">Account & Domain</th>
+              <th scope="col" class="px-4 py-3.5">Target Persona</th>
+              <th scope="col" class="px-4 py-3.5">Signal Cluster</th>
+              <th scope="col" class="px-4 py-3.5">Deterministic Evidence (Why Right Now?)</th>
+              <th scope="col" class="px-4 py-3.5">Contextual Hook Angle</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-sans">
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://company.shopltk.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">LTK</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">shopltk.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">VP of Engineering / Head of Mobile</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Track 1: Creator Commerce</span></td>
+              <td class="px-4 py-3 text-slate-300">Primary documentation: Senior Android Engineer Rahul Singh re-architected LTK video with Kotlin, Compose, and ExoPlayer to cut cold-start latency from 8s to &lt;1s.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"As LTK expands creator video feeds on ExoPlayer, optimizing buffer pre-caching across high-density product drops requires continuous player tuning..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://whatnot.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Whatnot</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">whatnot.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">VP of Engineering / Video Platform</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Track 1: Live Marketplace</span></td>
+              <td class="px-4 py-3 text-slate-300">Live Ashby posting (<a href="https://ashbyhq.com/whatnot" target="_blank" class="text-indigo-400 underline">ashbyhq.com/whatnot</a>) for Software Engineer, Video explicitly tasked with "evaluating and onboarding new video providers."</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Your active Ashby posting for a Video Software Engineer to evaluate new video providers highlights Whatnot’s focus on scaling video infrastructure beyond live auctions..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://reddit.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Reddit</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">reddit.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Senior iOS Media Experience Lead</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: Community Media</span></td>
+              <td class="px-4 py-3 text-slate-300">Live Greenhouse role (<a href="https://boards.greenhouse.io/reddit" target="_blank" class="text-indigo-400 underline">greenhouse.io/reddit</a>) for Senior iOS Engineer, Media Experience specifically managing AVFoundation, VideoToolbox, and HLS.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Your Greenhouse role for Senior iOS Engineer on Media Experience to optimize AVFoundation playback aligns with Reddit's push to maximize video watch time..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://newsbreak.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">NewsBreak</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">newsbreak.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Director of Mobile / VP Product</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: Digital Publishing</span></td>
+              <td class="px-4 py-3 text-slate-300">Live Greenhouse role (<a href="https://boards.greenhouse.io/newsbreak" target="_blank" class="text-indigo-400 underline">greenhouse.io/newsbreak</a>) for Senior iOS Engineer, Ads & Monetization / Video Surfaces ($165k-$200k base) scaling "Scoopz" vertical video.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Your active Greenhouse posting for a Senior iOS Engineer focused on video surfaces aligns directly with NewsBreak’s push to scale the Scoopz vertical feed..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://tubitv.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Tubi</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">tubitv.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">VP Engineering / Android Playback Lead</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: Streaming Platform</span></td>
+              <td class="px-4 py-3 text-slate-300">Live Greenhouse posting (<a href="https://boards.greenhouse.io/tubi/jobs/5256244004" target="_blank" class="text-indigo-400 underline">boards.greenhouse.io/tubi</a>) specifically requiring hands-on expertise in ExoPlayer / Media3.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Tubi’s Greenhouse recruitment for a Senior Android Engineer with deep ExoPlayer/Media3 expertise highlights the ongoing engineering overhead of fine-tuning streaming playback..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://twitch.tv" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Twitch</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">twitch.tv</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Head of Mobile Core</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: Interactive Media</span></td>
+              <td class="px-4 py-3 text-slate-300">Live Greenhouse posting (<a href="https://boards.greenhouse.io/twitch" target="_blank" class="text-indigo-400 underline">greenhouse.io/twitch</a>) for Senior iOS Engineer tasked with owning "native video playback infrastructure."</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Your Mobile Core team’s active search for a Senior iOS Engineer to own native video playback infrastructure directly reflects the challenge of maintaining low-latency playback..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://foxcareers.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Fox Corporation</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">foxcareers.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Director of Video Technology</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: Broadcast Sports</span></td>
+              <td class="px-4 py-3 text-slate-300">Live job posting for Senior Video Player Engineer (iOS) ($143k-$161k) leading architecture on AVPlayer, AVFoundation, and adaptive HLS streaming.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Fox’s recruitment for a Senior Video Player Engineer on iOS focused on AVPlayer architecture highlights the technical investment required to maintain high QoE playback..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://poshmark.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Poshmark</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">poshmark.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">VP of Engineering / Mobile Apps</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Track 1: Social Resale</span></td>
+              <td class="px-4 py-3 text-slate-300">Live feature "Posh Shows" and short-form video listing previews managing millions of unstandardized user video uploads.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Scaling short-form video listings across Poshmark's mobile app involves ingesting and rendering highly variable user video content across thousands of device types..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://vinted.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">Vinted</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">vinted.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Head of Mobile Engineering</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-950/80 text-indigo-300 border border-indigo-800/60">Track 1: European Marketplace</span></td>
+              <td class="px-4 py-3 text-slate-300">Engineering documentation at <code>vinted.engineering</code> shows high-throughput media scaling and live testing of item video verification clips.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"As Vinted tests video previews to enhance item verification, delivering seamless video playback across diverse European mobile networks presents caching challenges..."</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition">
+              <td class="px-4 py-3 font-semibold text-white">
+                <a href="https://classdojo.com" target="_blank" class="hover:text-indigo-400 underline decoration-slate-700 underline-offset-2">ClassDojo</a>
+                <span class="block text-[11px] text-slate-400 font-mono font-normal">classdojo.com</span>
+              </td>
+              <td class="px-4 py-3 text-slate-300">Head of Mobile / VP Product</td>
+              <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-950/80 text-purple-300 border border-purple-800/60">Track 2: EdTech Community</span></td>
+              <td class="px-4 py-3 text-slate-300">Live feature "Class Story" used by 95% of US schools (50M+ users); mobile engineering continuously manages video compression and low-end Android playback.</td>
+              <td class="px-4 py-3 text-slate-400 italic">"Supporting millions of daily classroom video moments on Class Story requires ensuring smooth playback across heavily fragmented student and parent smartphones..."</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Signal Clusters & Trigger Tracks Breakdown -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold tracking-tight text-white">Signal Clusters: The Operational Triggers</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Track 1 -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-indigo-950 text-indigo-400 border border-indigo-800/50">SIGNAL CLUSTER 1</span>
+            <span class="text-xs text-slate-400">Social Commerce & Creator Marketplaces</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">In-App Vertical Video Feeds to Combat Ad CAC</h3>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <p><strong>The Active Pain Trigger:</strong> Marketplaces are losing margin to Meta/TikTok ad inflation. They are launching native vertical video feeds ("Watch & Shop", "Explore Feed") to drive organic conversion, but their generalist mobile teams are bottlenecked trying to make vertical swipe feel as fluid as TikTok.</p>
+            <p><strong>The 3 Verifiable Signals:</strong></p>
+            <ul class="list-disc list-inside text-slate-400 space-y-1 pl-1 text-xs font-mono">
+              <li>1M+ mobile app downloads on iOS/Android</li>
+              <li>Launched shoppable video, creator reels, or live show replays</li>
+              <li>Documented engineering work on ExoPlayer, AVPlayer, or Compose</li>
+            </ul>
+          </div>
+          <div class="p-3.5 rounded-lg bg-indigo-950/40 border border-indigo-900/40 text-xs text-indigo-300">
+            <strong>ShortKit's Wedge:</strong> Drop-in SDK that handles view recycling and pre-buffering out of the box, saving 2 senior mobile video engineer salaries.
+          </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded text-xs font-mono bg-purple-950 text-purple-400 border border-purple-800/50">SIGNAL CLUSTER 2</span>
+            <span class="text-xs text-slate-400">Consumer Media, Sports & Streaming</span>
+          </div>
+          <h3 class="text-lg font-bold text-white">Active Video Player Recruitment Bottlenecks</h3>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-300">
+            <p><strong>The Active Pain Trigger:</strong> High-traffic media and sports apps with millions of users are actively hiring specialized video player engineers on Greenhouse/Ashby to fix playback stutter, high battery consumption, and ad-insertion stalls.</p>
+            <p><strong>The 3 Verifiable Signals:</strong></p>
+            <ul class="list-disc list-inside text-slate-400 space-y-1 pl-1 text-xs font-mono">
+              <li>High-traffic mobile app (5M+ MAU)</li>
+              <li>Live job posting for Video Player / Media Experience Engineer</li>
+              <li>Explicit requirement for AVFoundation, VideoToolbox, ExoPlayer/Media3</li>
+            </ul>
+          </div>
+          <div class="p-3.5 rounded-lg bg-purple-950/40 border border-purple-900/40 text-xs text-purple-300">
+            <strong>ShortKit's Wedge:</strong> Provides a production-hardened feed player engine that guarantees sub-100ms first-frame rendering and automated decoder recycling.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GTM Play Explainer (Campaign Strategy & Fallback Mechanics) -->
+    <section class="p-6 rounded-xl border border-slate-800 bg-[#111827] space-y-6">
+      <div class="space-y-2">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/50">
+          GTM PLAY EXPLAINER
+        </div>
+        <h2 class="text-2xl font-bold tracking-tight text-white">The Execution Strategy: Pain Signal Led Outreach</h2>
+        <p class="text-xs sm:text-sm text-slate-400">How to execute this motion systematically, what angles to lead with, and what fallback to trigger if primary signals shift.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 1: SIGNAL DETECTION</div>
+          <h4 class="font-bold text-sm text-white">Scrape Live Hiring & Release Notes</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Monitor Greenhouse/Ashby for keywords <code>ExoPlayer</code>, <code>AVPlayer</code>, and App Store release notes mentioning "video feed". Never contact a company unless at least 2 signals in the cluster fire simultaneously.
+          </p>
+        </div>
+        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 2: PAIN SIGNAL LED OUTREACH</div>
+          <h4 class="font-bold text-sm text-white">3-Sentence Crawford Mirror</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Lead with the exact observable fact (e.g. <em>"Noticed your active Greenhouse role for Senior iOS Engineer on Media Experience..."</em>). Never ask for a 15-minute demo; ask for curiosity around peer player architecture benchmarks.
+          </p>
+        </div>
+        <div class="p-4 rounded-lg bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono text-indigo-400 font-semibold">STEP 3: VALUE-BASED FALLBACK</div>
+          <h4 class="font-bold text-sm text-white">Permissionless Feed Teardown</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            If the prospect doesn't respond or has frozen hiring, fallback to a <strong>Permissionless Playback Audit</strong>: record a 60-second video inspecting their mobile app's cold-start playback and memory profile compared to TikTok-grade benchmarks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agency Call to Action / Fractional GTME Footer -->
+    <section class="p-8 rounded-2xl border border-indigo-900/80 bg-gradient-to-br from-indigo-950/50 via-slate-900 to-[#0A0E17] space-y-6 text-center sm:text-left">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <span class="px-3 py-1 rounded-full text-xs font-mono bg-indigo-900/60 text-indigo-300 border border-indigo-700/60">
+            SCALE THIS REPEATABLY
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+            Want to Turn This Into a Repeatable Outbound Sales Engine?
+          </h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            This 10-account dispatch is just 1% of what is possible. If you want to scale this into an automated outbound motion—complete with <strong>Entire TAM Mapping</strong>, <strong>Message-Market Fit</strong>, <strong>Pain Signal Led Outreach</strong>, and <strong>Value-Based Intro Offers</strong>—you can hire a full-time or fractional Go-To-Market Engineer (GTME).
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400 pt-2 justify-center sm:justify-start">
+            <span class="flex items-center gap-1.5 text-slate-300">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              TAM Signal Mapping
+            </span>
+            <span class="flex items-center gap-1.5 text-slate-300">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Waterfall Enrichment
+            </span>
+            <span class="flex items-center gap-1.5 text-slate-300">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Fractional GTME Placement
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3 w-full sm:w-auto no-print">
+          <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 shadow-xl shadow-indigo-600/30 transition text-center">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Book Strategy Call
+          </a>
+          <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-medium text-xs text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 transition text-center">
+            Connect with Rivesh on LinkedIn
+          </a>
+          <a href="mailto:riveshk@automyzeai.com" class="text-xs text-center text-slate-400 hover:text-white font-mono transition">
+            riveshk@automyzeai.com
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-6xl mx-auto px-4">
+      © 2026 Automyze AI. All rights reserved. • Engineered for high-conversion B2B GTM.
+    </div>
+  </footer>
+
+  <!-- Instant CSV Download Script -->
+  <script>
+    document.getElementById('downloadCsvBtn').addEventListener('click', function () {
+      const csvContent = "client_name,client_domain,recipe_id,recipe_name,account_number,target_account_name,target_account_domain,target_persona,observable_tension_evidence,pqs_subject_line,pqs_sentence_1_mirror,pqs_sentence_2_learning,pqs_sentence_3_curiosity_ask\\n" +
+        'ShortKit,shortkit.dev,Recipe 1,Social Commerce & Creator Platforms Building In-App Video Feeds,1,LTK / rewardStyle,shopltk.com,VP of Engineering / Head of Mobile Engineering.,"Primary documentation: Senior Android Engineer Rahul Singh re-architected LTK video with Kotlin, Compose, and ExoPlayer to cut cold-start latency from 8s to <1s.",Creator video playback,"As LTK expands creator video feeds using Jetpack Compose and ExoPlayer, optimizing buffer pre-caching across high-density product drops requires continuous mobile player tuning.",Mobile commerce teams frequently find that default ExoPlayer buffer management causes noticeable frame drops when users swipe rapidly through high-resolution shoppable video cards.,Curious how consumer apps are embedding pre-built vertical feed SDKs with predictive three-video pre-buffering to achieve instant sub-100ms playback out of the box?\\n' +
+        'ShortKit,shortkit.dev,Recipe 1,Social Commerce & Creator Platforms Building In-App Video Feeds,2,Whatnot,whatnot.com,VP of Engineering / Head of Video Platform.,"Live Ashby posting (ashbyhq.com/whatnot) for Software Engineer, Video explicitly tasked with evaluating and onboarding new video providers.",Video provider evaluation,Your active Ashby posting for a Video Software Engineer to evaluate new video providers and improve playback quality highlights Whatnot’s focus on scaling video infrastructure beyond live auctions.,"When consumer marketplaces scale asynchronous short-form feeds alongside live streams, managing player instance recycling inside custom collection views often burns months of senior mobile engineering time on memory leak triage.",Open to reviewing technical benchmarks on how dedicated feed player architectures eliminate player memory bloat and deliver zero-delay swipe transitions?\\n' +
+        'ShortKit,shortkit.dev,Recipe 1,Social Commerce & Creator Platforms Building In-App Video Feeds,3,Poshmark,poshmark.com,VP of Engineering / Director of Mobile Apps.,Live feature Posh Shows and short-form video listing previews managing millions of unstandardized user video uploads.,Resale video performance,Scaling short-form video listings and live show replays across Poshmark\'s mobile app involves ingesting and rendering highly variable user-generated video content across thousands of device types.,"In consumer resale marketplaces, unstandardized user video uploads often lead to inconsistent aspect-ratio rendering and audio desync unless significant engineering is poured into custom client-side player wrappers.",Curious how marketplace engineering teams are handling multi-platform video ingestion and TikTok-quality client playback using a unified managed SDK?\\n' +
+        'ShortKit,shortkit.dev,Recipe 1,Social Commerce & Creator Platforms Building In-App Video Feeds,4,Vinted,vinted.com,Head of Mobile Engineering / Platform Engineering Lead.,Engineering documentation at vinted.engineering shows high-throughput media scaling and live testing of item video verification clips.,Item video verification,"As Vinted tests video previews to enhance second-hand item verification, delivering seamless video playback across diverse European mobile networks presents immediate client-side caching challenges.",C2C marketplaces frequently find that building custom in-feed video players from scratch draws senior mobile engineers away from core transaction and checkout architecture for multiple quarters.,Open to seeing how international mobile apps embed production-grade vertical video feeds with built-in CDN distribution in days rather than quarters?\\n' +
+        'ShortKit,shortkit.dev,Recipe 1,Social Commerce & Creator Platforms Building In-App Video Feeds,5,ClassDojo,classdojo.com,Head of Mobile Engineering / VP of Product.,Live feature Class Story used by 95% of US schools (50M+ users); mobile engineering continuously manages video compression and low-end Android playback.,Classroom video playback,"Supporting millions of daily classroom video moments on Class Story requires ensuring smooth, reliable video playback across heavily fragmented student and parent smartphones.",Educational platforms supporting mass consumer audiences often face support tickets when custom video players fail to buffer smoothly on budget mobile hardware with limited RAM.,Interested in seeing how consumer mobile platforms guarantee rock-solid video playback across lower-tier devices without maintaining custom player forks?\\n' +
+        'ShortKit,shortkit.dev,Recipe 2,Consumer Media Streaming & Sports Apps with Active Video Player Recruitment,6,Reddit,reddit.com,Senior iOS Media Experience Lead,"Live Greenhouse role (boards.greenhouse.io/reddit) for Senior iOS Engineer, Media Experience specifically managing AVFoundation, VideoToolbox, and HLS.",Reddit video architecture,Your active Greenhouse posting for a Senior iOS Engineer on the Media Experience team to lead video discovery architecture and AVFoundation player tuning aligns with Reddit\'s push to maximize video watch time.,High-density community apps frequently find that building custom player lifecycle managers on top of AVPlayer leads to subtle memory leaks when users swipe rapidly between mixed text and video cards.,Curious how consumer platforms are using purpose-built feed player engines with automated hardware decoder recycling to achieve zero-stutter playback?\\n' +
+        'ShortKit,shortkit.dev,Recipe 2,Consumer Media Streaming & Sports Apps with Active Video Player Recruitment,7,NewsBreak,newsbreak.com,Director of Mobile Engineering / VP of Product,"Live Greenhouse role (boards.greenhouse.io/newsbreak) for Senior iOS Engineer, Ads & Monetization / Video Surfaces ($165k-$200k base) scaling Scoopz vertical video.",Local video monetization,"Your active Greenhouse posting for a Senior iOS Engineer focused on video surfaces and monetization platform aligns directly with NewsBreak’s push to scale the Scoopz vertical video feed.",Digital publishers rolling out short-form feeds frequently hit a wall where injecting native video ads between editorial clips introduces frame hitching and player stalls that damage session retention.,Interested in seeing how mobile publishers are deploying specialized feed player SDKs that seamlessly integrate native ads and interactive overlays with zero playback stutter?\\n' +
+        'ShortKit,shortkit.dev,Recipe 2,Consumer Media Streaming & Sports Apps with Active Video Player Recruitment,8,Tubi,tubitv.com,VP of Engineering / Android Playback Lead,"Live Greenhouse posting (boards.greenhouse.io/tubi/jobs/5256244004) specifically requiring hands-on expertise in ExoPlayer / Media3.",ExoPlayer Media3 optimization,Tubi’s active Greenhouse recruitment for a Senior Android Engineer with deep ExoPlayer and Media3 expertise highlights the ongoing engineering overhead of fine-tuning streaming playback across Android devices.,Streaming mobile teams often discover that optimizing ABR ladder switching and pre-buffering logic for rapid content previews consumes months of senior engineering capacity that could be spent on core product features.,Open to exploring how modern media apps use pre-tuned client player SDKs with predictive buffering algorithms to eliminate start-up latency?\\n' +
+        'ShortKit,shortkit.dev,Recipe 2,Consumer Media Streaming & Sports Apps with Active Video Player Recruitment,9,Twitch,twitch.tv,Head of Mobile Core / Director of Video Infrastructure,"Live Greenhouse posting (greenhouse.io/twitch) for Senior iOS Engineer tasked with owning native video playback infrastructure.",Mobile video playback,Your Mobile Core team’s active search for a Senior iOS Engineer to own native video playback infrastructure on Greenhouse directly reflects the challenge of maintaining low-latency playback across millions of mobile DAUs.,Scaling video feeds across large mobile user bases consistently creates edge-case playback bugs where native video decoders fail to release memory fast enough during aggressive user navigation.,Would it help to see how specialized client feed engines manage hardware decoder lifecycle pooling to eliminate memory-related app crashes?\\n' +
+        'ShortKit,shortkit.dev,Recipe 2,Consumer Media Streaming & Sports Apps with Active Video Player Recruitment,10,Fox Corporation,foxcareers.com,Director of Video Technology / VP of Digital Engineering,"Live job posting for Senior Video Player Engineer (iOS) ($143k-$161k) leading architecture on AVPlayer, AVFoundation, and adaptive HLS streaming.",iOS player architecture,Fox Corporation’s active recruitment for a Senior Video Player Engineer on iOS focused on AVPlayer architecture and adaptive streaming highlights the technical investment required to maintain high QoE playback.,Broadcasters expanding mobile video features often find that building custom client-side buffering and QoE measurement layers from scratch delays mobile roadmap delivery by multiple quarters.,Curious how media organizations are embedding production-grade mobile feed player engines with built-in QoE telemetry in a fraction of the time?\\n';
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.setAttribute('href', url);
+      link.setAttribute('download', 'automyze_shortkit_10_accounts.csv');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
+</body>
+</html>

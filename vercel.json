@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/live-accounts-for-shortkit", "destination": "/live-accounts-for-shortkit/index.html" },
+    { "source": "/live-accounts-for-lexi", "destination": "/live-accounts-for-lexi/index.html" }
+  ]
+}
