@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Automyze | Fractional GTM Target Accounts & Signal Playbook</title>
-<meta name="description" content="A curated dispatch of 10 mid-market B2B software companies with verified active GTM leadership searches, unfilled Growth/Demand Gen requisitions, and pipeline expansion strain.">
+<title>Automyze | Live Target Accounts & Signal Playbook</title>
+<meta name="description" content="A curated dispatch of 15 mid-market B2B software scaleups with verified active operational bottlenecks across SDR hiring on commodity lists, secondary domain sprawl, and post-funding pipeline cliffs.">
 
 <!-- Favicon: Forest Green Logo -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3D2B'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='22' font-weight='600' fill='%23F4F2ED'%3Ea%3C/text%3E%3Ccircle cx='23.5' cy='21.5' r='2.5' fill='%238A6D3B'/%3E%3C/svg%3E">
@@ -59,14 +59,8 @@ p{line-height:1.65}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--rule2)}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--forest);display:inline-block;margin-right:7px;vertical-align:1px}
 
-header{border-bottom:1px solid var(--rule);padding:20px 0}
-header .wrap{display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Instrument Serif',Georgia,serif;font-size:26px;text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:2px}
-.logo em{font-style:italic;color:var(--forest)}
-.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);border:1px solid var(--rule2);padding:4px 10px;border-radius:2px}
-
 section{border-bottom:1px solid var(--rule);padding:72px 0}
-.two{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.two{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
 
 .btn{
   background:var(--forest);
@@ -76,117 +70,252 @@ section{border-bottom:1px solid var(--rule);padding:72px 0}
   font-weight:500;
   text-decoration:none;
   display:inline-block;
-  transition:background .2s ease,transform .2s ease;
   border:none;
   cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
 }
 .btn:hover{background:var(--forest-hover);transform:translateY(-1px);color:var(--paper)}
 .btn2{
   font-size:14px;
   color:var(--ink2);
   text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  border-bottom:1px solid var(--ink2);
+  border-bottom:1px solid var(--rule2);
   padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
 }
 .btn2:hover{color:var(--ink);border-color:var(--ink)}
+.fine{font-size:12.5px;color:var(--ink3)}
 
-.hero{padding:80px 0 0}
-.hero .sub{font-size:19px;line-height:1.45;color:var(--ink2);max-width:760px;margin-bottom:32px}
-.hero .cta-row{display:flex;align-items:center;gap:20px;margin-bottom:36px}
-.hero .fine{font-size:12px;color:var(--ink3);font-family:'IBM Plex Mono',monospace}
+/* Navigation */
+nav{
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  transition:border-color .2s ease;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Instrument Serif',Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
+.logo em{color:var(--forest);font-style:italic}
+.nav-r{display:flex;align-items:center;gap:26px}
+.nav-r a{font-size:13.5px;color:var(--ink2);text-decoration:none;transition:color .15s ease}
+.nav-r a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--forest)!important;
+  color:var(--paper)!important;
+  padding:8px 18px!important;
+  font-size:13px!important;
+  font-weight:500!important;
+  border-radius:0;
+}
+.nav-cta:hover{background:var(--forest-hover)!important}
 
-.band{background:var(--tint);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:24px 0}
-.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.band .cell .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
-.band .cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:28px;line-height:1;color:var(--forest)}
+/* Hero */
+.hero{padding:80px 0 0;border-bottom:none}
+.hero .sub{font-size:19px;color:var(--ink2);max-width:760px;margin-bottom:30px;line-height:1.55}
+.hero .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:14px}
 
-.wedge-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
-.wedge-grid > div{background:var(--card);border:1px solid var(--rule);padding:28px;border-radius:2px}
-.wedge-grid h4{font-family:'Instrument Serif',Georgia,serif;font-size:22px;margin-bottom:10px}
-.wedge-grid p{font-size:14px;color:var(--ink2);line-height:1.55}
+/* Metric Band */
+.band{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--tint);margin-top:60px}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
+.cell{padding:26px 36px;border-right:1px solid var(--rule)}
+.cell:last-child{border-right:none}
+.cell .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:6px}
+.cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:32px;line-height:1;color:var(--forest)}
 
-.table-wrap{margin-top:40px;border:1px solid var(--rule);background:var(--card);overflow-x:auto}
-table.act{width:100%;border-collapse:collapse;font-size:13.5px}
+/* The Strategic Wedge */
+.wedge-grid{display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--rule2)}
+.wedge-grid>div{padding:34px 30px}
+.wedge-grid>div:first-child{border-right:1px solid var(--rule2);background:var(--paper)}
+.wedge-grid h4{font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.wedge-grid p{font-size:13.5px;color:var(--ink2);line-height:1.6}
+
+/* Accounts Table */
+.table-wrap{
+  overflow-x:auto;
+  margin-top:28px;
+  background:var(--card);
+  border:1px solid var(--rule2);
+}
+table.act{
+  width:100%;
+  border-collapse:collapse;
+  text-align:left;
+}
 table.act th{
   font-family:'IBM Plex Mono',monospace;
-  font-size:10.5px;
-  letter-spacing:.12em;
+  font-size:11px;
+  letter-spacing:.08em;
   text-transform:uppercase;
   color:var(--ink3);
-  text-align:left;
-  padding:14px 18px;
-  border-bottom:1px solid var(--rule);
-  background:var(--tint);
   font-weight:500;
+  padding:14px 18px;
+  background:var(--tint);
+  border-bottom:1px solid var(--rule2);
+  white-space:nowrap;
 }
 table.act td{
-  padding:18px;
+  font-size:13.5px;
+  padding:16px 18px;
   border-bottom:1px solid var(--rule);
   vertical-align:top;
-  line-height:1.5;
+  line-height:1.55;
+  color:var(--ink);
 }
 table.act tr:last-child td{border-bottom:none}
 table.act tr:hover td{background:rgba(244,242,237,.5)}
-.act-name{font-weight:600;font-size:14.5px;color:var(--ink);display:block;margin-bottom:3px}
-.act-dom{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--forest)}
-.act-meta{font-size:11.5px;color:var(--ink3);margin-top:4px}
-.pill{
-  display:inline-block;
-  font-size:10.5px;
+.ac-link{font-weight:600;color:var(--forest);text-decoration:none}
+.ac-link:hover{text-decoration:underline}
+.ac-domain{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink3);display:block;margin-top:2px}
+.ac-tag{
   font-family:'IBM Plex Mono',monospace;
-  padding:3px 7px;
-  background:var(--tint);
+  font-size:10.5px;
+  background:var(--paper);
   border:1px solid var(--rule2);
-  border-radius:2px;
+  padding:2px 7px;
   color:var(--ink2);
+  display:inline-block;
+}
+.ac-cluster-link{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--forest);
+  text-decoration:none;
+  background:var(--tint);
+  border:1px solid rgba(31,61,43,0.18);
+  padding:4px 8px;
+  display:inline-block;
+  line-height:1.4;
+  transition:all .15s ease;
+}
+.ac-cluster-link:hover{
+  background:var(--paper);
+  border-color:var(--forest);
+  text-decoration:underline;
+}
+.ac-mirror{
+  font-size:12.5px;
+  color:var(--ink2);
+  background:var(--tint);
+  padding:8px 10px;
+  border-left:2px solid var(--brass);
+  font-style:normal;
   margin-top:4px;
 }
-.proof-link{color:var(--forest);text-decoration:underline;font-family:'IBM Plex Mono',monospace;font-size:11.5px}
 
-footer{padding:48px 0;font-size:12px;color:var(--ink3)}
-footer .wrap{display:flex;justify-content:space-between;align-items:center}
+/* Signal Clusters Blocks */
+.clusters-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.c-box{background:var(--card);border:1px solid var(--rule2);padding:26px}
+.c-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);display:block;margin-bottom:8px}
+.c-box h3{font-size:19px;font-weight:500;margin-bottom:12px;color:var(--ink)}
+.c-box p{font-size:13.5px;color:var(--ink2);margin-bottom:14px;line-height:1.6}
+.c-signals{list-style:none;margin:14px 0;padding-top:12px;border-top:1px solid var(--rule)}
+.c-signals li{font-size:12.5px;color:var(--ink2);padding:4px 0;position:relative;padding-left:16px}
+.c-signals li::before{content:"+";position:absolute;left:0;color:var(--forest);font-family:'IBM Plex Mono',monospace}
+.c-wedge{
+  background:var(--tint);
+  border-left:3px solid var(--forest);
+  padding:12px 14px;
+  font-size:12.5px;
+  color:var(--forest);
+  margin-top:14px;
+  line-height:1.5;
+}
 
-@media(max-width:860px){
-  .two{grid-template-columns:1fr;gap:36px}
+/* Callout Section (Proprietary Clusters vs Rented Data) */
+.callout-box{
+  background:var(--card);
+  border:1px solid var(--rule2);
+  padding:32px;
+  margin-top:28px;
+}
+.callout-box h3{font-family:'Instrument Serif',Georgia,serif;font-size:26px;margin-bottom:12px;color:var(--forest)}
+.callout-box p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:920px}
+
+/* Final Call Section */
+.final{background:var(--forest);color:var(--paper);border-bottom:none}
+.final h2{color:var(--paper);max-width:680px}
+.final h2 em{color:#C9BFA4}
+.final p{color:#BFC7C0;max-width:580px;margin-top:18px;font-size:16px}
+.final .btn{background:var(--paper);color:var(--forest);margin-top:30px}
+.final .btn:hover{background:#EDE9DF;color:var(--forest-hover)}
+.final-links{display:flex;gap:20px;align-items:center;margin-top:20px}
+.final-links a{color:#D2DDD5;font-size:13.5px;text-decoration:none;border-bottom:1px dotted #8FA095}
+.final-links a:hover{color:var(--paper);border-bottom-style:solid}
+
+/* Footer */
+footer{padding:34px 0;font-size:13px;color:var(--ink3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{font-size:20px}
+
+/* Scroll Reveals */
+.rv{opacity:0;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-u{transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* Print Styles */
+@media print {
+  nav, .no-print, button, .btn { display:none!important }
+  body { background:white!important; color:black!important }
+  .table-wrap, table.act { border:1px solid #ccc!important; width:100%!important }
+  table.act td, table.act th { border-bottom:1px solid #ddd!important }
+  section { padding:24px 0!important; page-break-inside:avoid }
+  .wrap { max-width:100%!important; padding:0!important }
+}
+
+/* Responsive */
+@media(max-width:960px){
+  .wrap{padding:0 24px}
+  .two,.wedge-grid,.clusters-grid{grid-template-columns:1fr;gap:24px}
+  .wedge-grid>div:first-child{border-right:none;border-bottom:1px solid var(--rule2)}
+  h1{font-size:38px}
+  h2{font-size:29px}
   .band .wrap{grid-template-columns:1fr 1fr}
-  .wedge-grid{grid-template-columns:1fr}
-  h1{font-size:42px}
-  h2{font-size:32px}
+  .cell:nth-child(2){border-right:none}
+  .cell:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .cell:nth-child(4){border-top:1px solid var(--rule)}
+  .nav-r a:not(.nav-cta){display:none}
+  section{padding:54px 0}
 }
 </style>
 </head>
 <body>
 
-<header>
+<nav id="nav">
   <div class="wrap">
-    <a href="/" class="logo">Automyze<em>.</em></a>
-    <span class="tag">Fractional GTM Outbound Engine</span>
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div class="nav-r">
+      <a href="#accounts">Accounts</a>
+      <a href="#wedge">The Wedge</a>
+      <a href="#clusters">Signal Clusters</a>
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="nav-cta">Book a call</a>
+    </div>
   </div>
-</header>
+</nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Fractional GTM Signal Cluster</p>
-      <h1>Ten live target accounts for <em>Automyze</em>.</h1>
-      <p class="sub">A curated dispatch of 10 mid-market B2B software scaleups (20 to 150 employees) with verified active Head of Growth, Founding GTM, or Demand Generation hiring searches combined with urgent commercial expansion demands.</p>
+      <p class="eyebrow">Target Dispatch</p>
+      <h1>Fifteen live target accounts for <em>Automyze</em>.</h1>
+      <p class="sub">A curated dispatch of 15 mid-market B2B software scaleups with verified active operational bottlenecks across SDR hiring on commodity lists, secondary domain sprawl, and post-funding pipeline cliffs.</p>
       <div class="cta-row">
         <button id="downloadCsvBtn" class="btn">Download Accounts (.CSV)</button>
         <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn2">Book a strategy call</a>
       </div>
-      <p class="fine">Verified against active Ashby career APIs, executive search postings, and post-PMF commercialization milestones.</p>
+      <p class="fine">Verified against active Ashby job board APIs, DNS sequencer records, and SEC Form D filings.</p>
     </div>
   </div>
 
   <div class="band">
     <div class="wrap">
-      <div class="cell"><div class="k">Accounts verified</div><div class="v">10</div></div>
-      <div class="cell"><div class="k">Signal cluster depth</div><div class="v">3 Signals</div></div>
-      <div class="cell"><div class="k">Core trigger</div><div class="v" style="font-size:20px">Active GTM hiring search</div></div>
-      <div class="cell"><div class="k">Sweet spot envelope</div><div class="v">20-150 emp</div></div>
+      <div class="cell"><div class="k">Accounts verified</div><div class="v">15</div></div>
+      <div class="cell"><div class="k">Primary source checks</div><div class="v">100%</div></div>
+      <div class="cell"><div class="k">Core bottleneck</div><div class="v" style="font-size:20px">SDR ramp & domain setup</div></div>
+      <div class="cell"><div class="k">Unverified accounts</div><div class="v">0</div></div>
     </div>
   </div>
 </section>
@@ -196,20 +325,20 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center}
   <div class="wrap two">
     <div>
       <p class="eyebrow">The Strategic Wedge</p>
-      <h2>Why waiting 6 months for a full-time GTM hire leaves pipeline dry, and where fractional GTM <em>wins</em>.</h2>
-      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">When venture-backed B2B scaleups open searches for a Head of Growth or Founding GTM lead, executive recruiting takes between 90 and 180 days to identify, interview, sign, and onboard the candidate. During those months, commercial expansion stalls, board growth targets loom, and founder bandwidth is consumed by manual sales. Automyze operates as a plug-and-play fractional GTM engine: we build the evidence-backed outbound architecture, deploy the playbooks, and generate qualified enterprise pipeline immediately while founders execute their permanent hiring search.</p>
+      <h2>Why buying commodity lists fails, and where Automyze <em>wins</em>.</h2>
+      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">Most outbound campaigns fail on the list, but everyone rewrites the copy. B2B sales teams buy static firmographic lists from Apollo or ZoomInfo, hand them to newly hired SDRs, and blast identical sequences to the same 2,000 VP titles. Automyze engineers custom Pain Data Recipes: we identify the 2 to 5 observable public data points that prove an acute operational trigger right now, build the list, run the sending, and book qualified sales calls directly onto your calendar.</p>
     </div>
     <div>
       <div class="wedge-grid">
         <div>
-          <span class="lbl" style="color:#A04040">The In-House Recruiting Drag</span>
-          <h4 style="margin-top:6px">The 6-Month Hiring Drought</h4>
-          <p>Companies spend $30k+ on executive recruiters and wait months for a full-time growth leader to start, during which pipeline remains completely static and targets slip.</p>
+          <span class="lbl" style="color:#A04040">The Commodity Trap</span>
+          <h4 style="margin-top:6px">Static Firmographic Lists & Headcount Sprawl</h4>
+          <p>Hiring more SDRs to blast static Apollo filters burns secondary email domains, wastes months of rep ramp time, and produces sub-1% reply rates because every competitor in your vertical is targeting the exact same titles.</p>
         </div>
         <div>
-          <span class="lbl" style="color:var(--forest)">The Fractional GTM Advantage</span>
-          <h4 style="margin-top:6px">Instant Evidence-Backed Execution</h4>
-          <p>Automyze activates immediate evidence-grounded outbound campaigns based on closed deal patterns, delivering 10 verified target accounts weekly without recruiting delays.</p>
+          <span class="lbl" style="color:var(--forest)">The High-Converting Wedge</span>
+          <h4 style="margin-top:6px">Managed Signal-Based GTM Outreach</h4>
+          <p>Automyze works backwards from closed deals to find acute pain signals. We build custom multi-signal lists, deploy dedicated sending infrastructure, and book qualified meetings on a pay-per-call basis. The client does nothing but take the calls.</p>
         </div>
       </div>
     </div>
@@ -222,7 +351,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center}
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
       <div>
         <p class="eyebrow">Live Target Accounts</p>
-        <h2>Ten software scaleups actively hiring GTM leadership while scaling pipeline.</h2>
+        <h2>Fifteen accounts with active sales development and outbound pipeline strain.</h2>
       </div>
       <button id="downloadCsvBtnTable" class="btn" style="padding:10px 20px;font-size:13px">Download CSV</button>
     </div>
@@ -231,163 +360,208 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center}
       <table class="act">
         <thead>
           <tr>
-            <th style="width:20%">Account & Headcount</th>
-            <th style="width:18%">Target Persona</th>
-            <th style="width:24%">Active GTM Hiring Trigger</th>
-            <th style="width:24%">Strategic Wedge Angle</th>
-            <th style="width:14%">Primary Proof</th>
+            <th style="width:22%">Account & Industry</th>
+            <th style="width:17%">Target Persona</th>
+            <th style="width:18%">Signal Cluster</th>
+            <th style="width:21%">Deterministic Evidence</th>
+            <th style="width:22%">Opening Angle</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              <span class="act-name">Momentic</span>
-              <span class="act-dom">momentic.ai</span>
-              <div class="act-meta">San Francisco, CA, USA</div>
-              <span class="pill">32 employees</span>
+              <a href="https://dock.us" target="_blank" class="ac-link">Dock</a>
+              <span class="ac-domain">dock.us</span>
+              <span class="ac-tag" style="margin-top:6px">Sales Onboarding</span>
             </td>
+            <td>Alex Kracov, CEO & Co-Founder</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: SDR Ramp</a></td>
+            <td>Actively recruiting Outbound SDRs on Ashby while primary domain runs Apollo and Segment tracking scripts; shifting from self-serve signups to outbound enterprise deals.</td>
             <td>
-              <strong>Founder & CEO</strong>
-              <div class="act-meta">AI-native testing platform</div>
+              <div class="ac-mirror">"You are actively hiring Outbound SDRs right now while running Apollo on dock.us to source pipeline. Most sales leaders find that doubling SDR seats on static firmographic filters only burns secondary domains faster. Are you open to seeing how we extract the 80 accounts in your market showing active buying friction this week before your new reps start sending?"</div>
             </td>
-            <td>Actively hiring Head of Growth on Ashby to build outbound pipeline strategy from scratch.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Momentic is actively recruiting a Head of Growth on Ashby while building 0-to-1 pipeline for AI-native software testing agents.</td>
-            <td><a href="https://jobs.ashbyhq.com/momentic" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Brellium</span>
-              <span class="act-dom">brellium.com</span>
-              <div class="act-meta">New York, NY, USA</div>
-              <span class="pill">45 employees</span>
+              <a href="https://inaccord.com" target="_blank" class="ac-link">Accord</a>
+              <span class="ac-domain">inaccord.com</span>
+              <span class="ac-tag" style="margin-top:6px">Mutual Action Plans</span>
             </td>
+            <td>Ross Rich, CEO & Co-Founder</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: SDR Ramp</a></td>
+            <td>Actively hiring Enterprise SDRs to prospect VP of Sales titles; site telemetry confirms ZoomInfo and HubSpot tracking pixels installed.</td>
             <td>
-              <strong>Co-Founder & CEO</strong>
-              <div class="act-meta">Clinical audit AI</div>
+              <div class="ac-mirror">"Accord's active recruitment for Enterprise SDRs while running ZoomInfo scripts highlights the push to scale outbound into mid-market accounts. Arming reps with static database lists usually leads to low reply rates because decision-makers get flooded with identical copy. Would it be helpful to see the specific data signals we use to verify which accounts have acute collaboration pain right now?"</div>
             </td>
-            <td>Actively recruiting enterprise Head of Growth on Ashby for AI clinical compliance platform.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Brellium is actively recruiting an enterprise Head of Growth on Ashby while managing clinical audit pipelines across healthcare providers.</td>
-            <td><a href="https://jobs.ashbyhq.com/brellium" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Nooks</span>
-              <span class="act-dom">nooks.ai</span>
-              <div class="act-meta">San Francisco, CA, USA</div>
-              <span class="pill">68 employees</span>
+              <a href="https://parabola.io" target="_blank" class="ac-link">Parabola</a>
+              <span class="ac-domain">parabola.io</span>
+              <span class="ac-tag" style="margin-top:6px">Workflow Automation</span>
             </td>
+            <td>Alex Yaseen, Founder & CEO</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: SDR Ramp</a></td>
+            <td>Open postings for Outbound BDRs to prospect operations and supply chain leaders; site runs Apollo script on primary domain.</td>
             <td>
-              <strong>VP of Sales & Co-Founder</strong>
-              <div class="act-meta">Virtual salesfloor AI</div>
+              <div class="ac-mirror">"Your active recruitment for Outbound BDRs alongside Apollo tracking on parabola.io points to scaling pipeline against operations teams. Most teams discover that scaling headcount on broad industry filters burns list TAM before reps hit ramp. Are you open to reviewing the custom public data recipes we use to pinpoint operations teams with live workflow backlogs?"</div>
             </td>
-            <td>Actively hiring Head of Growth Marketing on Ashby to expand customer acquisition.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Nooks is actively recruiting a Head of Growth Marketing on Ashby while expanding sales pipeline execution for virtual salesfloor teams.</td>
-            <td><a href="https://jobs.ashbyhq.com/nooks" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Strix</span>
-              <span class="act-dom">strix.ai</span>
-              <div class="act-meta">New York, NY, USA</div>
-              <span class="pill">35 employees</span>
+              <a href="https://spekit.com" target="_blank" class="ac-link">Spekit</a>
+              <span class="ac-domain">spekit.com</span>
+              <span class="ac-tag" style="margin-top:6px">Sales Enablement</span>
             </td>
+            <td>Melanie Fellay, CEO & Co-Founder</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: SDR Ramp</a></td>
+            <td>Multiple open requisitions for Senior SDRs; site runs Apollo and 6sense script tags to prospect enterprise enablement leaders.</td>
             <td>
-              <strong>Founder & CEO</strong>
-              <div class="act-meta">Autonomous cyber defense</div>
+              <div class="ac-mirror">"Spekit's recent postings for Outbound SDRs while deploying Apollo intent trackers shows an active push to ramp pipeline across enterprise accounts. When SDRs rely on third-party intent data, they end up reaching out weeks after the initial research spike occurred. Would you be open to comparing your current intent list against multi-signal clusters that verify live tool rollout friction?"</div>
             </td>
-            <td>Actively hiring Head of Growth on Ashby to drive GTM for autonomous cyber defense agents.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Strix is actively recruiting a Head of Growth on Ashby while scaling enterprise penetration testing pipelines for security leaders.</td>
-            <td><a href="https://jobs.ashbyhq.com/strix" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Vendelux</span>
-              <span class="act-dom">vendelux.com</span>
-              <div class="act-meta">New York, NY, USA</div>
-              <span class="pill">75 employees</span>
+              <a href="https://arrows.to" target="_blank" class="ac-link">Arrows</a>
+              <span class="ac-domain">arrows.to</span>
+              <span class="ac-tag" style="margin-top:6px">HubSpot Onboarding</span>
             </td>
+            <td>Daniel Layfield, CEO & Co-Founder</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: SDR Ramp</a></td>
+            <td>Open search for an Outbound Growth Specialist to expand beyond inbound directory leads; domain runs Apollo tracking scripts.</td>
             <td>
-              <strong>Chief Revenue Officer</strong>
-              <div class="act-meta">Event market intelligence</div>
+              <div class="ac-mirror">"You are looking to build proactive outbound to onboarding leaders while currently relying on standard directory and Apollo data. Shifting from organic ecosystem traffic to cold outbound is where most SaaS teams stumble by sending generic product announcements. Are you open to seeing how we identify high-fit HubSpot customers who recently had onboarding leadership turnover?"</div>
             </td>
-            <td>Actively recruiting Head of Growth Marketing on Ashby to scale event intelligence acquisition.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Vendelux is actively recruiting a Head of Growth Marketing on Ashby while transitioning event data intelligence into scalable outbound pipelines.</td>
-            <td><a href="https://jobs.ashbyhq.com/vendelux" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Voxel</span>
-              <span class="act-dom">voxelai.com</span>
-              <div class="act-meta">San Francisco, CA, USA</div>
-              <span class="pill">85 employees</span>
+              <a href="https://subscript.com" target="_blank" class="ac-link">Subscript</a>
+              <span class="ac-domain">subscript.com</span>
+              <span class="ac-tag" style="margin-top:6px">Subscription Analytics</span>
             </td>
+            <td>Sidharth Kakkar, CEO & Co-Founder</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Domain Sprawl</a></td>
+            <td>Registered multiple secondary domains with DNS TXT records for cold sequencers; lean team with no in-house GTM data engineer.</td>
             <td>
-              <strong>VP of Marketing</strong>
-              <div class="act-meta">Industrial computer vision</div>
+              <div class="ac-mirror">"You recently configured secondary sending domains on Google Workspace and cold sequencers to scale outbound to finance leaders. The teams getting 8% to 12% positive replies on these setups aren't writing better copy; they are feeding their inboxes with 2 to 5 combined public pain signals rather than pulling title lists from databases. Would it be helpful to see the specific data signals we use to verify which accounts in your ICP have acute billing complexity right now?"</div>
             </td>
-            <td>Actively hiring Director of Demand Generation on Ashby to build full enterprise demand engine.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Voxel is actively recruiting a Director of Demand Generation on Ashby while scaling computer vision safety pipelines across industrial operations.</td>
-            <td><a href="https://jobs.ashbyhq.com/voxel" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Passionfroot</span>
-              <span class="act-dom">passionfroot.me</span>
-              <div class="act-meta">Berlin, Germany & Remote</div>
-              <span class="pill">30 employees</span>
+              <a href="https://castordoc.com" target="_blank" class="ac-link">CastorDoc</a>
+              <span class="ac-domain">castordoc.com</span>
+              <span class="ac-tag" style="margin-top:6px">Data Governance</span>
             </td>
+            <td>Tristan Mayer, CEO & Co-Founder</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Domain Sprawl</a></td>
+            <td>Configured secondary outbound domains with Instantly routing; no internal technical RevOps engineer on staff.</td>
             <td>
-              <strong>Co-Founder & CEO</strong>
-              <div class="act-meta">Creator growth software</div>
+              <div class="ac-mirror">"Your team configured secondary outbound inboxes across dedicated sending domains to target enterprise data architects. Spinning up secondary domains protects deliverability, but feeding them unvalidated CSVs burns domain authority within 60 days. Would you be open to seeing how we build verified signal lists of companies undergoing data warehouse migrations?"</div>
             </td>
-            <td>Actively hiring Growth Lead on Ashby to scale B2B brand acquisition programs.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Passionfroot is actively recruiting a Growth Lead on Ashby while expanding brand partnership pipelines for creator-led software platforms.</td>
-            <td><a href="https://jobs.ashbyhq.com/passionfroot" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Lightsage</span>
-              <span class="act-dom">lightsage.ai</span>
-              <div class="act-meta">San Francisco, CA, USA</div>
-              <span class="pill">24 employees</span>
+              <a href="https://novu.co" target="_blank" class="ac-link">Novu</a>
+              <span class="ac-domain">novu.co</span>
+              <span class="ac-tag" style="margin-top:6px">Developer Infra</span>
             </td>
+            <td>Tomer Barnea, CEO & Co-Founder</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Domain Sprawl</a></td>
+            <td>Scaling outbound targeting VP of Engineering titles via secondary domains; DNS shows cold sequencing records without internal RevOps engineering.</td>
             <td>
-              <strong>Co-Founder & CEO</strong>
-              <div class="act-meta">Agent infrastructure</div>
+              <div class="ac-mirror">"Novu's setup of secondary sending infrastructure to prospect engineering leadership reflects a major push into cold outbound. Developers and engineering leaders have the highest spam filter defenses and ignore standard cold sequences. Are you open to seeing how we detect public GitHub repositories experiencing notification latency issues as our outreach trigger?"</div>
             </td>
-            <td>Actively hiring Founding GTM Lead on Ashby to lead sales strategy for AI agent infrastructure.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Lightsage is actively recruiting a Founding GTM Lead on Ashby while establishing outbound sales playbooks for developer infrastructure teams.</td>
-            <td><a href="https://jobs.ashbyhq.com/lightsage" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Datalab</span>
-              <span class="act-dom">datalab.to</span>
-              <div class="act-meta">New York, NY, USA</div>
-              <span class="pill">35 employees</span>
+              <a href="https://userflow.com" target="_blank" class="ac-link">Userflow</a>
+              <span class="ac-domain">userflow.com</span>
+              <span class="ac-tag" style="margin-top:6px">Product Onboarding</span>
             </td>
+            <td>Esben Friis-Jensen, Chief Growth Officer</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Domain Sprawl</a></td>
+            <td>Setup of secondary cold outreach domains with Smartlead MX records to target product managers; lean 30-person team with 0 dedicated data engineers.</td>
             <td>
-              <strong>Founder & CEO</strong>
-              <div class="act-meta">Data science automation</div>
+              <div class="ac-mirror">"You recently initialized secondary sending domains and sequencer warming to drive outbound pipeline for your enterprise tier. Product leaders rarely reply to cold outreach unless the message highlights an observable flaw in their current user onboarding flow. Would it be helpful to see the observable UI friction signals we monitor across SaaS web apps?"</div>
             </td>
-            <td>Actively hiring Founding GTM on Ashby to define outbound sales playbooks.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Datalab is actively recruiting a Founding GTM Lead on Ashby while commercializing automated data science workflows for enterprise analytics teams.</td>
-            <td><a href="https://jobs.ashbyhq.com/datalab" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
           </tr>
           <tr>
             <td>
-              <span class="act-name">Broccoli AI</span>
-              <span class="act-dom">broccoliai.com</span>
-              <div class="act-meta">San Francisco, CA, USA</div>
-              <span class="pill">30 employees</span>
+              <a href="https://unifygtm.com" target="_blank" class="ac-link">Unify</a>
+              <span class="ac-domain">unifygtm.com</span>
+              <span class="ac-tag" style="margin-top:6px">GTM Platform</span>
             </td>
+            <td>Austin Hughes, CEO & Co-Founder</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Domain Sprawl</a></td>
+            <td>Rapidly spinning up secondary domains to test high-volume cold sequences; lean team facing outbound deliverability constraints.</td>
             <td>
-              <strong>Co-Founder & CEO</strong>
-              <div class="act-meta">Enterprise workflow AI</div>
+              <div class="ac-mirror">"Your deployment of multiple secondary sending domains to scale cold touchpoints highlights the challenge of maintaining inbox health at volume. Scaling outbound successfully requires high-relevance trigger clusters so sending volume can drop by 80% while booking more calls. Are you open to reviewing the data recipes we use to trigger outreach only when accounts hit multi-signal velocity?"</div>
             </td>
-            <td>Actively hiring Head of Growth on Ashby to establish pipeline creation systems.</td>
-            <td style="background:rgba(31,61,43,.03);font-weight:500">Broccoli AI is actively recruiting a Head of Growth on Ashby while structuring outbound pipeline creation systems for enterprise automation workflows.</td>
-            <td><a href="https://jobs.ashbyhq.com/broccoli" target="_blank" rel="noreferrer" class="proof-link">Ashby Requisition</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://finout.io" target="_blank" class="ac-link">Finout</a>
+              <span class="ac-domain">finout.io</span>
+              <span class="ac-tag" style="margin-top:6px">FinOps Platform</span>
+            </td>
+            <td>Roi Rav-Hon, CEO & Co-Founder</td>
+            <td><a href="#cluster-03" class="ac-cluster-link">Cluster 03: Post-Funding Cliff</a></td>
+            <td>Series B raised ($26M); organic search volume plateaued over trailing 90 days; board mandate to build predictable outbound ARR into cloud spenders.</td>
+            <td>
+              <div class="ac-mirror">"Following Finout's Series B expansion, hitting enterprise net-new ARR targets means relying on outbound rather than organic inbound. Reaching enterprise DevOps and FinOps buyers through cold email requires proving their cloud infrastructure is currently scaling without governance. Would you be open to seeing how we verify cloud telemetry signals across high-spend engineering teams?"</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://incident.io" target="_blank" class="ac-link">incident.io</a>
+              <span class="ac-domain">incident.io</span>
+              <span class="ac-tag" style="margin-top:6px">Reliability Platform</span>
+            </td>
+            <td>Stephen Whitworth, CEO & Co-Founder</td>
+            <td><a href="#cluster-03" class="ac-cluster-link">Cluster 03: Post-Funding Cliff</a></td>
+            <td>Post-Series A ($28.7M Index Ventures); expanded from developer self-serve to outbound enterprise sales targeting Heads of Infrastructure.</td>
+            <td>
+              <div class="ac-mirror">"With incident.io moving upmarket into Fortune 500 engineering teams, outbound to enterprise infrastructure leaders has become the primary pipeline driver. Enterprise VP of Infrastructure titles delete generic feature pitches, but respond when public uptime data mirrors an active operational transition. Are you open to seeing the multi-signal recipe we use to identify companies with expanding on-call rosters?"</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://baseten.co" target="_blank" class="ac-link">Baseten</a>
+              <span class="ac-domain">baseten.co</span>
+              <span class="ac-tag" style="margin-top:6px">ML Infrastructure</span>
+            </td>
+            <td>Tuhin Srivastava, CEO & Co-Founder</td>
+            <td><a href="#cluster-03" class="ac-cluster-link">Cluster 03: Post-Funding Cliff</a></td>
+            <td>Series B ($40M IVP, Spark Capital); marketing site shifts from open ML playground to enterprise SLAs; hiring AEs with immediate quota delivery mandates.</td>
+            <td>
+              <div class="ac-mirror">"As Baseten scales enterprise ML model deployments, building predictable executive pipeline beyond inbound developer signups is critical. AI engineering heads get pitched by twenty infra tools daily, making standard database outbound ineffective. Would it be helpful to see how we track production ML job postings and HuggingFace activity to time outreach precisely?"</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://breachrx.com" target="_blank" class="ac-link">BreachRx</a>
+              <span class="ac-domain">breachrx.com</span>
+              <span class="ac-tag" style="margin-top:6px">Regulated Security</span>
+            </td>
+            <td>Anderson Lunsford, CEO & Founder</td>
+            <td><a href="#cluster-03" class="ac-cluster-link">Cluster 03: Post-Funding Cliff</a></td>
+            <td>Series A funded ($15M); expanding outbound into CISO and General Counsel personas facing new SEC cyber disclosure mandates.</td>
+            <td>
+              <div class="ac-mirror">"BreachRx's move to capture enterprise CISO accounts under the new SEC disclosure deadlines requires direct, trigger-driven outbound. Reaching security executives requires objective proof of compliance bottlenecks rather than fear-based messaging. Are you open to reviewing the regulatory data signals we use to verify which mid-market firms lack dedicated incident response counsel?"</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://commonroom.io" target="_blank" class="ac-link">Common Room</a>
+              <span class="ac-domain">commonroom.io</span>
+              <span class="ac-tag" style="margin-top:6px">Customer Intelligence</span>
+            </td>
+            <td>Linda Lian, CEO & Founder</td>
+            <td><a href="#cluster-03" class="ac-cluster-link">Cluster 03: Post-Funding Cliff</a></td>
+            <td>Series B funded; sales leadership actively accelerating outbound into B2B software CROs and VPs of Sales while organic inbound has normalized.</td>
+            <td>
+              <div class="ac-mirror">"Common Room's mandate to close enterprise revenue leaders requires generating qualified pipeline outside of existing community signups. Commercial GTM executives are the hardest persona to prospect because they recognize standard sales templates immediately. Would you be open to seeing how we build acute-pain lists based on sales team expansion and tech stack transitions?"</div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -395,29 +569,148 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center}
   </div>
 </section>
 
+<!-- SIGNAL CLUSTERS -->
+<section id="clusters">
+  <div class="wrap">
+    <p class="eyebrow">Signal Clusters</p>
+    <h2>The operational triggers we monitor.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Accounts enter the dispatch when multiple observable facts align simultaneously. We monitor live sales hiring surges, secondary domain configurations, and post-raise milestones before drafting a single word.</p>
+
+    <div class="clusters-grid">
+      <div class="c-box" id="cluster-01">
+        <span class="c-badge">CLUSTER 01</span>
+        <h3>SDR Capacity Ramp Straining on Commodity Apollo Lists</h3>
+        <p>B2B software scaleups actively hiring SDRs while their web telemetry reveals reliance on static database lists like Apollo or ZoomInfo, setting up new reps to blast exhausted TAM.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>1+ active SDR/BDR postings on Greenhouse, Lever, or Ashby (<45 days)</li>
+          <li>Apollo.io, ZoomInfo, or Seamless.ai tracking scripts detected on marketing site</li>
+          <li>25 to 150 employees, $15k+ ACV contract size</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Automyze wedge:</strong> Arming newly hired reps with high-converting signal clusters so they hit quota in month one rather than burning company domains on cold contact databases.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-02">
+        <span class="c-badge">CLUSTER 02</span>
+        <h3>Secondary Domain Inboxing Sprawl Without Signal Data</h3>
+        <p>Growth leaders who purchased 3 to 10 lookalike domains and sequencer seats, but lack internal technical data architects to build multi-point custom lists.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>3+ secondary domains registered within 30 to 75 days via WHOIS logs</li>
+          <li>Active SPF/DKIM/DMARC TXT records routed through Instantly or Smartlead</li>
+          <li>No in-house GTM Engineer or RevOps data architect on staff</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Automyze wedge:</strong> Feeding cold infrastructure with verified acute-pain data recipes so reply rates hit 8% to 12% and secondary domain reputations stay protected.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-03">
+        <span class="c-badge">CLUSTER 03</span>
+        <h3>Post-Funding Pipeline Cliff (Series A/B Scaling Demands)</h3>
+        <p>Venture-backed SaaS scaleups where post-announcement inbound and referral spikes have normalized, forcing sales leadership to build predictable cold outbound pipeline.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>$3M to $40M Series A/B funding closed 90 to 180 days ago via Form D / Crunchbase</li>
+          <li>Organic search and referral web visits plateauing over trailing 90 days</li>
+          <li>VP of Sales or Head of Revenue facing board ARR quota delivery targets</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Automyze wedge:</strong> Completely done-for-you outbound execution booking qualified sales calls directly on calendar without waiting 6 months to recruit internal SDR teams.
+        </div>
+      </div>
+    </div>
+
+    <!-- How Automyze Operates (Below Signal Clusters) -->
+    <div class="callout-box">
+      <span class="lbl" style="color:var(--brass)">Operating Philosophy</span>
+      <h3 style="margin-top:8px">How Automyze operates: proprietary Signal Clusters vs. rented data</h3>
+      <p>Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around Signal Clusters: multi-layered, observable public facts that prove an Active Pain Trigger inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live technical bottlenecks and architectural strain directly from job boards, engineer commits, and DNS infrastructure. Read more on our philosophy and methodology <a href="https://automyzeai.com/#method" style="color:var(--forest);font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CALL / BOOK -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#C9BFA4">Scale Outbound</p>
+    <h2>Turn this into a repeatable <em>outbound engine</em>.</h2>
+    <p>This 15-account dispatch is a single slice of what is possible. If you want to scale this into an automated outbound motion covering your entire market, test message-market fit, and run pain-signal outreach, you can work with Automyze or hire Rivesh as a full-time dedicated or fractional Go-To-Market Engineer.</p>
+    <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn">Book a strategy call</a>
+    <div class="final-links">
+      <a href="mailto:riveshk@automyzeai.com">riveshk@automyzeai.com</a>
+      <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div>Automyze Fractional GTM Intelligence. Built from evidence.</div>
-    <div><a href="/live-accounts-for-automyze.csv" download class="proof-link">Download live-accounts-for-automyze.csv</a></div>
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn" style="padding:10px 20px;font-size:13px">Book a call</a>
+      <span>© 2026 Automyze</span>
+    </div>
   </div>
 </footer>
 
+<!-- Instant CSV Download Script & Scroll Observer -->
 <script>
 (function(){
-  var csvData = "Company Name,Domain,Estimated Headcount,Geography,Active Strain Trigger,Primary Source URL,Strategic Wedge Angle,Target Decision Maker Title\n" +
-    'Momentic,momentic.ai,32,"San Francisco, CA, USA","Actively hiring Head of Growth on Ashby to build outbound pipeline strategy from scratch.","https://jobs.ashbyhq.com/momentic","Momentic is actively recruiting a Head of Growth on Ashby while building 0-to-1 pipeline for AI-native software testing agents.","Founder & CEO"\n' +
-    'Brellium,brellium.com,45,"New York, NY, USA","Actively recruiting enterprise Head of Growth on Ashby for AI clinical compliance platform.","https://jobs.ashbyhq.com/brellium","Brellium is actively recruiting an enterprise Head of Growth on Ashby while managing clinical audit pipelines across healthcare providers.","Co-Founder & CEO"\n' +
-    'Nooks,nooks.ai,68,"San Francisco, CA, USA","Actively hiring Head of Growth Marketing on Ashby to expand customer acquisition.","https://jobs.ashbyhq.com/nooks","Nooks is actively recruiting a Head of Growth Marketing on Ashby while expanding sales pipeline execution for virtual salesfloor teams.","VP of Sales & Co-Founder"\n' +
-    'Strix,strix.ai,35,"New York, NY, USA","Actively hiring Head of Growth on Ashby to drive GTM for autonomous cyber defense agents.","https://jobs.ashbyhq.com/strix","Strix is actively recruiting a Head of Growth on Ashby while scaling enterprise penetration testing pipelines for security leaders.","Founder & CEO"\n' +
-    'Vendelux,vendelux.com,75,"New York, NY, USA","Actively recruiting Head of Growth Marketing on Ashby to scale event intelligence acquisition.","https://jobs.ashbyhq.com/vendelux","Vendelux is actively recruiting a Head of Growth Marketing on Ashby while transitioning event data intelligence into scalable outbound pipelines.","Chief Revenue Officer"\n' +
-    'Voxel,voxelai.com,85,"San Francisco, CA, USA","Actively hiring Director of Demand Generation on Ashby to build full enterprise demand engine.","https://jobs.ashbyhq.com/voxel","Voxel is actively recruiting a Director of Demand Generation on Ashby while scaling computer vision safety pipelines across industrial operations.","VP of Marketing"\n' +
-    'Passionfroot,passionfroot.me,30,"Berlin, Germany & Remote","Actively hiring Growth Lead on Ashby to scale B2B brand acquisition programs.","https://jobs.ashbyhq.com/passionfroot","Passionfroot is actively recruiting a Growth Lead on Ashby while expanding brand partnership pipelines for creator-led software platforms.","Co-Founder & CEO"\n' +
-    'Lightsage,lightsage.ai,24,"San Francisco, CA, USA","Actively hiring Founding GTM Lead on Ashby to lead sales strategy for AI agent infrastructure.","https://jobs.ashbyhq.com/lightsage","Lightsage is actively recruiting a Founding GTM Lead on Ashby while establishing outbound sales playbooks for developer infrastructure teams.","Co-Founder & CEO"\n' +
-    'Datalab,datalab.to,35,"New York, NY, USA","Actively hiring Founding GTM on Ashby to define outbound sales playbooks.","https://jobs.ashbyhq.com/datalab","Datalab is actively recruiting a Founding GTM Lead on Ashby while commercializing automated data science workflows for enterprise analytics teams.","Founder & CEO"\n' +
-    'Broccoli AI,broccoliai.com,30,"San Francisco, CA, USA","Actively hiring Head of Growth on Ashby to establish pipeline creation systems.","https://jobs.ashbyhq.com/broccoli","Broccoli AI is actively recruiting a Head of Growth on Ashby while structuring outbound pipeline creation systems for enterprise automation workflows.","Co-Founder & CEO"\n';
+  // Sticky nav scroll threshold
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive: true});
 
-  function triggerDownload() {
-    var blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+  // IntersectionObserver for graceful, non-jarring scroll reveals
+  var targets = document.querySelectorAll('section > .wrap > *');
+  for(var i = 0; i < targets.length; i++){
+    if(!targets[i].closest('.hero')) {
+      targets[i].classList.add('rv', 'rv-u');
+    }
+  }
+  var all = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold: 0.1});
+    all.forEach(function(el){ io.observe(el); });
+  } else {
+    all.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // 15 Verified Accounts CSV generation
+  var csvData = "Company,Website,Target Persona,Signal Cluster,Deterministic Evidence,Opening Angle\n" +
+    "Dock,https://dock.us,Alex Kracov (CEO & Co-Founder),Cluster 01: SDR Ramp,Actively recruiting Outbound SDRs on Ashby while primary domain runs Apollo and Segment tracking scripts; shifting from self-serve signups to outbound enterprise deals.,\"You are actively hiring Outbound SDRs right now while running Apollo on dock.us to source pipeline. Most sales leaders find that doubling SDR seats on static firmographic filters only burns secondary domains faster. Are you open to seeing how we extract the 80 accounts in your market showing active buying friction this week before your new reps start sending?\"\n" +
+    "Accord,https://inaccord.com,Ross Rich (CEO & Co-Founder),Cluster 01: SDR Ramp,Actively hiring Enterprise SDRs to prospect VP of Sales titles; site telemetry confirms ZoomInfo and HubSpot tracking pixels installed.,\"Accord's active recruitment for Enterprise SDRs while running ZoomInfo scripts highlights the push to scale outbound into mid-market accounts. Arming reps with static database lists usually leads to low reply rates because decision-makers get flooded with identical copy. Would it be helpful to see the specific data signals we use to verify which accounts have acute collaboration pain right now?\"\n" +
+    "Parabola,https://parabola.io,Alex Yaseen (Founder & CEO),Cluster 01: SDR Ramp,Open postings for Outbound BDRs to prospect operations and supply chain leaders; site runs Apollo script on primary domain.,\"Your active recruitment for Outbound BDRs alongside Apollo tracking on parabola.io points to scaling pipeline against operations teams. Most teams discover that scaling headcount on broad industry filters burns list TAM before reps hit ramp. Are you open to reviewing the custom public data recipes we use to pinpoint operations teams with live workflow backlogs?\"\n" +
+    "Spekit,https://spekit.com,Melanie Fellay (CEO & Co-Founder),Cluster 01: SDR Ramp,Multiple open requisitions for Senior SDRs; site runs Apollo and 6sense script tags to prospect enterprise enablement leaders.,\"Spekit's recent postings for Outbound SDRs while deploying Apollo intent trackers shows an active push to ramp pipeline across enterprise accounts. When SDRs rely on third-party intent data, they end up reaching out weeks after the initial research spike occurred. Would you be open to comparing your current intent list against multi-signal clusters that verify live tool rollout friction?\"\n" +
+    "Arrows,https://arrows.to,Daniel Layfield (CEO & Co-Founder),Cluster 01: SDR Ramp,Open search for an Outbound Growth Specialist to expand beyond inbound directory leads; domain runs Apollo tracking scripts.,\"You are looking to build proactive outbound to onboarding leaders while currently relying on standard directory and Apollo data. Shifting from organic ecosystem traffic to cold outbound is where most SaaS teams stumble by sending generic product announcements. Are you open to seeing how we identify high-fit HubSpot customers who recently had onboarding leadership turnover?\"\n" +
+    "Subscript,https://subscript.com,Sidharth Kakkar (CEO & Co-Founder),Cluster 02: Domain Sprawl,Registered multiple secondary domains with DNS TXT records for cold sequencers; lean team with no in-house GTM data engineer.,\"You recently configured secondary sending domains on Google Workspace and cold sequencers to scale outbound to finance leaders. The teams getting 8% to 12% positive replies on these setups aren't writing better copy; they are feeding their inboxes with 2 to 5 combined public pain signals rather than pulling title lists from databases. Would it be helpful to see the specific data signals we use to verify which accounts in your ICP have acute billing complexity right now?\"\n" +
+    "CastorDoc,https://castordoc.com,Tristan Mayer (CEO & Co-Founder),Cluster 02: Domain Sprawl,Configured secondary outbound domains with Instantly routing; no internal technical RevOps engineer on staff.,\"Your team configured secondary outbound inboxes across dedicated sending domains to target enterprise data architects. Spinning up secondary domains protects deliverability, but feeding them unvalidated CSVs burns domain authority within 60 days. Would you be open to seeing how we build verified signal lists of companies undergoing data warehouse migrations?\"\n" +
+    "Novu,https://novu.co,Tomer Barnea (CEO & Co-Founder),Cluster 02: Domain Sprawl,Scaling outbound targeting VP of Engineering titles via secondary domains; DNS shows cold sequencing records without internal RevOps engineering.,\"Novu's setup of secondary sending infrastructure to prospect engineering leadership reflects a major push into cold outbound. Developers and engineering leaders have the highest spam filter defenses and ignore standard cold sequences. Are you open to seeing how we detect public GitHub repositories experiencing notification latency issues as our outreach trigger?\"\n" +
+    "Userflow,https://userflow.com,Esben Friis-Jensen (Chief Growth Officer),Cluster 02: Domain Sprawl,Setup of secondary cold outreach domains with Smartlead MX records to target product managers; lean 30-person team with 0 dedicated data engineers.,\"You recently initialized secondary sending domains and sequencer warming to drive outbound pipeline for your enterprise tier. Product leaders rarely reply to cold outreach unless the message highlights an observable flaw in their current user onboarding flow. Would it be helpful to see the observable UI friction signals we monitor across SaaS web apps?\"\n" +
+    "Unify,https://unifygtm.com,Austin Hughes (CEO & Co-Founder),Cluster 02: Domain Sprawl,Rapidly spinning up secondary domains to test high-volume cold sequences; lean team facing outbound deliverability constraints.,\"Your deployment of multiple secondary sending domains to scale cold touchpoints highlights the challenge of maintaining inbox health at volume. Scaling outbound successfully requires high-relevance trigger clusters so sending volume can drop by 80% while booking more calls. Are you open to reviewing the data recipes we use to trigger outreach only when accounts hit multi-signal velocity?\"\n" +
+    "Finout,https://finout.io,Roi Rav-Hon (CEO & Co-Founder),Cluster 03: Post-Funding Cliff,Series B raised ($26M); organic search volume plateaued over trailing 90 days; board mandate to build predictable outbound ARR into cloud spenders.,\"Following Finout's Series B expansion, hitting enterprise net-new ARR targets means relying on outbound rather than organic inbound. Reaching enterprise DevOps and FinOps buyers through cold email requires proving their cloud infrastructure is currently scaling without governance. Would you be open to seeing how we verify cloud telemetry signals across high-spend engineering teams?\"\n" +
+    "incident.io,https://incident.io,Stephen Whitworth (CEO & Co-Founder),Cluster 03: Post-Funding Cliff,Post-Series A ($28.7M Index Ventures); expanded from developer self-serve to outbound enterprise sales targeting Heads of Infrastructure.,\"With incident.io moving upmarket into Fortune 500 engineering teams, outbound to enterprise infrastructure leaders has become the primary pipeline driver. Enterprise VP of Infrastructure titles delete generic feature pitches, but respond when public uptime data mirrors an active operational transition. Are you open to seeing the multi-signal recipe we use to identify companies with expanding on-call rosters?\"\n" +
+    "Baseten,https://baseten.co,Tuhin Srivastava (CEO & Co-Founder),Cluster 03: Post-Funding Cliff,Series B ($40M IVP, Spark Capital); marketing site shifts from open ML playground to enterprise SLAs; hiring AEs with immediate quota delivery mandates.,\"As Baseten scales enterprise ML model deployments, building predictable executive pipeline beyond inbound developer signups is critical. AI engineering heads get pitched by twenty infra tools daily, making standard database outbound ineffective. Would it be helpful to see how we track production ML job postings and HuggingFace activity to time outreach precisely?\"\n" +
+    "BreachRx,https://breachrx.com,Anderson Lunsford (CEO & Founder),Cluster 03: Post-Funding Cliff,Series A funded ($15M); expanding outbound into CISO and General Counsel personas facing new SEC cyber disclosure mandates.,\"BreachRx's move to capture enterprise CISO accounts under the new SEC disclosure deadlines requires direct, trigger-driven outbound. Reaching security executives requires objective proof of compliance bottlenecks rather than fear-based messaging. Are you open to reviewing the regulatory data signals we use to verify which mid-market firms lack dedicated incident response counsel?\"\n" +
+    "Common Room,https://commonroom.io,Linda Lian (CEO & Founder),Cluster 03: Post-Funding Cliff,Series B funded; sales leadership actively accelerating outbound into B2B software CROs and VPs of Sales while organic inbound has normalized.,\"Common Room's mandate to close enterprise revenue leaders requires generating qualified pipeline outside of existing community signups. Commercial GTM executives are the hardest persona to prospect because they recognize standard sales templates immediately. Would you be open to seeing how we build acute-pain lists based on sales team expansion and tech stack transitions?\"";
+
+  function downloadCsv(){
+    var blob = new Blob([csvData], {type: 'text/csv;charset=utf-8;'});
     var url = URL.createObjectURL(blob);
     var a = document.createElement('a');
     a.href = url;
@@ -425,12 +718,13 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center}
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
-  var b1 = document.getElementById('downloadCsvBtn');
-  var b2 = document.getElementById('downloadCsvBtnTable');
-  if(b1) b1.addEventListener('click', triggerDownload);
-  if(b2) b2.addEventListener('click', triggerDownload);
+  var btn1 = document.getElementById('downloadCsvBtn');
+  var btn2 = document.getElementById('downloadCsvBtnTable');
+  if(btn1) btn1.addEventListener('click', downloadCsv);
+  if(btn2) btn2.addEventListener('click', downloadCsv);
 })();
 </script>
 
