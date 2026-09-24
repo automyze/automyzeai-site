@@ -10,6 +10,7 @@
     { "source": "/live-accounts-for-synthax", "destination": "/live-accounts-for-synthax/index.html" },
     { "source": "/live-accounts-for-automyze", "destination": "/live-accounts-for-automyze/index.html" },
     { "source": "/live-accounts-for-revzyn", "destination": "/live-accounts-for-revzyn/index.html" },
-    { "source": "/live-accounts-for-seconize", "destination": "/live-accounts-for-seconize/index.html" }
+    { "source": "/live-accounts-for-seconize", "destination": "/live-accounts-for-seconize/index.html" },
+    { "source": "/live-accounts-for-lightsprint", "destination": "/live-accounts-for-lightsprint/index.html" }
   ]
 }
