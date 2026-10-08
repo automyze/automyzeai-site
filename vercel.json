@@ -11,6 +11,7 @@
     { "source": "/live-accounts-for-automyze", "destination": "/live-accounts-for-automyze/index.html" },
     { "source": "/live-accounts-for-revzyn", "destination": "/live-accounts-for-revzyn/index.html" },
     { "source": "/live-accounts-for-seconize", "destination": "/live-accounts-for-seconize/index.html" },
-    { "source": "/live-accounts-for-lightsprint", "destination": "/live-accounts-for-lightsprint/index.html" }
+    { "source": "/live-accounts-for-lightsprint", "destination": "/live-accounts-for-lightsprint/index.html" },
+    { "source": "/live-accounts-for-novantro", "destination": "/live-accounts-for-novantro/index.html" }
   ]
 }
