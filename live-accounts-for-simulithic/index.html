@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulithic | Live Target Accounts &amp; Signal Playbook | Automyze</title>
+<meta name="description" content="A verified dispatch of 4 companies whose own live job postings show them building test automation by hand, each paired with a separate dated public signal, the exact gap Simulithic closes.">
+
+<!-- Favicon: Forest Green Logo -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3D2B'/%3E%3Ctext x='6' y='23' font-family='serif' font-size='22' font-weight='600' fill='%23F4F2ED'%3Ea%3C/text%3E%3Ccircle cx='23.5' cy='21.5' r='2.5' fill='%238A6D3B'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#F4F2ED;
+  --ink:#16181A;
+  --ink2:#5A5F63;
+  --ink3:#8B8F93;
+  --rule:#DDD9D1;
+  --rule2:#C9C4B8;
+  --forest:#1F3D2B;
+  --forest-hover:#173022;
+  --brass:#8A6D3B;
+  --card:#FBFAF7;
+  --tint:#F0EEE8;
+}
+
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter Tight',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+
+h1,h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+h1{font-size:56px;line-height:1.06;letter-spacing:-.015em;margin-bottom:20px}
+h1 em,h2 em{font-style:italic;color:var(--forest)}
+h2{font-size:38px;line-height:1.12;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:500;line-height:1.35}
+p{line-height:1.65}
+
+.lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule2)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--forest);display:inline-block;margin-right:7px;vertical-align:1px}
+
+section{border-bottom:1px solid var(--rule);padding:72px 0}
+.two{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:64px;align-items:start}
+
+.btn{
+  background:var(--forest);
+  color:var(--paper);
+  padding:13px 26px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  display:inline-block;
+  border:none;
+  cursor:pointer;
+  transition:background .2s ease,transform .2s ease;
+}
+.btn:hover{background:var(--forest-hover);transform:translateY(-1px);color:var(--paper)}
+.btn2{
+  font-size:14px;
+  color:var(--ink2);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule2);
+  padding-bottom:2px;
+  transition:color .2s ease,border-color .2s ease;
+}
+.btn2:hover{color:var(--ink);border-color:var(--ink)}
+.fine{font-size:12.5px;color:var(--ink3)}
+
+/* Navigation */
+nav{
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  background:rgba(244,242,237,.94);
+  backdrop-filter:blur(8px);
+  z-index:100;
+  transition:border-color .2s ease;
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Instrument Serif',Georgia,serif;font-size:25px;text-decoration:none;letter-spacing:-.01em}
+.logo em{font-style:italic;color:var(--brass)}
+.nav-r{display:flex;align-items:center;gap:24px;font-size:14px;color:var(--ink2)}
+.nav-r a{text-decoration:none}
+.nav-r a:not(.nav-cta){padding:6px 12px;border-radius:2px;transition:background .18s,color .18s}
+.nav-r a:not(.nav-cta):hover{background:var(--forest);color:var(--paper)}
+.nav-cta{
+  border:1px solid var(--ink);
+  padding:8px 17px;
+  font-size:13px;
+  font-weight:500;
+  color:var(--ink)!important;
+  transition:background .22s,color .22s,border-color .22s;
+}
+nav.scrolled .nav-cta{background:var(--forest);color:var(--paper)!important;border-color:var(--forest)}
+
+/* Hero Section */
+.hero{padding:64px 0 0;border-bottom:none}
+.sub{font-size:18px;line-height:1.6;color:var(--ink2);max-width:760px;margin-bottom:28px}
+.cta-row{display:flex;align-items:center;gap:20px;margin-bottom:14px}
+
+/* Metric Band */
+.band{border-top:1px solid var(--rule);margin-top:48px}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.cell{padding:24px 24px 24px 0;border-right:1px solid var(--rule)}
+.cell:last-child{border-right:none;padding-right:0}
+.cell:not(:first-child){padding-left:24px}
+.cell .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin-bottom:8px}
+.cell .v{font-family:'Instrument Serif',Georgia,serif;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.cell .v small{font-size:13.5px;color:var(--ink2);font-family:'Inter Tight',sans-serif}
+
+/* Comparison / Wedge Box */
+.wedge-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule2);margin-top:20px}
+.wedge-grid>div{padding:26px 28px}
+.wedge-grid>div:first-child{border-right:1px solid var(--rule2);background:var(--tint)}
+.wedge-grid h4{font-size:16px;font-weight:600;margin-bottom:10px}
+.wedge-grid p{font-size:14px;color:var(--ink2);line-height:1.6}
+
+/* Clean Accounts Table */
+.table-wrap{
+  overflow-x:auto;
+  border:1px solid var(--rule2);
+  background:var(--card);
+  margin-top:24px;
+}
+table.act{width:100%;border-collapse:collapse;text-align:left}
+table.act th{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink3);
+  font-weight:500;
+  padding:14px 18px;
+  background:var(--tint);
+  border-bottom:1px solid var(--rule2);
+  white-space:nowrap;
+}
+table.act td{
+  font-size:13.5px;
+  padding:16px 18px;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+  line-height:1.55;
+  color:var(--ink);
+}
+table.act tr:last-child td{border-bottom:none}
+table.act tr:hover td{background:rgba(244,242,237,.5)}
+.ac-link{font-weight:600;color:var(--forest);text-decoration:none}
+.ac-link:hover{text-decoration:underline}
+.ac-domain{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink3);display:block;margin-top:2px}
+.ac-tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;
+  background:var(--paper);
+  border:1px solid var(--rule2);
+  padding:2px 7px;
+  color:var(--ink2);
+  display:inline-block;
+}
+.ac-cluster-link{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  color:var(--forest);
+  text-decoration:none;
+  background:var(--tint);
+  border:1px solid rgba(31,61,43,0.18);
+  padding:4px 8px;
+  display:inline-block;
+  line-height:1.4;
+  transition:all .15s ease;
+}
+.ac-cluster-link:hover{
+  background:var(--paper);
+  border-color:var(--forest);
+  text-decoration:underline;
+}
+.ac-mirror{
+  font-size:12.5px;
+  color:var(--ink2);
+  background:var(--tint);
+  padding:8px 10px;
+  border-left:2px solid var(--brass);
+  font-style:normal;
+  margin-top:4px;
+}
+
+/* Signal Clusters Blocks */
+.clusters-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.c-box{background:var(--card);border:1px solid var(--rule2);padding:28px}
+.c-badge{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--brass);display:block;margin-bottom:8px}
+.c-box h3{font-size:20px;font-weight:500;margin-bottom:14px;color:var(--ink)}
+.c-box p{font-size:14px;color:var(--ink2);margin-bottom:14px;line-height:1.6}
+.c-signals{list-style:none;margin:16px 0;padding-top:12px;border-top:1px solid var(--rule)}
+.c-signals li{font-size:13px;color:var(--ink2);padding:5px 0;position:relative;padding-left:16px}
+.c-signals li::before{content:"+";position:absolute;left:0;color:var(--forest);font-family:'IBM Plex Mono',monospace}
+.c-wedge{
+  background:var(--tint);
+  border-left:3px solid var(--forest);
+  padding:12px 14px;
+  font-size:13px;
+  color:var(--forest);
+  margin-top:16px;
+}
+
+/* Callout Section (Proprietary Clusters vs Rented Data) */
+.callout-box{
+  background:var(--card);
+  border:1px solid var(--rule2);
+  padding:32px;
+  margin-top:28px;
+}
+.callout-box h3{font-family:'Instrument Serif',Georgia,serif;font-size:26px;margin-bottom:12px;color:var(--forest)}
+.callout-box p{font-size:15px;color:var(--ink2);line-height:1.65;max-width:920px}
+
+/* Final Call Section */
+.final{background:var(--forest);color:var(--paper);border-bottom:none}
+.final h2{color:var(--paper);max-width:680px}
+.final h2 em{color:#C9BFA4}
+.final p{color:#BFC7C0;max-width:580px;margin-top:18px;font-size:16px}
+.final .btn{background:var(--paper);color:var(--forest);margin-top:30px}
+.final .btn:hover{background:#EDE9DF;color:var(--forest-hover)}
+.final-links{display:flex;gap:20px;align-items:center;margin-top:20px}
+.final-links a{color:#D2DDD5;font-size:13.5px;text-decoration:none;border-bottom:1px dotted #8FA095}
+.final-links a:hover{color:var(--paper);border-bottom-style:solid}
+
+/* Footer */
+footer{padding:34px 0;font-size:13px;color:var(--ink3)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+footer .logo{font-size:20px}
+
+/* Scroll Reveals (Subtle & Non-Jarring) */
+.rv{opacity:0;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.3,1)}
+.rv-u{transform:translateY(18px)}
+.rv.in{opacity:1;transform:none}
+
+/* Print Styles */
+@media print {
+  nav, .no-print, button, .btn { display:none!important }
+  body { background:white!important; color:black!important }
+  .table-wrap, table.act { border:1px solid #ccc!important; width:100%!important }
+  table.act td, table.act th { border-bottom:1px solid #ddd!important }
+  section { padding:24px 0!important; page-break-inside:avoid }
+  .wrap { max-width:100%!important; padding:0!important }
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .wrap{padding:0 24px}
+  .two,.wedge-grid,.clusters-grid{grid-template-columns:1fr;gap:24px}
+  .wedge-grid>div:first-child{border-right:none;border-bottom:1px solid var(--rule2)}
+  h1{font-size:38px}
+  h2{font-size:29px}
+  .band .wrap{grid-template-columns:1fr 1fr}
+  .cell:nth-child(2){border-right:none}
+  .cell:nth-child(3){padding-left:0;border-top:1px solid var(--rule)}
+  .cell:nth-child(4){border-top:1px solid var(--rule)}
+  .nav-r a:not(.nav-cta){display:none}
+  section{padding:54px 0}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div class="nav-r">
+      <a href="#accounts">Accounts</a>
+      <a href="#wedge">The Wedge</a>
+      <a href="#also-hiring">Also Hiring</a>
+      <a href="#clusters">Signal Clusters</a>
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="nav-cta">Book a call</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Target Dispatch</p>
+      <h1>Four live target accounts for <em>Simulithic</em>.</h1>
+      <p class="sub">A verified dispatch of 4 companies whose own job postings, live right now, show them building test automation by hand: hiring a first or lead QA owner, or a QA role for a team that says it ships with AI coding agents. Each also has a separate, dated public signal of shipping pace.</p>
+      <div class="cta-row">
+        <button id="downloadCsvBtn" class="btn">Download Accounts (.CSV)</button>
+        <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn2">Book a strategy call</a>
+      </div>
+      <p class="fine">Every account was verified on 26 October 2026 against the live posting on the company's own applicant tracking system (Ashby or Greenhouse), not an aggregator, plus a second dated public source (a launch, an announcement or release activity). Headcounts are estimates from public trackers. Accounts above 150 employees or $100M in funding were removed. 4 of a targeted 10 accounts cleared verification; the remaining ones are not padded onto this list. Four more companies with live postings are listed further down, clearly marked as hiring-verified only.</p>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <div class="cell"><div class="k">Accounts verified</div><div class="v">4</div></div>
+      <div class="cell"><div class="k">Primary source checks</div><div class="v">100%</div></div>
+      <div class="cell"><div class="k">Core bottleneck</div><div class="v" style="font-size:20px">Hand-built test automation</div></div>
+      <div class="cell"><div class="k">Also hiring (posting verified)</div><div class="v">4</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THE STRATEGIC WEDGE -->
+<section id="wedge">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">The Strategic Wedge</p>
+      <h2>Why "AI writes your tests" fails, and where Simulithic <em>wins</em>.</h2>
+      <p style="font-size:15.5px;color:var(--ink2);margin-top:16px">Every company on this list has already decided test automation is worth a headcount. Their postings say so in plain words: build the framework, define the quality gates, own the workflow. A pitch that sounds like "we generate your tests" reads as a competitor to the hire they just approved.</p>
+    </div>
+    <div>
+      <div class="wedge-grid">
+        <div>
+          <span class="lbl" style="color:#A04040">The Commodity Trap</span>
+          <h4 style="margin-top:6px">Pitching "AI-written Playwright tests"</h4>
+          <p>These teams are hiring people to build and own an automation framework. Pitching a tool that generates more scripts competes with that seat, and invites the objection that someone still has to review, stabilize and maintain every generated test. Clariti's own posting asks its hire to keep the generated-test workflow reliable as volume grows.</p>
+        </div>
+        <div>
+          <span class="lbl" style="color:var(--forest)">The High-Converting Wedge</span>
+          <h4 style="margin-top:6px">Positioning as the QA hire's force multiplier</h4>
+          <p>Simulithic maps a live app's user flows itself and runs them in isolated VMs across Safari, Chrome and Firefox, macOS and Windows, and iPhone and Android, on every pull request and continuously in production. The new QA owner sets the quality gates and handles the edge cases instead of writing and repairing scripts, and the result shows up this quarter instead of after a long framework build.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNTS TABLE -->
+<section id="accounts">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div>
+        <p class="eyebrow">Live Target Accounts</p>
+        <h2>Four accounts hand-building test automation right now.</h2>
+      </div>
+      <button id="downloadCsvBtnTable" class="btn" style="padding:10px 20px;font-size:13px">Download CSV</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="act">
+        <thead>
+          <tr>
+            <th style="width:22%">Account &amp; Industry</th>
+            <th style="width:15%">Target Persona</th>
+            <th style="width:17%">Signal Cluster</th>
+            <th style="width:27%">Deterministic Evidence</th>
+            <th style="width:19%">Opening Angle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://mach9.ai" target="_blank" class="ac-link">Mach9</a>
+              <span class="ac-domain">mach9.ai</span>
+              <span class="ac-tag" style="margin-top:6px">AI CAD for civil engineering</span>
+              <span class="ac-tag" style="margin-top:6px">About 24 people (est.)</span>
+            </td>
+            <td>CTO, Head of Engineering</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Shipping With AI Coding Agents</a></td>
+            <td>Live posting for a Test Automation (SDET) engineer, posted Sep 4, to grow automated coverage across its CAD editor and drive pages and to build tools for coding agents. On Oct 1 its engineering blog said: &quot;None of us are writing that much code by hand anymore.&quot; On Oct 21 it announced a $34M Series A. <a href="https://jobs.ashbyhq.com/mach9/95b6b89b-4c39-4e10-97eb-f29aa463c894" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a> <a href="https://mach9.ai/blog/building-an-evolving-design-system" target="_blank" class="ac-domain" style="color:var(--forest)">Verify blog &rarr;</a> <a href="https://mach9.ai/blog/mach9-raises-34m-series-a" target="_blank" class="ac-domain" style="color:var(--forest)">Verify funding &rarr;</a></td>
+            <td>
+              <div class="ac-mirror">"Mach9&#x27;s own posting asks its SDET to &#x27;evolve our test infrastructure and CI so our test suite stays fast and reliable as its coverage grows&#x27; and to &#x27;build tools for coding agents&#x27;."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://claritisoftware.com" target="_blank" class="ac-link">Clariti</a>
+              <span class="ac-domain">claritisoftware.com</span>
+              <span class="ac-tag" style="margin-top:6px">Permitting software for governments</span>
+              <span class="ac-tag" style="margin-top:6px">About 130 people (est.)</span>
+            </td>
+            <td>Head of Engineering, Head of Product</td>
+            <td><a href="#cluster-02" class="ac-cluster-link">Cluster 02: Shipping With AI Coding Agents</a></td>
+            <td>Live posting for a QA Engineer, Agentic Development, posted Oct 15 (Playwright, Postman). The posting says the team &quot;uses agentic development to move quickly&quot;. On Aug 31 Clariti announced the City of Toronto launching its AI Pre-Check. <a href="https://job-boards.greenhouse.io/clariticloudinc/jobs/8034493003" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a> <a href="https://www.claritisoftware.com/blog/city-of-toronto-launches-ai-pre-check-with-clariti-to-speed-up-housing-approvals" target="_blank" class="ac-domain" style="color:var(--forest)">Verify news &rarr;</a></td>
+            <td>
+              <div class="ac-mirror">"Clariti&#x27;s own posting says its QA hire will own &#x27;the automated QA workflow for agentic delivery, from triage through test generation and execution reporting&#x27;."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://foundationhealth.com" target="_blank" class="ac-link">Foundation Health</a>
+              <span class="ac-domain">foundationhealth.com</span>
+              <span class="ac-tag" style="margin-top:6px">AI operating system for pharmacy</span>
+              <span class="ac-tag" style="margin-top:6px">Under about 100 people (est., sources vary)</span>
+            </td>
+            <td>Head of Engineering, QA Lead</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Hiring To Hand-Build Test Automation</a></td>
+            <td>Live postings for a QA Lead and a QA Engineer in the UK, both posted Oct 7 (Playwright and TypeScript). The engineer post describes one of the first QA hires in the UK, building quality practice with no legacy test debt. On Sep 15, Shields Health Solutions announced Foundation Health as the AI layer behind its care model. <a href="https://jobs.ashbyhq.com/foundationhealthcareers/1277bed9-b692-4afd-9244-11e5ec9dfed0" target="_blank" class="ac-domain" style="color:var(--forest)">Verify QA Lead post &rarr;</a> <a href="https://jobs.ashbyhq.com/foundationhealthcareers/95d8b3d7-d18d-4dc5-8bc4-cd36d06d70e7" target="_blank" class="ac-domain" style="color:var(--forest)">Verify QA Engineer post &rarr;</a> <a href="https://www.foundationhealth.com/news/foundation-health-powers-the-ai-layer-behind-shields-health-solutions-connected-specialty-care" target="_blank" class="ac-domain" style="color:var(--forest)">Verify news &rarr;</a></td>
+            <td>
+              <div class="ac-mirror">"Foundation Health&#x27;s own post says its UK QA hires will build &#x27;frameworks, standards and process, with no legacy test debt to dig out of&#x27;."</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://litmus.io" target="_blank" class="ac-link">Litmus</a>
+              <span class="ac-domain">litmus.io</span>
+              <span class="ac-tag" style="margin-top:6px">Industrial data platform</span>
+              <span class="ac-tag" style="margin-top:6px">About 150 people (est.)</span>
+            </td>
+            <td>VP Engineering, Head of Quality</td>
+            <td><a href="#cluster-01" class="ac-cluster-link">Cluster 01: Hiring To Hand-Build Test Automation</a></td>
+            <td>Three live QA roles: a QA Architect (posted Aug 27) to &quot;build out a modern Playwright automation framework&quot; for Litmus Edge Manager, and two Senior QA Test Engineer roles (posted Oct 13 and Oct 21). On Oct 5 Litmus announced general availability of Litmus Data Catalog, and its public GitHub repositories shipped 15 releases in the last 60 days. <a href="https://jobs.ashbyhq.com/litmus/866b4b47-ef34-4d05-88d9-8f213e5734a9" target="_blank" class="ac-domain" style="color:var(--forest)">Verify QA Architect post &rarr;</a> <a href="https://litmus.io/newsroom/litmus-launches-general-availability-of-litmus-data-catalog" target="_blank" class="ac-domain" style="color:var(--forest)">Verify launch &rarr;</a> <a href="https://github.com/litmusautomation" target="_blank" class="ac-domain" style="color:var(--forest)">Verify releases &rarr;</a></td>
+            <td>
+              <div class="ac-mirror">"Litmus&#x27;s own posting says its QA Architect will build a Playwright framework and set &#x27;clear quality gates&#x27; for what counts as release-ready."</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ALSO HIRING -->
+<section id="also-hiring">
+  <div class="wrap">
+    <p class="eyebrow">Also Hiring</p>
+    <h2>Four more with a live posting, not yet paired with a second signal.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Each posting below was confirmed live on 26 October 2026. We did not find a dated public launch or release signal for these within the last 60 days, so they are not counted in the verified accounts above.</p>
+    <div class="table-wrap">
+      <table class="act">
+        <thead>
+          <tr>
+            <th style="width:24%">Account</th>
+            <th style="width:26%">Live role</th>
+            <th style="width:50%">What the posting says</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="https://medsien.com" target="_blank" class="ac-link">Medsien</a>
+              <span class="ac-domain">medsien.com</span>
+            </td>
+            <td>Senior QA Engineer, posted Sep 10</td>
+            <td>Selenium and Playwright, Appium for iOS and Android, GitHub Actions and Jenkins. The post asks the hire to drive the adoption of &quot;AI-assisted and agentic approaches&quot; in testing. <a href="https://job-boards.greenhouse.io/medsien/jobs/5233269007" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://uptimeai.com" target="_blank" class="ac-link">UptimeAI</a>
+              <span class="ac-domain">uptimeai.com</span>
+            </td>
+            <td>QA Engineer, posted Oct 16</td>
+            <td>Playwright, Cypress, Selenium and Appium are named; covers web applications and APIs. <a href="https://jobs.ashbyhq.com/uptimeai/7247b26c-c6aa-42d8-8ab7-7c636a858d00" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://realitydefender.com" target="_blank" class="ac-link">Reality Defender</a>
+              <span class="ac-domain">realitydefender.com</span>
+            </td>
+            <td>Quality Assurance Engineer (L3), posted Oct 23</td>
+            <td>Covers its web app, APIs, SDKs and real-time voice and video integrations, with Playwright, Cypress, Selenium and GitHub Actions. Reports to an existing QA Lead. <a href="https://jobs.ashbyhq.com/realitydefender/cab9bc40-2343-45ed-98ef-1fee80d5e99d" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://impiricus.com" target="_blank" class="ac-link">Impiricus</a>
+              <span class="ac-domain">impiricus.com</span>
+            </td>
+            <td>QA Automation Engineer, posted Oct 1</td>
+            <td>Tests integrated into CI/CD pipelines. The post names no framework or platform. <a href="https://job-boards.greenhouse.io/impiricus/jobs/5441227008" target="_blank" class="ac-domain" style="color:var(--forest)">Verify posting &rarr;</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL CLUSTERS -->
+<section id="clusters">
+  <div class="wrap">
+    <p class="eyebrow">Signal Clusters</p>
+    <h2>Two ways a company tells you its test automation is built by hand.</h2>
+    <p style="font-size:16px;color:var(--ink2);max-width:720px;margin-top:12px">Accounts enter this dispatch only when the company's own hiring language names test automation as work it intends to build, and a separate dated public source shows its shipping pace. We pull the full posting text from each company's applicant tracking system and keep a dated copy before drafting a single word.</p>
+
+    <div class="clusters-grid">
+      <div class="c-box" id="cluster-01">
+        <span class="c-badge">CLUSTER 01</span>
+        <h3>Hiring To Hand-Build Test Automation</h3>
+        <p>The company has opened a first or lead QA seat to build or own an automation framework. Months of authoring and stabilizing scripts come before coverage compounds.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Live posting naming Playwright, Cypress or a similar framework</li>
+          <li>Language like "build out", "from scratch" or "no legacy test debt"</li>
+          <li>A dated public launch, announcement or release alongside the hire</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Simulithic wedge:</strong> flows are discovered from the live app, so the new hire starts with coverage across real browsers and devices instead of a blank framework.
+        </div>
+      </div>
+
+      <div class="c-box" id="cluster-02">
+        <span class="c-badge">CLUSTER 02</span>
+        <h3>Shipping With AI Coding Agents</h3>
+        <p>The company says in its own words that it builds with agents, and it is hiring to keep quality in step. The check on what ships has to move at the same speed as the code.</p>
+        <span class="lbl">Verifiable Signals</span>
+        <ul class="c-signals">
+          <li>Posting or engineering blog naming agentic development</li>
+          <li>A QA role scoped around generated code or tools for coding agents</li>
+          <li>Recent funding or a customer launch that raises release pace</li>
+        </ul>
+        <div class="c-wedge">
+          <strong>Simulithic wedge:</strong> the CLI can run from coding agents (its site names Claude Code and Codex) and comments on the pull request with whatever broke.
+        </div>
+      </div>
+    </div>
+
+    <!-- How Automyze Operates (Below Signal Clusters) -->
+    <div class="callout-box">
+      <span class="lbl" style="color:var(--brass)">Operating Philosophy</span>
+      <h3 style="margin-top:8px">How Automyze operates: proprietary Signal Clusters vs. rented data</h3>
+      <p>Unlike traditional lead generation agencies that simply rent stale contact lists from ZoomInfo or Apollo, Automyze builds proprietary target account lists engineered around Signal Clusters: multi-layered, observable public facts that prove an Active Pain Trigger inside the account right now. We don't guess intent or rely on superficial firmographics; we verify live hiring language and public signals directly from each company's own systems. Read more on our philosophy and methodology <a href="https://automyzeai.com/#method" style="color:var(--forest);font-weight:600;text-decoration:underline">here</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CALL / BOOK -->
+<section class="final">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#C9BFA4">Scale Outbound</p>
+    <h2>Turn this into a repeatable <em>outbound engine</em>.</h2>
+    <p>This 4-account dispatch is a single slice of what is possible. If you want to scale this into an automated outbound motion covering your entire market, test message-market fit, and run pain-signal outreach, you can work with Automyze or hire Rivesh as a full-time dedicated or fractional Go-To-Market Engineer.</p>
+    <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn">Book a strategy call</a>
+    <div class="final-links">
+      <a href="mailto:riveshk@automyzeai.com">riveshk@automyzeai.com</a>
+      <a href="https://www.linkedin.com/in/riveshkumar/" target="_blank">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <a href="https://automyzeai.com" class="logo">automyze<em>.</em></a>
+    <div style="display:flex;align-items:center;gap:22px">
+      <a href="https://cal.com/automyze-ai/automyze-ai-strategy-call" target="_blank" class="btn" style="padding:10px 20px;font-size:13px">Book a call</a>
+      <span>&copy; 2026 Automyze</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Instant CSV Download Script & Scroll Observer -->
+<script>
+(function(){
+  // Sticky nav scroll threshold
+  var nav = document.getElementById('nav');
+  var onScroll = function(){
+    if(nav) nav.classList.toggle('scrolled', window.scrollY > 50);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive: true});
+
+  // IntersectionObserver for graceful, non-jarring scroll reveals
+  var targets = document.querySelectorAll('section > .wrap > *');
+  for(var i = 0; i < targets.length; i++){
+    if(!targets[i].closest('.hero')) {
+      targets[i].classList.add('rv', 'rv-u');
+    }
+  }
+  var all = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -5% 0px'});
+    for(var k = 0; k < all.length; k++) io.observe(all[k]);
+  } else {
+    for(var k = 0; k < all.length; k++) all[k].classList.add('in');
+  }
+
+  // Instant CSV Download
+  var csvData = "client_name,client_domain,signal_cluster,target_account_name,target_account_domain,target_persona,observable_evidence,opening_angle,primary_source_url\r\nSimulithic,simulithic.com,Shipping With AI Coding Agents,Mach9,mach9.ai,\"CTO, Head of Engineering\",\"Live posting for a Test Automation (SDET) engineer, posted Sep 4, to grow automated coverage across its CAD editor and drive pages and to build tools for coding agents. On Oct 1 its engineering blog said: \"\"None of us are writing that much code by hand anymore.\"\" On Oct 21 it announced a $34M Series A.\",Mach9's own posting asks its SDET to 'evolve our test infrastructure and CI so our test suite stays fast and reliable as its coverage grows' and to 'build tools for coding agents'.,https://jobs.ashbyhq.com/mach9/95b6b89b-4c39-4e10-97eb-f29aa463c894\r\nSimulithic,simulithic.com,Shipping With AI Coding Agents,Clariti,claritisoftware.com,\"Head of Engineering, Head of Product\",\"Live posting for a QA Engineer, Agentic Development, posted Oct 15 (Playwright, Postman). The posting says the team \"\"uses agentic development to move quickly\"\". On Aug 31 Clariti announced the City of Toronto launching its AI Pre-Check.\",\"Clariti's own posting says its QA hire will own 'the automated QA workflow for agentic delivery, from triage through test generation and execution reporting'.\",https://job-boards.greenhouse.io/clariticloudinc/jobs/8034493003\r\nSimulithic,simulithic.com,Hiring To Hand-Build Test Automation,Foundation Health,foundationhealth.com,\"Head of Engineering, QA Lead\",\"Live postings for a QA Lead and a QA Engineer in the UK, both posted Oct 7 (Playwright and TypeScript). The engineer post describes one of the first QA hires in the UK, building quality practice with no legacy test debt. On Sep 15, Shields Health Solutions announced Foundation Health as the AI layer behind its care model.\",\"Foundation Health's own post says its UK QA hires will build 'frameworks, standards and process, with no legacy test debt to dig out of'.\",https://jobs.ashbyhq.com/foundationhealthcareers/95d8b3d7-d18d-4dc5-8bc4-cd36d06d70e7\r\nSimulithic,simulithic.com,Hiring To Hand-Build Test Automation,Litmus,litmus.io,\"VP Engineering, Head of Quality\",\"Three live QA roles: a QA Architect (posted Aug 27) to \"\"build out a modern Playwright automation framework\"\" for Litmus Edge Manager, and two Senior QA Test Engineer roles (posted Oct 13 and Oct 21). On Oct 5 Litmus announced general availability of Litmus Data Catalog, and its public GitHub repositories shipped 15 releases in the last 60 days.\",Litmus's own posting says its QA Architect will build a Playwright framework and set 'clear quality gates' for what counts as release-ready.,https://jobs.ashbyhq.com/litmus/866b4b47-ef34-4d05-88d9-8f213e5734a9\r\n";
+
+  function triggerDownload() {
+    var blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'automyze_simulithic_4_accounts.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  var b1 = document.getElementById('downloadCsvBtn');
+  var b2 = document.getElementById('downloadCsvBtnTable');
+  if(b1) b1.addEventListener('click', triggerDownload);
+  if(b2) b2.addEventListener('click', triggerDownload);
+})();
+</script>
+
+</body>
+</html>
