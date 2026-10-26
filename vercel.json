@@ -13,6 +13,7 @@
     { "source": "/live-accounts-for-seconize", "destination": "/live-accounts-for-seconize/index.html" },
     { "source": "/live-accounts-for-lightsprint", "destination": "/live-accounts-for-lightsprint/index.html" },
     { "source": "/live-accounts-for-novantro", "destination": "/live-accounts-for-novantro/index.html" },
-    { "source": "/live-accounts-for-simulithic", "destination": "/live-accounts-for-simulithic/index.html" }
+    { "source": "/live-accounts-for-simulithic", "destination": "/live-accounts-for-simulithic/index.html" },
+    { "source": "/live-accounts-for-probe", "destination": "/live-accounts-for-probe/index.html" }
   ]
 }
