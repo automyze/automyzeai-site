@@ -14,6 +14,7 @@
     { "source": "/live-accounts-for-lightsprint", "destination": "/live-accounts-for-lightsprint/index.html" },
     { "source": "/live-accounts-for-novantro", "destination": "/live-accounts-for-novantro/index.html" },
     { "source": "/live-accounts-for-simulithic", "destination": "/live-accounts-for-simulithic/index.html" },
-    { "source": "/live-accounts-for-probe", "destination": "/live-accounts-for-probe/index.html" }
+    { "source": "/live-accounts-for-probe", "destination": "/live-accounts-for-probe/index.html" },
+    { "source": "/veriad-brief-370ccac076ab", "destination": "/veriad-brief-370ccac076ab/index.html" }
   ]
 }
